@@ -1,0 +1,2971 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<!--html xmlns="http://www.w3.org/1999/xhtml"-->
+	<head>
+    	<meta charset="UTF-8">
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      	<meta name="description" content="Project 2 - Estonian Property Manager">
+      	<meta name="keywords" content="Property, rental, bootcamp, part-time">
+      	<meta name="author" content="Jake Wyatt, Spencer Brown, Christopher Allen, Samuel Jeon, Marya Crigler">
+<!-- Link to reset Style Sheets -->
+      	<link rel="stylesheet" type="text/css" href="public/assets/css/reset.css">
+<!-- Link to the Bootstrap CDN -->
+      	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- Link to my customized style sheet -->
+      	<link rel="stylesheet" type="text/css" href="public/assets/css/style.css">
+<!-- Linkk to jQuery -->
+     	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Google Font -->
+     	 <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+
+		<title>Kodus Application</title>
+	</head>
+
+<body id="kodusApp" >
+
+	<div class="well infolist">
+		<ul>
+			<li>As the first person to complete this application, you will be considered the primary applicant, and you will be asked to provide information about additional occupants.</li>
+			<li>If you do not finish your application now, you may log in it at a later time to complete it, or to review it after you have submitted it.</li>
+			<li>Prices and special offers valid for new residents only. Pricing and availability subject to change at any time. Prices and specials are not guaranteed until you have paid the application fees.</li>
+			<li>Once your application has started, any changes made to your application by the property management company will immediately be reflected on this application for your convenience.</li>
+			<li><em>Renter&#39;s Insurance is required to reside at this community. All residents and applicants must provide evidence of renters insurance to the management office.&nbsp; For your convenience you can click the ResidentShield link below to compare policy coverage and pricing options from our website or you can procure renter&#39;s insurance from a provider of your choice.&nbsp; Worthing has selected ResidentShield as our preferred provider and by purchasing your policy through them your account will be updated automatically, saving you time and effort.</em></li>
+			<li><strong><u>DISCLAIMER</u>:</strong>&nbsp;Please note that all applications are subject to a $65 application fee and a $150 administrative fee. Additional security deposit is required for all floor plans. The rates are as follows: one bedroom $200, two bedroom $300, three bedroom $400 deposit.</li>
+		</ul>
+	</div>
+	
+
+
+	<form id="ApplicantInformation" name="ApplicantInformation" class="form-horizontal formbuilder" method="post">
+		<div id="noticeboxdiv_ApplicantInformation" class="msgContainer"></div>
+
+		<div class="row-fluid ApplicantInfoSection" id="personalinfodiv">
+			<h2>
+				Personal Information
+			</h2>
+			<div class="row-fluid" id="PersonInfoBody">
+				<div class="span6" id="PersonalInfoDiv1">
+					<div class="control-group" id="Title">
+						<label class="control-label">Title </label>
+							<div class="controls">
+								<select class=" input-mini  " id="Salutation" name="Salutation">
+								<option value=""></option>
+								<option value="Mr.">Mr.</option>
+								<option value="Ms.">Ms.</option>
+								<option value="Mrs.">Mrs.</option>
+								<option value="Dr.">Dr.</option>
+
+								</select>
+							</div>
+					</div>
+
+					<div class="control-group" id="Firstname">
+						<label class="control-label">First Name  <span class='text text-error'><b>*</b></span> </label>
+							<div class="controls label-inline">
+								<input id="ProspectFirstName" name="ProspectFirstName" type="text" maxlength="40" alt="" class=" required span5  alphanumeric" value="" />
+							</div>	
+					</div>
+
+					<div class="control-group" id="Middlename">
+						<label class="control-label">Middle Name <span class='text text-error'><b>*</b></span> </label>
+						<div class="controls">
+							<input id="ProspectMiddleName" name="ProspectMiddleName" type="text" maxlength="40" alt="" class=" required span5  alphanumeric" value="" />
+								<label class="checkbox inline m-l-md-sm-up">
+									<input id="chkMiddleName" name="chkMiddleName" type="checkbox" value='1' ><small>I don't have a middle name</small>
+								</label>
+						</div>
+					</div>
+
+					<div class="control-group" id="Lastname">
+						<label class="control-label">Last Name <span class='text text-error'><b>*</b></span> </label>
+						<div class="controls">
+							<input id="ProspectLastName" name="ProspectLastName" type="text" maxlength="40" alt="" class=" required span5  alphanumeric" value=""/>
+						</div>
+					</div>
+
+					<div class="control-group" id="MaritalStatusDiv">
+						<label class="control-label">Marital Status</label>
+						<div class="controls">
+							<select class="   span8" id="drpMaritalStatus" name="drpMaritalStatus">
+								<option value=""></option>
+								<option value="Single">Single</option>
+								<option value="Married">Married</option>
+
+							</select>
+						</div>
+					</div>
+
+					<div class="control-group" id="phone">
+						<label class="control-label">Phone</label><div class="controls">
+							<input id="ProspectPhone" name="ProspectPhone" type="text" alt="" class="  phone span8  nothing" value="" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="Email">
+						<label class="control-label">Email <span class='text text-error'><b>*</b></span> </label>
+						<div class="controls">
+							<div class="input-append">
+								<input id="ProspectEmail" name="ProspectEmail" type="text" alt="" disabled="True" class=" required   span8  nothing" value="" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="row-fluid ApplicantInfoSection" id="Addressinfodiv">
+			<h2>
+				Address Information
+			</h2>
+			<div class="row-fluid" id="AddressInformationBody">
+				<div class="row-fluid" id="ProspectCurrentAddressDiv">
+					<div class="span6" id="currAddrCol1">
+						
+						<div class="control-group" id="CurrentAddress1Div1">
+							<label class="control-label">Address <span class='text text-error'><b>*</b></span> </label>
+							<div class="controls">
+								<input id="CurrentAddress1" name="CurrentAddress1" type="text" maxlength="40" alt name="CurrentAddress1" data-selenium-id="CurrentAddress1_0" class=" required  span8  nothing" />
+							</div>
+						</div>
+
+						<div class="control-group" id="CurrentAddress2Div">
+							<label class="control-label">Address (line two)</label><div class="controls">
+								<input id="CurrentAddress2" name="CurrentAddress2" type="text" maxlength="40" alt name="CurrentAddress2" data-selenium-id="CurrentAddress2_0" class="   span8 nothing" />
+							</div>
+						</div>
+
+						<div class="control-group" id="CurrentCitydiv">
+							<label class="control-label">City <span class='text text-error'><b>*</b></span> </label><div class="controls">
+								<input id="CurrentCity" name="CurrentCity" type="text" maxlength="30" alt name="CurrentCity" data-selenium-id="CurrentCity_0" class=" required   span8 nothing" />
+							</div>
+						</div>
+
+						<div class="control-group" id="CurrentStatediv">
+							<label class="control-label">State-Zip <span class='text text-error'><b>*</b></span> </label><div class="controls">
+								<select class=" required  span4" id="CurrentState" name="CurrentState" data-selenium-id="CurrentState_0">
+									<option value=""></option>
+									<option value="AK">AK</option>
+									<option value="AL">AL</option>
+									<option value="AR">AR</option>
+									<option value="AZ">AZ</option>
+									<option value="CA">CA</option>
+									<option value="CO">CO</option>
+									<option value="CT">CT</option>
+									<option value="DC">DC</option>
+									<option value="DE">DE</option>
+									<option value="FL">FL</option>
+									<option value="GA">GA</option>
+									<option value="HI">HI</option>
+									<option value="IA">IA</option>
+									<option value="ID">ID</option>
+									<option value="IL">IL</option>
+									<option value="IN">IN</option>
+									<option value="KS">KS</option>
+									<option value="KY">KY</option>
+									<option value="LA">LA</option>
+									<option value="MA">MA</option>
+									<option value="MD">MD</option>
+									<option value="ME">ME</option>
+									<option value="MI">MI</option>
+									<option value="MN">MN</option>
+									<option value="MO">MO</option>
+									<option value="MS">MS</option>
+									<option value="MT">MT</option>
+									<option value="NC">NC</option>
+									<option value="ND">ND</option>
+									<option value="NE">NE</option>
+									<option value="NH">NH</option>
+									<option value="NJ">NJ</option>
+									<option value="NM">NM</option>
+									<option value="NV">NV</option>
+									<option value="NY">NY</option>
+									<option value="OH">OH</option>
+									<option value="OK">OK</option>
+									<option value="OR">OR</option>
+									<option value="PA">PA</option>
+									<option value="PR">PR</option>
+									<option value="RI">RI</option>
+									<option value="SC">SC</option>
+									<option value="SD">SD</option>
+									<option value="TN">TN</option>
+									<option value="TX">TX</option>
+									<option value="UT">UT</option>
+									<option value="VA">VA</option>
+									<option value="VT">VT</option>
+									<option value="WA">WA</option>
+									<option value="WI">WI</option>
+									<option value="WV">WV</option>
+									<option value="WY">WY</option>
+								</select>
+								<input id="CurrentZip" name="CurrentZip" type="text" alt maxlength="5" name="CurrentZip" data-selenium-id="CurrentZip_0" class=" required  span4 alphanumeric" />
+							</div>
+						</div>
+
+						<div class="control-group" id="ApartmentCommunityDiv">
+							<label class="control-label">Apartment Community</label>
+							<div class="controls">
+								<input id="ApartmentCommunity" name="ApartmentCommunity" type="text" maxlength="40" alt name="ApartmentCommunity" data-selenium-id="ApartmentCommunity_0" class="   span8  nothing" />
+							</div>
+						</div>
+
+						<div class="control-group" id="ManagementCompanyDiv">
+							<label class="control-label">Management Company</label>
+							<div class="controls">
+								<input id="ManagementCompany" name="ManagementCompany" type="text" maxlength="40" alt name="ManagementCompany" data-selenium-id="ManagementCompany_0" class="   span8  nothing" />
+							</div>
+						</div>
+
+						<div class="control-group" id="ManagementCompanyPhoneDiv">
+							<label class="control-label">Management Company Phone</label>
+							<div class="controls">
+								<input id="ManagementCompanyPhone" name="ManagementCompanyPhone" type="text" maxlength="40" alt name="ManagementCompanyPhone" data-selenium-id="ManagementCompanyPhone_0" class="  customphonewithnoext span8  nothing" />
+							</div>
+						</div>
+					</div>
+
+
+					<div class="span6" id="currAddrCol2">
+						<div class="control-group" id="ResidencyFromdiv">
+							<label class="control-label">Residency From <span class='text text-error'><b>*</b></span> </label>
+							<div class="controls">
+								<input id="ResidencyFrom" name="ResidencyFrom" type="text" maxlength="10" alt="" name="ResidencyFrom" data-selenium-id="ResidencyFrom_0" class=" required   maskdate datevalidation span8  isdate" value="" />
+							</div>
+						</div>
+
+						<div class="control-group" id="CurrentrentpaidDiv">
+							<label class="control-label">Monthly Rent/Monthly mortgage payments</label>
+							<div class="controls">
+								<input id="Currentrentpaid" name="Currentrentpaid" type="text" alt="" name="Currentrentpaid" data-selenium-id="Currentrentpaid_0" class="  span8 iscurrency" value="" />
+							</div>
+						</div>
+
+						<div class="control-group" id="CurrentReasonformovingDiv">
+							<label class="control-label">Reason for moving</label>
+							<div class="controls">
+								<input id="CurrentReasonformoving" name="CurrentReasonformoving" type="text" maxlength="40" alt name="CurrentReasonformoving" data-selenium-id="CurrentReasonformoving_0" class="   span8 nothing" />
+							</div>
+						</div>
+
+						<div class="control-group" id="Notice30DaysDiv">
+							<label class="control-label">Was 30 days notice given</label>
+							<div class="controls">
+								<select class="   span8" id="drpNotice30Days" name="drpNotice30Days" data-selenium-id="drpNotice30Days_0">
+									<option value="Yes">Yes</option>
+									<option value="No">No</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+				<div class=" alert alert-error  hidden" id="NotLongEnoughResident">
+					<p>You have lived at your current place of residence for less than 12 months. Please enter your previous address.</p>
+				</div>
+
+				<div class="  hidden row-fluid" id="PreviousAddress">
+					<div class="row-fluid">
+						<div class="span6" id="prevAddrCol1">
+							<div class="hidden row-fluid" id="dontShowPrevAddrHidden">
+								<input id="dontShowPrevAddr" name="dontShowPrevAddr" type="text" alt="0" class="hidden row-fluid nothing" value="0" />
+							</div>
+
+							<div class="control-group" id="previousAddress1Div">
+								<label class="control-label">Address</label>
+								<div class="controls">
+									<input id="previousAddress1" name="previousAddress1" type="text" maxlength="40" alt name="previousAddress1" data-selenium-id="previousAddress1_0" class="   span8 nothing" />
+								</div>
+							</div>
+
+							<div class="control-group" id="previousAddress2Div">
+								<label class="control-label">Address (line two)</label>
+								<div class="controls">
+									<input id="previousAddress2" name="previousAddress2" type="text" maxlength="40" alt name="previousAddress2" data-selenium-id="previousAddress2_0" class="   span8 nothing" />
+								</div>
+							</div>
+
+							<div class="control-group" id="PreviousCityDiv1">
+								<label class="control-label">City</label>
+								<div class="controls">
+									<input id="PreviousCity" name="PreviousCity" type="text" maxlength="30" alt name="PreviousCity" data-selenium-id="PreviousCity_0" class="   span8 nothing" />
+								</div>
+							</div>
+
+							<div class="control-group" id="PreviousStatediv">
+								<label class="control-label">State-Zip</label><div class="controls">
+									<select class="   span4" id="PreviousState" name="PreviousState" data-selenium-id="PreviousState_0">
+										<option value=""></option>
+										<option value="AK">AK</option>
+										<option value="AL">AL</option>
+										<option value="AR">AR</option>
+										<option value="AZ">AZ</option>
+										<option value="CA">CA</option>
+										<option value="CO">CO</option>
+										<option value="CT">CT</option>
+										<option value="DC">DC</option>
+										<option value="DE">DE</option>
+										<option value="FL">FL</option>
+										<option value="GA">GA</option>
+										<option value="HI">HI</option>
+										<option value="IA">IA</option>
+										<option value="ID">ID</option>
+										<option value="IL">IL</option>
+										<option value="IN">IN</option>
+										<option value="KS">KS</option>
+										<option value="KY">KY</option>
+										<option value="LA">LA</option>
+										<option value="MA">MA</option>
+										<option value="MD">MD</option>
+										<option value="ME">ME</option>
+										<option value="MI">MI</option>
+										<option value="MN">MN</option>
+										<option value="MO">MO</option>
+										<option value="MS">MS</option>
+										<option value="MT">MT</option>
+										<option value="NC">NC</option>
+										<option value="ND">ND</option>
+										<option value="NE">NE</option>
+										<option value="NH">NH</option>
+										<option value="NJ">NJ</option>
+										<option value="NM">NM</option>
+										<option value="NV">NV</option>
+										<option value="NY">NY</option>
+										<option value="OH">OH</option>
+										<option value="OK">OK</option>
+										<option value="OR">OR</option>
+										<option value="PA">PA</option>
+										<option value="PR">PR</option>
+										<option value="RI">RI</option>
+										<option value="SC">SC</option>
+										<option value="SD">SD</option>
+										<option value="TN">TN</option>
+										<option value="TX">TX</option>
+										<option value="UT">UT</option>
+										<option value="VA">VA</option>
+										<option value="VT">VT</option>
+										<option value="WA">WA</option>
+										<option value="WI">WI</option>
+										<option value="WV">WV</option>
+										<option value="WY">WY</option>
+									</select>
+									<input id="PreviousZip10850465" name="PreviousZip" type="text" alt name="PreviousZip" maxlength="5" data-selenium-id="PreviousZip_0" class="   span4 alphanumeric" />
+								</div>
+							</div>
+
+							<div class="control-group" id="PreviousApartmentCommunityDiv">
+								<label class="control-label">Apartment Community</label>
+								<div class="controls">
+									<input id="PreviousApartmentCommunity" name="PreviousApartmentCommunity" type="text" maxlength="40" alt name="PreviousApartmentCommunity" data-selenium-id="PreviousApartmentCommunity_0" class="   span8  nothing" />
+								</div>
+							</div>
+
+							<div class="control-group" id="PreviousManagementCompanyDiv">
+								<label class="control-label">Management Company</label>
+								<div class="controls">
+									<input id="PreviousManagementCompany" name="PreviousManagementCompany" type="text" maxlength="40" alt name="PreviousManagementCompany" data-selenium-id="PreviousManagementCompany_0" class="   span8  nothing" />
+								</div>
+							</div>
+
+							<div class="control-group" id="PreviousManagementCompanyPhoneDiv">
+								<label class="control-label">Management Company Phone</label>
+								<div class="controls">
+									<input id="PreviousManagementCompanyPhone" name="PreviousManagementCompanyPhone" type="text" maxlength="40" alt name="PreviousManagementCompanyPhone" class="  customphonewithnoext span8  nothing" />
+								</div>
+							</div>
+						</div>
+
+						<div class="span6" id="prevAddrCol2">
+							<div class="control-group" id="PreviousResidencyFromDiv">
+								<label class="control-label">Residency From</label>
+								<div class="controls">
+									<input id="PreviousResidencyFrom" name="PreviousResidencyFrom" type="text" maxlength="10" alt="" name="PreviousResidencyFrom" class="   maskdate datevalidation  span8 isdate" value="" />
+								</div>
+							</div>
+
+							<div class="control-group" id="PreviousrentpaidDiv">
+								<label class="control-label">Monthly Rent/Monthly mortgage payments</label>
+								<div class="controls">
+									<input id="Previousrentpaid" name="Previousrentpaid" type="text" alt="" name="Previousrentpaid" class="  nonzero  span8 iscurrency" value="" />
+								</div>
+							</div>
+
+							<div class="control-group" id="PreviousReasonformovingDiv">
+								<label class="control-label">Reason for moving</label>
+								<div class="controls">
+									<input id="PreviousReasonformoving" name="PreviousReasonformoving" type="text" maxlength="40" alt name="PreviousReasonformoving" class="   span8 nothing" />
+								</div>
+							</div>
+
+							<div class="control-group" id="PreviousNotice30DaysDiv">
+								<label class="control-label">Was 30 days notice given</label>
+								<div class="controls">
+									<select class="   span8" id="drpPreviousNotice30Days" name="drpPreviousNotice30Days">
+										<option value="Yes">Yes</option>
+										<option value="No">No</option>
+									</select>
+								</div>					
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="row-fluid ApplicantInfoSection" id="Empinfodiv">
+			<h2>
+				Employment Information
+			</h2>
+			<div class="row-fluid" id="EmploymentInformationBody">
+				<div class="span6" id="EmploymentDiv1">
+					
+					<div class="control-group" id="StatusDiv">
+						<label class="control-label">Employment Status</label>
+						<div class="controls">
+							<select class="   span8 " id="Status" name="Status" data-selenium-id="EmploymentStatus_0" onchange="UpdateEmploymentRequiredFields(this);">
+								<option value=""></option>
+								<option value="Employed">Employed</option>
+								<option value="Retired">Retired</option>
+								<option value="Student">Student</option>
+								<option value="Never employed">Never employed</option>
+								<option value="Other">Other</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="control-group" id="DesignationDiv">
+						<label class="control-label">Job Title</label>
+						<div class="controls">
+							<input id="Designation" name="Designation" type="text" maxlength="30" alt name="Designation" data-selenium-id="Designation_0" class="   span8  nothing" />
+						</div>
+					</div>
+
+					<div class="control-group" id="EmployedSinceDiv">
+						<label class="control-label">Employed Since</label>
+						<div class="controls">
+							<input id="EmployedSince" name="EmployedSince" type="text" maxlength="10" alt="" name="EmployedSince" data-selenium-id="EmployedSince_0" class="    maskdate span8 isdate" value="" />
+						</div>
+					</div>
+
+					<div class="control-group" id="GrossIncomeDiv">
+						<label class="control-label">Monthly Income</label>
+						<div class="controls">
+							<input id="GrossIncome" name="GrossIncome" type="text" alt="" name="GrossIncome" data-selenium-id="GrossIncome_0" class="   span8  iscurrency" value="" />
+						</div>
+					</div>
+
+					<div class="control-group" id="AdditionalincomeDiv">
+						<label class="control-label">Additional Income</label>
+						<div class="controls">
+							<input id="Additionalincome" name="Additionalincome" type="text" alt="" data-selenium-id="Additionalincome_0" name="Additionalincome" onchange="if($(&quot;#Additionalincome&quot;).val() != &#39;&#39; &amp;&amp; $(&quot;#Additionalincome&quot;).val()!= 0){ $(&quot;#EmpAddIncomeSrc&quot;).addClass(&quot;required&quot;);}else{$(&quot;#EmpAddIncomeSrc&quot;).removeClass(&quot;required&quot;);}" class="   span8  iscurrency" value="" />
+						</div>
+					</div>
+
+					<div class="control-group" id="AdditionalincomeSourceDiv">
+						<label class="control-label">Additional Income Source</label>
+						<div class="controls">
+							<input id="AdditionalincomeSource" name="AdditionalincomeSource" type="text" maxlength="40" alt="" data-selenium-id="AdditionalincomeSource_0" name="AdditionalincomeSource" onchange="if($(&quot;#Additionalincome&quot;).val() != &#39;&#39; &amp;&amp; $(&quot;#Additionalincome&quot;).val()!= 0){ $(&quot;#AdditionalincomeSource&quot;).addClass(&quot;required&quot;);}else{$(&quot;#AdditionalincomeSource&quot;).removeClass(&quot;required&quot;);}" class="   span8  alphanumeric" value="" />
+						</div>
+					</div>
+				</div>
+
+				<div class="span6" id="EmploymentDiv2">
+					<div class="control-group" id="EmployerDiv">
+						<label class="control-label">Employer</label>
+						<div class="controls">
+							<input id="Employer" name="Employer" type="text" maxlength="60" alt name="Employer" data-selenium-id="EmploymentCompany_0" class="   span8  nothing" />
+						</div>
+					</div>
+
+					<div class="control-group" id="SupervisorNameDiv">
+						<label class="control-label">Supervisor's Name</label>
+						<div class="controls">
+							<input id="SupervisorName" name="SupervisorName" type="text" maxlength="60" alt name="SupervisorName" data-selenium-id="SupervisorName_0" class="   span8  nothing" />
+						</div>
+					</div>
+
+					<div class="control-group" id="EmpAddress1Div">
+						<label class="control-label">Address</label>
+						<div class="controls">
+							<input id="EmpAddress1" name="EmpAddress1" type="text" maxlength="40" alt name="EmpAddress1" data-selenium-id="EmpAddress1_0" class="   span8  nothing" />
+						</div>
+					</div>
+
+
+					<div class="control-group" id="EmpAddress2Div">
+						<label class="control-label">Address (line two)</label>
+						<div class="controls">
+							<input id="EmpAddress2" name="EmpAddress2" type="text" maxlength="40" alt name="EmpAddress2" data-selenium-id="EmpAddress2_0" class="    span8 nothing" />
+						</div>
+					</div>
+
+					<div class="control-group" id="EmpCitydiv">
+						<label class="control-label">City</label><div class="controls">
+							<input id="EmpCity" name="EmpCity" type="text" maxlength="30" alt name="EmpCity" data-selenium-id="EmpCity_0" class="   span8  alphanumeric" />
+						</div>
+					</div>
+
+					<div class="control-group" id="EmpStatediv">
+						<label class="control-label">State-Zip</label>
+						<div class="controls">
+							<select class="   span3" id="EmpState" name="EmpState" data-selenium-id="EmpState_0">
+								<option value=""></option>
+								<option value="AK">AK</option>
+								<option value="AL">AL</option>
+								<option value="AR">AR</option>
+								<option value="AZ">AZ</option>
+								<option value="CA">CA</option>
+								<option value="CO">CO</option>
+								<option value="CT">CT</option>
+								<option value="DC">DC</option>
+								<option value="DE">DE</option>
+								<option value="FL">FL</option>
+								<option value="GA">GA</option>
+								<option value="HI">HI</option>
+								<option value="IA">IA</option>
+								<option value="ID">ID</option>
+								<option value="IL">IL</option>
+								<option value="IN">IN</option>
+								<option value="KS">KS</option>
+								<option value="KY">KY</option>
+								<option value="LA">LA</option>
+								<option value="MA">MA</option>
+								<option value="MD">MD</option>
+								<option value="ME">ME</option>
+								<option value="MI">MI</option>
+								<option value="MN">MN</option>
+								<option value="MO">MO</option>
+								<option value="MS">MS</option>
+								<option value="MT">MT</option>
+								<option value="NC">NC</option>
+								<option value="ND">ND</option>
+								<option value="NE">NE</option>
+								<option value="NH">NH</option>
+								<option value="NJ">NJ</option>
+								<option value="NM">NM</option>
+								<option value="NV">NV</option>
+								<option value="NY">NY</option>
+								<option value="OH">OH</option>
+								<option value="OK">OK</option>
+								<option value="OR">OR</option>
+								<option value="PA">PA</option>
+								<option value="PR">PR</option>
+								<option value="RI">RI</option>
+								<option value="SC">SC</option>
+								<option value="SD">SD</option>
+								<option value="TN">TN</option>
+								<option value="TX">TX</option>
+								<option value="UT">UT</option>
+								<option value="VA">VA</option>
+								<option value="VT">VT</option>
+								<option value="WA">WA</option>
+								<option value="WI">WI</option>
+								<option value="WV">WV</option>
+								<option value="WY">WY</option>
+							</select>
+							<input id="EmpZip10850465" name="EmpZip" type="text" alt maxlength="5" data-selenium-id="EmpZip_0" name="EmpZip" class="   span4 alphanumeric" />
+						</div>
+					</div>
+
+					<div class="control-group" id="EmpPhoneDiv">
+						<label class="control-label">Employer's Phone</label>
+						<div class="controls">
+							<input id="EmpPhone" name="EmpPhone" type="text" alt name="EmpPhone" data-selenium-id="EmpPhone_0" class="   customphonewithnoext  span8 nothing" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class=" " id="NotLongEnoughEmpl">
+			</div>
+
+			<div class="hidden row-fluid" id="dontShowPrevEmplHidden">
+				<input id="dontShowPrevEmpl" name="dontShowPrevEmpl" type="text" alt="1" class="hidden row-fluid nothing" value="1" />
+			</div>
+			<div class=" " id="PreviousEmploymentHeading">
+				<h4>Previous Employment Information</h4>
+			</div>
+			<div class="row-fluid" id="PreviousEmploymentInformationBody10850465">
+				<div class="span6" id="PrevEmploymentDiv110850465">
+					<div class="control-group" id="PreviousDesignationDiv10850465">
+						<label class="control-label">Job Title</label><div class="controls">
+							<input id="PreviousDesignation10850465" name="PreviousDesignation" type="text" maxlength="30" alt name="PreviousDesignation" class="   span8  nothing" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="PreviousGrossIncomeDiv10850465">
+						<label class="control-label">Monthly Income</label><div class="controls">
+							<input id="PreviousGrossIncome10850465" name="PreviousGrossIncome" type="text" alt="" name="PreviousGrossIncome" class="   span8  iscurrency" value="" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="PreviousAdditionalincomeDiv10850465">
+						<label class="control-label">Additional Income</label><div class="controls">
+							<input id="PreviousAdditionalincome10850465" name="PreviousAdditionalincome" type="text" alt="" name="PreviousAdditionalincome" onchange="if($(&quot;#PreviousAdditionalincome10850465&quot;).val() != &#39;&#39; &amp;&amp; $(&quot;#PreviousAdditionalincome10850465&quot;).val()!= 0){ $(&quot;#PreviousAdditionalincomeSource&quot;).addClass(&quot;required&quot;);}else{$(&quot;#PreviousAdditionalincomeSource&quot;).removeClass(&quot;required&quot;);}" class="   span8  iscurrency" value="" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="PreviousAdditionalincomeSourceDiv10850465">
+						<label class="control-label">Additional Income Source</label><div class="controls">
+							<input id="PreviousAdditionalincomeSource10850465" name="PreviousAdditionalincomeSource" type="text" maxlength="40" alt="" name="PreviousAdditionalincomeSource" class="   span8  alphanumeric" value="" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="EmployedSincePrefCompDiv10850465">
+						<label class="control-label">Previous Employer Start Date</label><div class="controls">
+							<input id="EmployedSincePrefComp10850465" name="EmployedSincePrefComp" type="text" maxlength="10" alt="" name="EmployedSincePrefComp" data-selenium-id="EmployedSincePrefComp_0" class="    maskdate datevalidation span8 isdate" value="" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="EmployedTillPrefCompDiv10850465">
+						<label class="control-label">Previous Employer End Date</label><div class="controls">
+							<input id="EmployedTillPrefComp10850465" name="EmployedTillPrefComp" type="text" maxlength="10" alt="" name="EmployedTillPrefComp" data-selenium-id="EmployedTillPrefComp_0" class="    maskdate datevalidation span8 isdate" value="" />
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="span6" id="PrevEmploymentDiv210850465">
+					<div class="control-group" id="PreviousEmployerDiv10850465">
+						<label class="control-label">Employer</label><div class="controls">
+							<input id="PreviousEmployer10850465" name="PreviousEmployer" type="text" maxlength="60" alt name="PreviousEmployer" data-selenium-id="PreviousEmployer_0" class="   span8  nothing" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="PreviousSupervisorNameDiv10850465">
+						<label class="control-label">Supervisor's Name</label><div class="controls">
+							<input id="PreviousSupervisorName10850465" name="PreviousSupervisorName" type="text" maxlength="60" alt name="PreviousSupervisorName" data-selenium-id="PreviousSupervisorName_0" class="   span8  nothing" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="PreviousEmpAddress1Div10850465">
+						<label class="control-label">Address</label><div class="controls">
+							<input id="PreviousEmpAddress110850465" name="PreviousEmpAddress1" type="text" maxlength="40" alt name="PreviousEmpAddress1" data-selenium-id="PreviousEmpAddress1_0" class="   span8  nothing" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="PreviousEmpAddress2Div10850465">
+						<label class="control-label">Address (line two)</label><div class="controls">
+							<input id="PreviousEmpAddress210850465" name="PreviousEmpAddress2" type="text" maxlength="40" alt name="PreviousEmpAddress2" data-selenium-id="PreviousEmpAddress2_0" class="    span8 nothing" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="PreviousEmpCitydiv10850465">
+						<label class="control-label">City</label><div class="controls">
+							<input id="PreviousEmpCity10850465" name="PreviousEmpCity" type="text" maxlength="30" alt name="PreviousEmpCity" data-selenium-id="PreviousEmpCity_0" class="   span8  alphanumeric" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="PreviousEmpStatediv10850465">
+						<label class="control-label">State-Zip</label><div class="controls">
+							<select class="   span3" id="PreviousEmpState10850465" name="PreviousEmpState" data-selenium-id="PreviousEmpState_0">
+								<option value=""></option>
+								<option value="AK">AK</option>
+								<option value="AL">AL</option>
+								<option value="AR">AR</option>
+								<option value="AZ">AZ</option>
+								<option value="CA">CA</option>
+								<option value="CO">CO</option>
+								<option value="CT">CT</option>
+								<option value="DC">DC</option>
+								<option value="DE">DE</option>
+								<option value="FL">FL</option>
+								<option value="GA">GA</option>
+								<option value="HI">HI</option>
+								<option value="IA">IA</option>
+								<option value="ID">ID</option>
+								<option value="IL">IL</option>
+								<option value="IN">IN</option>
+								<option value="KS">KS</option>
+								<option value="KY">KY</option>
+								<option value="LA">LA</option>
+								<option value="MA">MA</option>
+								<option value="MD">MD</option>
+								<option value="ME">ME</option>
+								<option value="MI">MI</option>
+								<option value="MN">MN</option>
+								<option value="MO">MO</option>
+								<option value="MS">MS</option>
+								<option value="MT">MT</option>
+								<option value="NC">NC</option>
+								<option value="ND">ND</option>
+								<option value="NE">NE</option>
+								<option value="NH">NH</option>
+								<option value="NJ">NJ</option>
+								<option value="NM">NM</option>
+								<option value="NV">NV</option>
+								<option value="NY">NY</option>
+								<option value="OH">OH</option>
+								<option value="OK">OK</option>
+								<option value="OR">OR</option>
+								<option value="PA">PA</option>
+								<option value="PR">PR</option>
+								<option value="RI">RI</option>
+								<option value="SC">SC</option>
+								<option value="SD">SD</option>
+								<option value="TN">TN</option>
+								<option value="TX">TX</option>
+								<option value="UT">UT</option>
+								<option value="VA">VA</option>
+								<option value="VT">VT</option>
+								<option value="WA">WA</option>
+								<option value="WI">WI</option>
+								<option value="WV">WV</option>
+								<option value="WY">WY</option>
+
+							</select><input id="PreviousEmpZip10850465" name="PreviousEmpZip" type="text" alt maxlength="5" name="PreviousEmpZip" data-selenium-id="PreviousEmpZip_0" class="   span4 alphanumeric" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="PreviousEmpPhoneDiv10850465">
+						<label class="control-label">Employer's Phone</label><div class="controls">
+							<input id="PreviousEmpPhone10850465" name="PreviousEmpPhone" type="text" alt data-selenium-id="PreviousEmpPhone_0" name="PreviousEmpPhone" class="   customphonewithnoext  span8 nothing" />
+						</div>
+						
+					</div>
+					
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="row-fluid ApplicantInfoSection" id="Screeninginfodiv">
+			<h2>
+				Screening Information
+			</h2>
+			<div class="row-fluid" id="ScreeningInformationBody">
+				<div class="span6" id="ScreeningDiv1">
+					<div class="control-group" id="DOB">
+						<label class="control-label">Date of Birth <span class='text text-error'><b>*</b></span> </label><div class="controls">
+							<input id="ProspectDOB10850465" name="ProspectDOB10850465" type="text" alt="" data-selenium-id="ProspectDOB" class=" required   maskdate birthdatevalidation span8 isdate" value="" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="CitizenDiv10850465">
+						<label class="control-label">Do you have a Social Security Number? <a id="Moreinfo" rel="tooltip" title="Providing a Social Security number will allow us to process your application online.  If you do not have one, or do not wish to provide one at this time, you may still complete the application form and submit any required payments, if applicable.  One of our representatives will contact you to finalize your online application." href="#" data-original-title=''><i class="icon-info-sign" style="font-size:15px"></i></a></label><div class="controls">
+							<select class=" span8" id="USCitizen10850465" name="USCitizen10850465" data-selenium-id="USCitizen" onchange="CheckCitizen(&#39;10850465&#39;)">
+								<option selected="selected" value="-1">Yes</option>
+								<option value="0">No</option>
+
+							</select>
+						</div>
+						
+					</div>
+					<div class="control-group" id="SSNNoDiv10850465">
+						<label class="control-label" id="lblSSN">SSN</label><div class="controls">
+							<input id="SSN10850465" name="SSN10850465" type="text" alt="" data-selenium-id="SSN" class=" required    span8 " value="" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="EverEvictedDiv10850465">
+						<label class="control-label">Have you ever been evicted?</label><div class="controls">
+							<select class="   span8" id="drpEverEvicted10850465" name="drpEverEvicted" data-selenium-id="drpEverEvicted" onchange="if($(&quot;#drpEverEvicted10850465&quot;).val()== &#39;Yes&#39;){ $(&quot;#IsEvictedDetail10850465&quot;).addClass(&quot;required&quot;);$(&#39;#ExplainEvictedDiv10850465 label&#39;).append(&quot; &lt;span class=&#39;text text-error&#39; style=&#39;display: inline;&#39;>*&lt;/span>&quot;);}else{$(&quot;#IsEvictedDetail10850465&quot;).removeClass(&quot;required&quot;);$(&#39;#ExplainEvictedDiv10850465 label&#39;).find(&#39;span&#39;).html(&#39;&#39;);}">
+								<option value=""></option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+
+							</select>
+						</div>
+						
+					</div>
+					<div class="control-group" id="ExplainEvictedDiv10850465">
+						<label class="control-label">If yes, explain.</label><div class="controls">
+							<div>
+								<textarea id="IsEvictedDetail10850465" name="IsEvictedDetail10850465" rows=" 0" cols=" 0" name="IsEvictedDetail" data-selenium-id="IsEvictedDetail" MaxLength="300" class="   span8 "></textarea>
+							</div>
+						</div>
+						
+					</div>
+					<div class="control-group" id="EverconvictedDiv10850465">
+						<label class="control-label">Have you ever been convicted of a felony?</label><div class="controls">
+							<select class="   span8" id="drpEverConvicted10850465" name="drpEverConvicted" data-selenium-id="drpEverConvicted" onchange="if($(&quot;#drpEverConvicted10850465&quot;).val()== &#39;Yes&#39;){ $(&quot;#IsConvictedFelonyDetail10850465&quot;).addClass(&quot;required&quot;);$(&#39;#ExplainEverConvictedDiv10850465 label&#39;).append(&quot; &lt;span class=&#39;text text-error&#39; style=&#39;display: inline;&#39;>*&lt;/span>&quot;);}else{$(&quot;#IsConvictedFelonyDetail10850465&quot;).removeClass(&quot;required&quot;);$(&#39;#ExplainEverConvictedDiv10850465 label&#39;).find(&#39;span&#39;).html(&#39;&#39;);}">
+								<option value=""></option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+
+							</select>
+						</div>
+						
+					</div>
+					<div class="control-group" id="ExplainEverConvictedDiv10850465">
+						<label class="control-label">If yes, explain.</label><div class="controls">
+							<div>
+								<textarea id="IsConvictedFelonyDetail10850465" name="IsConvictedFelonyDetail10850465" rows=" 0" cols=" 0" name="IsConvictedFelonyDetail" data-selenium-id="IsConvictedFelonyDetail" MaxLength="300" class="   span8 "></textarea>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="span6" id="ScreeningDiv2">
+					<div class="control-group" id="DLCountryDiv">
+						<label class="control-label">Country</label><div class="controls">
+							<select class="   span8 " id="drpDLCountry" name="drpDLCountry">
+								<option value="5">Afghanistan</option>
+								<option value="18">&#197;land Islands</option>
+								<option value="8">Albania</option>
+								<option value="62">Algeria</option>
+								<option value="14">American Samoa</option>
+								<option value="3">Andorra</option>
+								<option value="11">Angola</option>
+								<option value="7">Anguilla</option>
+								<option value="12">Antarctica</option>
+								<option value="6">Antigua and Barbuda</option>
+								<option value="13">Argentina</option>
+								<option value="9">Armenia</option>
+								<option value="17">Aruba</option>
+								<option value="16">Australia</option>
+								<option value="15">Austria</option>
+								<option value="19">Azerbaijan</option>
+								<option value="33">Bahamas</option>
+								<option value="26">Bahrain</option>
+								<option value="22">Bangladesh</option>
+								<option value="21">Barbados</option>
+								<option value="37">Belarus</option>
+								<option value="23">Belgium</option>
+								<option value="38">Belize</option>
+								<option value="28">Benin</option>
+								<option value="29">Bermuda</option>
+								<option value="34">Bhutan</option>
+								<option value="31">Bolivia</option>
+								<option value="20">Bosnia and Herzegovina</option>
+								<option value="36">Botswana</option>
+								<option value="35">Bouvet Island</option>
+								<option value="32">Brazil</option>
+								<option value="105">British Indian Ocean Territory</option>
+								<option value="30">Brunei Darussalam</option>
+								<option value="25">Bulgaria</option>
+								<option value="24">Burkina Faso</option>
+								<option value="27">Burundi</option>
+								<option value="116">Cambodia</option>
+								<option value="48">Cameroon</option>
+								<option value="39">Canada</option>
+								<option value="53">Cape Verde</option>
+								<option value="123">Cayman Islands</option>
+								<option value="42">Central African Republic</option>
+								<option value="210">Chad</option>
+								<option value="47">Chile</option>
+								<option value="49">China</option>
+								<option value="54">Christmas Island</option>
+								<option value="40">Cocos (Keeling) Islands</option>
+								<option value="50">Colombia</option>
+								<option value="118">Comoros</option>
+								<option value="43">Congo</option>
+								<option value="41">Congo, The Democratic Republic of The</option>
+								<option value="46">Cook Islands</option>
+								<option value="51">Costa Rica</option>
+								<option value="45">Cote D&#39;ivoire</option>
+								<option value="97">Croatia</option>
+								<option value="52">Cuba</option>
+								<option value="55">Cyprus</option>
+								<option value="56">Czech Republic</option>
+								<option value="59">Denmark</option>
+								<option value="58">Djibouti</option>
+								<option value="60">Dominica</option>
+								<option value="61">Dominican Republic</option>
+								<option value="63">Ecuador</option>
+								<option value="65">Egypt</option>
+								<option value="206">El Salvador</option>
+								<option value="88">Equatorial Guinea</option>
+								<option value="67">Eritrea</option>
+								<option value="64">Estonia</option>
+								<option value="69">Ethiopia</option>
+								<option value="72">Falkland Islands (Malvinas)</option>
+								<option value="74">Faroe Islands</option>
+								<option value="71">Fiji</option>
+								<option value="70">Finland</option>
+								<option value="75">France</option>
+								<option value="80">French Guiana</option>
+								<option value="172">French Polynesia</option>
+								<option value="211">French Southern Territories</option>
+								<option value="76">Gabon</option>
+								<option value="85">Gambia</option>
+								<option value="79">Georgia</option>
+								<option value="57">Germany</option>
+								<option value="82">Ghana</option>
+								<option value="83">Gibraltar</option>
+								<option value="89">Greece</option>
+								<option value="84">Greenland</option>
+								<option value="78">Grenada</option>
+								<option value="87">Guadeloupe</option>
+								<option value="91">Guam</option>
+								<option value="90">Guatemala</option>
+								<option value="81">Guernsey</option>
+								<option value="86">Guinea</option>
+								<option value="92">Guinea-bissau</option>
+								<option value="93">Guyana</option>
+								<option value="98">Haiti</option>
+								<option value="95">Heard Island and Mcdonald Islands</option>
+								<option value="230">Holy See (Vatican City State)</option>
+								<option value="96">Honduras</option>
+								<option value="94">Hong Kong</option>
+								<option value="99">Hungary</option>
+								<option value="108">Iceland</option>
+								<option value="104">India</option>
+								<option value="100">Indonesia</option>
+								<option value="107">Iran, Islamic Republic of</option>
+								<option value="106">Iraq</option>
+								<option value="101">Ireland</option>
+								<option value="103">Isle of Man</option>
+								<option value="102">Israel</option>
+								<option value="109">Italy</option>
+								<option value="111">Jamaica</option>
+								<option value="113">Japan</option>
+								<option value="110">Jersey</option>
+								<option value="112">Jordan</option>
+								<option value="124">Kazakhstan</option>
+								<option value="114">Kenya</option>
+								<option value="117">Kiribati</option>
+								<option value="120">Korea, Democratic People&#39;s Republic of</option>
+								<option value="121">Korea, Republic of</option>
+								<option value="122">Kuwait</option>
+								<option value="115">Kyrgyzstan</option>
+								<option value="125">Lao People&#39;s Democratic Republic</option>
+								<option value="134">Latvia</option>
+								<option value="126">Lebanon</option>
+								<option value="131">Lesotho</option>
+								<option value="130">Liberia</option>
+								<option value="135">Libyan Arab Jamahiriya</option>
+								<option value="128">Liechtenstein</option>
+								<option value="132">Lithuania</option>
+								<option value="133">Luxembourg</option>
+								<option value="146">Macao</option>
+								<option value="142">Macedonia, The Former Yugoslav Republic of</option>
+								<option value="140">Madagascar</option>
+								<option value="154">Malawi</option>
+								<option value="156">Malaysia</option>
+								<option value="153">Maldives</option>
+								<option value="143">Mali</option>
+								<option value="151">Malta</option>
+								<option value="141">Marshall Islands</option>
+								<option value="148">Martinique</option>
+								<option value="149">Mauritania</option>
+								<option value="152">Mauritius</option>
+								<option value="240">Mayotte</option>
+								<option value="155">Mexico</option>
+								<option value="73">Micronesia, Federated States of</option>
+								<option value="138">Moldova, Republic of</option>
+								<option value="137">Monaco</option>
+								<option value="145">Mongolia</option>
+								<option value="139">Montenegro</option>
+								<option value="150">Montserrat</option>
+								<option value="136">Morocco</option>
+								<option value="157">Mozambique</option>
+								<option value="144">Myanmar</option>
+								<option value="158">Namibia</option>
+								<option value="166">Nauru</option>
+								<option value="165">Nepal</option>
+								<option value="2">Netherlands</option>
+								<option value="10">Netherlands Antilles</option>
+								<option value="159">New Caledonia</option>
+								<option value="168">New Zealand</option>
+								<option value="163">Nicaragua</option>
+								<option value="160">Niger</option>
+								<option value="162">Nigeria</option>
+								<option value="167">Niue</option>
+								<option value="161">Norfolk Island</option>
+								<option value="147">Northern Mariana Islands</option>
+								<option value="164">Norway</option>
+								<option value="169">Oman</option>
+								<option value="175">Pakistan</option>
+								<option value="182">Palau</option>
+								<option value="180">Palestinian Territory, Occupied</option>
+								<option value="170">Panama</option>
+								<option value="173">Papua New Guinea</option>
+								<option value="183">Paraguay</option>
+								<option value="171">Peru</option>
+								<option value="174">Philippines</option>
+								<option value="178">Pitcairn</option>
+								<option value="176">Poland</option>
+								<option value="181">Portugal</option>
+								<option value="179">Puerto Rico</option>
+								<option value="184">Qatar</option>
+								<option value="185">Reunion</option>
+								<option value="186">Romania</option>
+								<option value="188">Russian Federation</option>
+								<option value="189">Rwanda</option>
+								<option value="196">Saint Helena</option>
+								<option value="119">Saint Kitts and Nevis</option>
+								<option value="127">Saint Lucia</option>
+								<option value="177">Saint Pierre and Miquelon</option>
+								<option value="231">Saint Vincent and The Grenadines</option>
+								<option value="238">Samoa</option>
+								<option value="201">San Marino</option>
+								<option value="205">Sao Tome and Principe</option>
+								<option value="190">Saudi Arabia</option>
+								<option value="202">Senegal</option>
+								<option value="187">Serbia</option>
+								<option value="192">Seychelles</option>
+								<option value="200">Sierra Leone</option>
+								<option value="195">Singapore</option>
+								<option value="199">Slovakia</option>
+								<option value="197">Slovenia</option>
+								<option value="191">Solomon Islands</option>
+								<option value="203">Somalia</option>
+								<option value="241">South Africa</option>
+								<option value="68">Spain</option>
+								<option value="129">Sri Lanka</option>
+								<option value="193">Sudan</option>
+								<option value="204">Suriname</option>
+								<option value="198">Svalbard and Jan Mayen</option>
+								<option value="208">Swaziland</option>
+								<option value="194">Sweden</option>
+								<option value="44">Switzerland</option>
+								<option value="207">Syrian Arab Republic</option>
+								<option value="223">Taiwan, Province of China</option>
+								<option value="214">Tajikistan</option>
+								<option value="224">Tanzania, United Republic of</option>
+								<option value="213">Thailand</option>
+								<option value="216">Timor-leste</option>
+								<option value="212">Togo</option>
+								<option value="215">Tokelau</option>
+								<option value="219">Tonga</option>
+								<option value="221">Trinidad and Tobago</option>
+								<option value="218">Tunisia</option>
+								<option value="220">Turkey</option>
+								<option value="217">Turkmenistan</option>
+								<option value="209">Turks and Caicos Islands</option>
+								<option value="222">Tuvalu</option>
+								<option value="226">Uganda</option>
+								<option value="225">Ukraine</option>
+								<option value="4">United Arab Emirates</option>
+								<option value="77">United Kingdom</option>
+								<option selected="selected" value="1">United States</option>
+								<option value="227">United States Minor Outlying Islands</option>
+								<option value="228">Uruguay</option>
+								<option value="229">Uzbekistan</option>
+								<option value="236">Vanuatu</option>
+								<option value="232">Venezuela</option>
+								<option value="235">Viet Nam</option>
+								<option value="233">Virgin Islands, British</option>
+								<option value="234">Virgin Islands, U.S.</option>
+								<option value="237">Wallis and Futuna</option>
+								<option value="66">Western Sahara</option>
+								<option value="239">Yemen</option>
+								<option value="242">Zambia</option>
+								<option value="243">Zimbabwe</option>
+
+							</select>
+						</div>
+						
+					</div>
+					<div class="control-group" id="DLNo">
+						<label class="control-label">Government Issued Identification Number</label><div class="controls">
+							<input id="DLNo" name="DLNo" type="text" maxlength="30" alt data-selenium-id="DLNo" class="   span8 alphanumeric" />
+						</div>
+						
+					</div>
+					<div class="control-group" id="DLStatediv">
+						<label class="control-label">Government Issuing Entity</label><div class="controls">
+							<select class="  input-mini" id="DLState" name="DLState">
+								<option value=""></option>
+								<option value="AK">AK</option>
+								<option value="AL">AL</option>
+								<option value="AR">AR</option>
+								<option value="AZ">AZ</option>
+								<option value="CA">CA</option>
+								<option value="CO">CO</option>
+								<option value="CT">CT</option>
+								<option value="DC">DC</option>
+								<option value="DE">DE</option>
+								<option value="FL">FL</option>
+								<option value="GA">GA</option>
+								<option value="HI">HI</option>
+								<option value="IA">IA</option>
+								<option value="ID">ID</option>
+								<option value="IL">IL</option>
+								<option value="IN">IN</option>
+								<option value="KS">KS</option>
+								<option value="KY">KY</option>
+								<option value="LA">LA</option>
+								<option value="MA">MA</option>
+								<option value="MD">MD</option>
+								<option value="ME">ME</option>
+								<option value="MI">MI</option>
+								<option value="MN">MN</option>
+								<option value="MO">MO</option>
+								<option value="MS">MS</option>
+								<option value="MT">MT</option>
+								<option value="NC">NC</option>
+								<option value="ND">ND</option>
+								<option value="NE">NE</option>
+								<option value="NH">NH</option>
+								<option value="NJ">NJ</option>
+								<option value="NM">NM</option>
+								<option value="NV">NV</option>
+								<option value="NY">NY</option>
+								<option value="OH">OH</option>
+								<option value="OK">OK</option>
+								<option value="OR">OR</option>
+								<option value="PA">PA</option>
+								<option value="PR">PR</option>
+								<option value="RI">RI</option>
+								<option value="SC">SC</option>
+								<option value="SD">SD</option>
+								<option value="TN">TN</option>
+								<option value="TX">TX</option>
+								<option value="UT">UT</option>
+								<option value="VA">VA</option>
+								<option value="VT">VT</option>
+								<option value="WA">WA</option>
+								<option value="WI">WI</option>
+								<option value="WV">WV</option>
+								<option value="WY">WY</option>
+
+							</select>
+						</div>
+						
+					</div>
+					<div class="control-group" id="CriminalChargesDiv10850465">
+						<label class="control-label">Do you have any criminal charges pending, awaiting disposition or looming in any way?</label><div class="controls">
+							<select class="   span8" id="drpCriminalCharges10850465" name="drpCriminalCharges" data-selenium-id="drpCriminalCharges" onchange="if($(&quot;#drpCriminalCharges10850465&quot;).val()== &#39;Yes&#39;){ $(&quot;#IsCriminalChgPendingDetail10850465&quot;).addClass(&quot;required&quot;);$(&#39;#ExplainCriminalCharges10850465 label&#39;).append(&quot; &lt;span class=&#39;text text-error&#39; style=&#39;display: inline;&#39;>*&lt;/span>&quot;);}else{$(&quot;#IsCriminalChgPendingDetail10850465&quot;).removeClass(&quot;required&quot;);$(&#39;#ExplainCriminalCharges10850465 label&#39;).find(&#39;span&#39;).html(&#39;&#39;);}">
+								<option value=""></option>
+								<option value="Yes">Yes</option>
+								<option value="No">No</option>
+
+							</select>
+						</div>
+						
+					</div>
+					<div class="control-group" id="ExplainCriminalCharges10850465">
+						<label class="control-label">If yes, explain.</label><div class="controls">
+							<div>
+								<textarea id="IsCriminalChgPendingDetail10850465" name="IsCriminalChgPendingDetail10850465" rows=" 0" cols=" 0" name="IsCriminalChgPendingDetail" data-selenium-id="IsCriminalChgPendingDetail" MaxLength="300" class="   span8 "></textarea>
+							</div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div>
+					<div class="span12" id="CHKBoxDivACH">
+						<label class="checkbox " for="chkTandCAgree"><input class=" required" id="chkTandCAgree" name="chkTandCAgree" type="checkbox" data-selenium-id="chkTandCAgree" /> I have read Section 7.4 of the Terms and Conditions, and I authorize the use of the information and contacts provided in this application to complete a credit, reference, and/or background check. <a target='blank' href='http://www.rentcafe.com/termsandconditions.aspx'> Click here</a> to read the Terms and Conditions. <span class='text text-error'><b>*</b></span> </label>
+						<label class="checkbox " for="chkTandCAgreeLegal"><input class=" required" id="chkTandCAgreeLegal" name="chkTandCAgreeLegal" type="checkbox" data-selenium-id="chkTandCAgreeLegal" />By submitting this application, I verify that the statements provided in this application are true and correct and I agree to be screened after payment of application fees. <span class='text text-error'><b>*</b></span> </label>
+						
+					</div>
+
+				</div>
+				
+			</div>
+			
+		</div>
+		<div class="row-fluid ApplicantInfoSection" id="PetsInformationDiv">
+			<!-- START MODIFIED CONTENT-->
+  
+
+
+
+
+      <h2 data-toggle="" data-target="">
+          Pet Information
+      </h2>
+			<div class="alert alert-info" style='display:none'>
+				
+			</div>
+      <div class="row-fluid" id="PetsInformation">
+          <div class='row-fluid'>
+              <div id="havePets" class="span12">
+                  <div class="control-group wide-label inline-labels">
+                      <label class="control-label">Do you have any pets? <span class="text text-error"><b>*</b></span> </label>
+                      <div class="controls">
+                          <label><input data-selenium-id ="hasPetsYes" type="radio" name="hasPets" class="required" value="Yes"  > Yes</label>
+                          <label><input data-selenium-id ="hasPetsNo" type="radio" name="hasPets" value="No"  > No</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div id ="PetsInformationPolicy" class='well infolist' style='display:none'>
+             <ul>
+             	
+            </ul>
+          </div>
+          <div class="row-fluid">
+              <div class="span12 hidden" id="PetDetails">
+                  <table class='table table-responsive' data-limit=0 id='PetDetailsTable' ><thead><tr><th>Pet Type</th><th>Weight(lbs)</th><th>Age</th><th>Color</th><th>Breed</th><th>Name</th><th>Gender</th><th> Spayed/Neutered</th></tr></thead></tr><tbody><tr><td class='visible-phone'><h3>Pet <span class='row_count'>0</span></h3></td><td data-label='Pet Type'><input id="PetType0" name="PetType0" type="text" maxlength="40" alt="" data-selenium-id="PetType0" class="  span12 alphanumeric" value="" /></td><td data-label='Pet Weight'><input id="PetWeight0" name="PetWeight0" type="text" alt="" data-selenium-id="PetWeight0" class="  span12 isinteger" value="" /></td><td data-label='Pet Age'><input id="PetAge0" name="PetAge0" type="text" alt="" data-selenium-id="PetAge0" class="  span12 isinteger" value="" /></td><td data-label='Pet Color'><input id="PetColor0" name="PetColor0" type="text" maxlength="40" alt="" data-selenium-id="PetColor0" class="  span12 alphanumeric" value="" /></td><td data-label='Pet Breed'><input id="PetBreed0" name="PetBreed0" type="text" maxlength="40" alt="" data-selenium-id="PetBreed0" class="  span12 alphanumeric" value="" /></td><td data-label='Pet Name'><input id="PetName0" name="PetName0" type="text" maxlength="40" alt="" data-selenium-id="PetName0" class="  span12 alphanumeric" value="" /></td><td data-label='Pet Gender'><input id="PetGender0" name="PetGender0" type="text" maxlength="40" alt="" data-selenium-id="PetGender0" class="  span12 alphanumeric" value="" /></td><td data-label='Pet Spayed'><select class="  span12" id="PetSpayed0" name="PetSpayed0" data-selenium-id="PetSpayed0">
+	<option value="Yes">Yes</option>
+	<option value="No">No</option>
+
+</select><td class="removeRowCT"><a href="#" data-selenium-id ="removeRowPets0" class="removeRowPets not_attach_event" data-table="#PetDetailsTable" ><i class="iconm iconm-cross3"></i></a></td></tbody></table>
+                  <p class="text-right"><a href="#" data-selenium-id ="addNewRowPets" class="addNewRowPets not_attach_event" data-table="#PetDetailsTable">+ Add another pet  </a></p>
+              </div>
+          </div>
+      </div>
+    
+
+
+  
+		</div>
+		<input id="PetSection" name="PetSection" type="hidden" class="" value="Active" /><input id="PetCount" name="PetCount" type="hidden" class="" value="" /><div class="          row-fluid ApplicantInfoSection   " id="VehicleInformationDiv">
+			
+      <h2 data-toggle="" data-target="">
+          Vehicle Information
+      </h2>
+      <div class="alert alert-info" style='display:none'>
+				
+			</div>
+      <div class="row-fluid" id="VehicleInformation">
+          <div class='row-fluid'>
+
+              <div id="havevehicles" class="span12">
+                  <div class="control-group wide-label inline-labels">
+                      <label class="control-label">Do you have any vehicles? <span class="text text-error"><b>*</b></span> </label>
+                      <div class="controls">
+                          <label><input type="radio" data-selenium-id ="hasVehiclesYes" name="hasVehicles"  class="required" value="Yes"  > Yes</label>
+                          <label><input type="radio" data-selenium-id ="hasVehiclesNo" name="hasVehicles" value="No"   > No</label>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row-fluid">
+              <div class="span12 hidden" id="VehicleDetails">
+
+                   <table class='table table-responsive' id='VehicleDetailsTable' data-limit='4'><thead><tr><th>Make</th><th>Model</th><th>Year</th><th>Color</th><th>License#</th><th>State</th></tr></thead><tr vehiclerow='1' id='vehiclerow1'><td class='visible-phone'><h3>Vehicle <span class='row_count'>1</span></h3></td><td data-label='Make'><input id="Make1" name="Make1" type="text" maxlength="20" alt data-selenium-id="Make1" isReq="0" class="   VehicleColumn span12 alphanumeric" /></td><td data-label='Model'><input id="Model1" name="Model1" type="text" maxlength="20" alt data-selenium-id="Model1" isReq="0" class="   VehicleColumn span12 alphanumeric" /></td><td data-label='Year'><input id="Year1" name="Year1" type="text" alt="" data-selenium-id="Year1" isReq="0" class="   VehicleColumn span12 year isinteger" value="" /></td><td data-label='Color'><input id="Color1" name="Color1" type="text" maxlength="20" alt data-selenium-id="Color1" isReq="0" class="   VehicleColumn span12 alphanumeric" /></td><td data-label='License Plate'><input id="License1" name="License1" type="text" maxlength="20" alt data-selenium-id="License1" isReq="0" class="   VehicleColumn span12 nothing" /></td><td data-label='State'><select class="   VehicleColumn span12" id="State1" name="State1" data-selenium-id="State1" isReq="0">
+	<option value=""></option>
+	<option value="AK">AK</option>
+	<option value="AL">AL</option>
+	<option value="AR">AR</option>
+	<option value="AZ">AZ</option>
+	<option value="CA">CA</option>
+	<option value="CO">CO</option>
+	<option value="CT">CT</option>
+	<option value="DC">DC</option>
+	<option value="DE">DE</option>
+	<option value="FL">FL</option>
+	<option value="GA">GA</option>
+	<option value="HI">HI</option>
+	<option value="IA">IA</option>
+	<option value="ID">ID</option>
+	<option value="IL">IL</option>
+	<option value="IN">IN</option>
+	<option value="KS">KS</option>
+	<option value="KY">KY</option>
+	<option value="LA">LA</option>
+	<option value="MA">MA</option>
+	<option value="MD">MD</option>
+	<option value="ME">ME</option>
+	<option value="MI">MI</option>
+	<option value="MN">MN</option>
+	<option value="MO">MO</option>
+	<option value="MS">MS</option>
+	<option value="MT">MT</option>
+	<option value="NC">NC</option>
+	<option value="ND">ND</option>
+	<option value="NE">NE</option>
+	<option value="NH">NH</option>
+	<option value="NJ">NJ</option>
+	<option value="NM">NM</option>
+	<option value="NV">NV</option>
+	<option value="NY">NY</option>
+	<option value="OH">OH</option>
+	<option value="OK">OK</option>
+	<option value="OR">OR</option>
+	<option value="PA">PA</option>
+	<option value="PR">PR</option>
+	<option value="RI">RI</option>
+	<option value="SC">SC</option>
+	<option value="SD">SD</option>
+	<option value="TN">TN</option>
+	<option value="TX">TX</option>
+	<option value="UT">UT</option>
+	<option value="VA">VA</option>
+	<option value="VT">VT</option>
+	<option value="WA">WA</option>
+	<option value="WI">WI</option>
+	<option value="WV">WV</option>
+	<option value="WY">WY</option>
+
+</select></td><td class="removeRowCT"><a href="#" data-selenium-id ="removeRowVehicles1" class="removeRowVehicles not_attach_event"><i class="iconm iconm-cross3"></i></a></td></tbody></table>                                                            
+                  <p class="text-right"><a href="#" data-selenium-id ="addNewRowVehicles" class="addNewRowVehicles" data-table="#VehicleDetailsTable">+ Add another vehicle (Limit 4)</a></p>
+              </div>
+
+          </div>            
+
+      </div>
+
+ 
+
+		</div>
+		<input id="VechileSection" name="VechileSection" type="hidden" class="" value="Active" /><div class=" row-fluid ApplicantInfoSection" id="Emergencyinfodiv">
+			<h2 data-toggle="collapse" data-target="#EmergencyInformation">
+				Emergency Contact <span data-selenium-id='EmergencyCaret' class='icon-caret-up pull-right'></span>
+
+			</h2>
+			<div class="row-fluid collapse in" id="EmergencyInformation">
+				<div class=" ">
+					<div class="span6" id="EmergencyDiv1">
+						<div class="control-group" id="Name">
+							<label class="control-label">Name</label><div class="controls">
+								<input id="EmergencyContactName" name="EmergencyContactName" type="text" maxlength="40" alt class="   span8 alphanumeric" />
+							</div>
+							
+						</div>
+						<div class="control-group" id="Relationship">
+							<label class="control-label ">Relationship</label><div class="controls">
+								<select class="   span8 " id="EmergencyRelationship" name="EmergencyRelationship">
+									<option value=""></option>
+									<option value="Husband">Husband</option>
+									<option value="Wife">Wife</option>
+									<option value="Son">Son</option>
+									<option value="Daughter">Daughter</option>
+									<option value="Friend">Friend</option>
+									<option value="Other">Other</option>
+
+								</select>
+							</div>
+							
+						</div>
+						<div class="control-group" id="Phone">
+							<label class="control-label ">Phone</label><div class="controls">
+								<input id="EmergencyPhone" name="EmergencyPhone" type="text" alt class="  phone  span8 nothing" />
+							</div>
+							
+						</div>
+						
+					</div>
+					<div class="span6" id="EmergencyDiv2">
+						<div class="control-group" id="EmergCountryDiv">
+							<label class="control-label ">Country</label><div class="controls">
+								<select class="   span8 " id="drpEmergCountry" name="drpEmergCountry">
+									<option value="5">Afghanistan</option>
+									<option value="18">&#197;land Islands</option>
+									<option value="8">Albania</option>
+									<option value="62">Algeria</option>
+									<option value="14">American Samoa</option>
+									<option value="3">Andorra</option>
+									<option value="11">Angola</option>
+									<option value="7">Anguilla</option>
+									<option value="12">Antarctica</option>
+									<option value="6">Antigua and Barbuda</option>
+									<option value="13">Argentina</option>
+									<option value="9">Armenia</option>
+									<option value="17">Aruba</option>
+									<option value="16">Australia</option>
+									<option value="15">Austria</option>
+									<option value="19">Azerbaijan</option>
+									<option value="33">Bahamas</option>
+									<option value="26">Bahrain</option>
+									<option value="22">Bangladesh</option>
+									<option value="21">Barbados</option>
+									<option value="37">Belarus</option>
+									<option value="23">Belgium</option>
+									<option value="38">Belize</option>
+									<option value="28">Benin</option>
+									<option value="29">Bermuda</option>
+									<option value="34">Bhutan</option>
+									<option value="31">Bolivia</option>
+									<option value="20">Bosnia and Herzegovina</option>
+									<option value="36">Botswana</option>
+									<option value="35">Bouvet Island</option>
+									<option value="32">Brazil</option>
+									<option value="105">British Indian Ocean Territory</option>
+									<option value="30">Brunei Darussalam</option>
+									<option value="25">Bulgaria</option>
+									<option value="24">Burkina Faso</option>
+									<option value="27">Burundi</option>
+									<option value="116">Cambodia</option>
+									<option value="48">Cameroon</option>
+									<option value="39">Canada</option>
+									<option value="53">Cape Verde</option>
+									<option value="123">Cayman Islands</option>
+									<option value="42">Central African Republic</option>
+									<option value="210">Chad</option>
+									<option value="47">Chile</option>
+									<option value="49">China</option>
+									<option value="54">Christmas Island</option>
+									<option value="40">Cocos (Keeling) Islands</option>
+									<option value="50">Colombia</option>
+									<option value="118">Comoros</option>
+									<option value="43">Congo</option>
+									<option value="41">Congo, The Democratic Republic of The</option>
+									<option value="46">Cook Islands</option>
+									<option value="51">Costa Rica</option>
+									<option value="45">Cote D&#39;ivoire</option>
+									<option value="97">Croatia</option>
+									<option value="52">Cuba</option>
+									<option value="55">Cyprus</option>
+									<option value="56">Czech Republic</option>
+									<option value="59">Denmark</option>
+									<option value="58">Djibouti</option>
+									<option value="60">Dominica</option>
+									<option value="61">Dominican Republic</option>
+									<option value="63">Ecuador</option>
+									<option value="65">Egypt</option>
+									<option value="206">El Salvador</option>
+									<option value="88">Equatorial Guinea</option>
+									<option value="67">Eritrea</option>
+									<option value="64">Estonia</option>
+									<option value="69">Ethiopia</option>
+									<option value="72">Falkland Islands (Malvinas)</option>
+									<option value="74">Faroe Islands</option>
+									<option value="71">Fiji</option>
+									<option value="70">Finland</option>
+									<option value="75">France</option>
+									<option value="80">French Guiana</option>
+									<option value="172">French Polynesia</option>
+									<option value="211">French Southern Territories</option>
+									<option value="76">Gabon</option>
+									<option value="85">Gambia</option>
+									<option value="79">Georgia</option>
+									<option value="57">Germany</option>
+									<option value="82">Ghana</option>
+									<option value="83">Gibraltar</option>
+									<option value="89">Greece</option>
+									<option value="84">Greenland</option>
+									<option value="78">Grenada</option>
+									<option value="87">Guadeloupe</option>
+									<option value="91">Guam</option>
+									<option value="90">Guatemala</option>
+									<option value="81">Guernsey</option>
+									<option value="86">Guinea</option>
+									<option value="92">Guinea-bissau</option>
+									<option value="93">Guyana</option>
+									<option value="98">Haiti</option>
+									<option value="95">Heard Island and Mcdonald Islands</option>
+									<option value="230">Holy See (Vatican City State)</option>
+									<option value="96">Honduras</option>
+									<option value="94">Hong Kong</option>
+									<option value="99">Hungary</option>
+									<option value="108">Iceland</option>
+									<option value="104">India</option>
+									<option value="100">Indonesia</option>
+									<option value="107">Iran, Islamic Republic of</option>
+									<option value="106">Iraq</option>
+									<option value="101">Ireland</option>
+									<option value="103">Isle of Man</option>
+									<option value="102">Israel</option>
+									<option value="109">Italy</option>
+									<option value="111">Jamaica</option>
+									<option value="113">Japan</option>
+									<option value="110">Jersey</option>
+									<option value="112">Jordan</option>
+									<option value="124">Kazakhstan</option>
+									<option value="114">Kenya</option>
+									<option value="117">Kiribati</option>
+									<option value="120">Korea, Democratic People&#39;s Republic of</option>
+									<option value="121">Korea, Republic of</option>
+									<option value="122">Kuwait</option>
+									<option value="115">Kyrgyzstan</option>
+									<option value="125">Lao People&#39;s Democratic Republic</option>
+									<option value="134">Latvia</option>
+									<option value="126">Lebanon</option>
+									<option value="131">Lesotho</option>
+									<option value="130">Liberia</option>
+									<option value="135">Libyan Arab Jamahiriya</option>
+									<option value="128">Liechtenstein</option>
+									<option value="132">Lithuania</option>
+									<option value="133">Luxembourg</option>
+									<option value="146">Macao</option>
+									<option value="142">Macedonia, The Former Yugoslav Republic of</option>
+									<option value="140">Madagascar</option>
+									<option value="154">Malawi</option>
+									<option value="156">Malaysia</option>
+									<option value="153">Maldives</option>
+									<option value="143">Mali</option>
+									<option value="151">Malta</option>
+									<option value="141">Marshall Islands</option>
+									<option value="148">Martinique</option>
+									<option value="149">Mauritania</option>
+									<option value="152">Mauritius</option>
+									<option value="240">Mayotte</option>
+									<option value="155">Mexico</option>
+									<option value="73">Micronesia, Federated States of</option>
+									<option value="138">Moldova, Republic of</option>
+									<option value="137">Monaco</option>
+									<option value="145">Mongolia</option>
+									<option value="139">Montenegro</option>
+									<option value="150">Montserrat</option>
+									<option value="136">Morocco</option>
+									<option value="157">Mozambique</option>
+									<option value="144">Myanmar</option>
+									<option value="158">Namibia</option>
+									<option value="166">Nauru</option>
+									<option value="165">Nepal</option>
+									<option value="2">Netherlands</option>
+									<option value="10">Netherlands Antilles</option>
+									<option value="159">New Caledonia</option>
+									<option value="168">New Zealand</option>
+									<option value="163">Nicaragua</option>
+									<option value="160">Niger</option>
+									<option value="162">Nigeria</option>
+									<option value="167">Niue</option>
+									<option value="161">Norfolk Island</option>
+									<option value="147">Northern Mariana Islands</option>
+									<option value="164">Norway</option>
+									<option value="169">Oman</option>
+									<option value="175">Pakistan</option>
+									<option value="182">Palau</option>
+									<option value="180">Palestinian Territory, Occupied</option>
+									<option value="170">Panama</option>
+									<option value="173">Papua New Guinea</option>
+									<option value="183">Paraguay</option>
+									<option value="171">Peru</option>
+									<option value="174">Philippines</option>
+									<option value="178">Pitcairn</option>
+									<option value="176">Poland</option>
+									<option value="181">Portugal</option>
+									<option value="179">Puerto Rico</option>
+									<option value="184">Qatar</option>
+									<option value="185">Reunion</option>
+									<option value="186">Romania</option>
+									<option value="188">Russian Federation</option>
+									<option value="189">Rwanda</option>
+									<option value="196">Saint Helena</option>
+									<option value="119">Saint Kitts and Nevis</option>
+									<option value="127">Saint Lucia</option>
+									<option value="177">Saint Pierre and Miquelon</option>
+									<option value="231">Saint Vincent and The Grenadines</option>
+									<option value="238">Samoa</option>
+									<option value="201">San Marino</option>
+									<option value="205">Sao Tome and Principe</option>
+									<option value="190">Saudi Arabia</option>
+									<option value="202">Senegal</option>
+									<option value="187">Serbia</option>
+									<option value="192">Seychelles</option>
+									<option value="200">Sierra Leone</option>
+									<option value="195">Singapore</option>
+									<option value="199">Slovakia</option>
+									<option value="197">Slovenia</option>
+									<option value="191">Solomon Islands</option>
+									<option value="203">Somalia</option>
+									<option value="241">South Africa</option>
+									<option value="68">Spain</option>
+									<option value="129">Sri Lanka</option>
+									<option value="193">Sudan</option>
+									<option value="204">Suriname</option>
+									<option value="198">Svalbard and Jan Mayen</option>
+									<option value="208">Swaziland</option>
+									<option value="194">Sweden</option>
+									<option value="44">Switzerland</option>
+									<option value="207">Syrian Arab Republic</option>
+									<option value="223">Taiwan, Province of China</option>
+									<option value="214">Tajikistan</option>
+									<option value="224">Tanzania, United Republic of</option>
+									<option value="213">Thailand</option>
+									<option value="216">Timor-leste</option>
+									<option value="212">Togo</option>
+									<option value="215">Tokelau</option>
+									<option value="219">Tonga</option>
+									<option value="221">Trinidad and Tobago</option>
+									<option value="218">Tunisia</option>
+									<option value="220">Turkey</option>
+									<option value="217">Turkmenistan</option>
+									<option value="209">Turks and Caicos Islands</option>
+									<option value="222">Tuvalu</option>
+									<option value="226">Uganda</option>
+									<option value="225">Ukraine</option>
+									<option value="4">United Arab Emirates</option>
+									<option value="77">United Kingdom</option>
+									<option selected="selected" value="1">United States</option>
+									<option value="227">United States Minor Outlying Islands</option>
+									<option value="228">Uruguay</option>
+									<option value="229">Uzbekistan</option>
+									<option value="236">Vanuatu</option>
+									<option value="232">Venezuela</option>
+									<option value="235">Viet Nam</option>
+									<option value="233">Virgin Islands, British</option>
+									<option value="234">Virgin Islands, U.S.</option>
+									<option value="237">Wallis and Futuna</option>
+									<option value="66">Western Sahara</option>
+									<option value="239">Yemen</option>
+									<option value="242">Zambia</option>
+									<option value="243">Zimbabwe</option>
+
+								</select>
+							</div>
+							
+						</div>
+						<div class="control-group" id="EmergencyContactAddress1">
+							<label class="control-label ">Address</label><div class="controls">
+								<input id="EmergencyContactAddress1" name="EmergencyContactAddress1" type="text" maxlength="40" alt class="   span8 nothing" />
+							</div>
+							
+						</div>
+						<div class="control-group" id="EmergencyContactAddress2">
+							<label class="control-label ">Address (line two)</label><div class="controls">
+								<input id="EmergencyContactAddress2" name="EmergencyContactAddress2" type="text" maxlength="40" alt class="   span8 nothing" />
+							</div>
+							
+						</div>
+						<div class="control-group" id="EmergCityDiv">
+							<label class="control-label ">City</label><div class="controls">
+								<input id="EmergencyCity" name="EmergencyCity" type="text" maxlength="30" alt class="   span8 alphanumeric" />
+							</div>
+							
+						</div>
+						<div class="control-group" id="EmergStateZipdiv">
+							<label class="control-label ">State-Zip</label><div class="controls">
+								<select class="   span3 do-not-translate" id="EmergencyState" name="EmergencyState">
+									<option value=""></option>
+									<option value="AK">AK</option>
+									<option value="AL">AL</option>
+									<option value="AR">AR</option>
+									<option value="AZ">AZ</option>
+									<option value="CA">CA</option>
+									<option value="CO">CO</option>
+									<option value="CT">CT</option>
+									<option value="DC">DC</option>
+									<option value="DE">DE</option>
+									<option value="FL">FL</option>
+									<option value="GA">GA</option>
+									<option value="HI">HI</option>
+									<option value="IA">IA</option>
+									<option value="ID">ID</option>
+									<option value="IL">IL</option>
+									<option value="IN">IN</option>
+									<option value="KS">KS</option>
+									<option value="KY">KY</option>
+									<option value="LA">LA</option>
+									<option value="MA">MA</option>
+									<option value="MD">MD</option>
+									<option value="ME">ME</option>
+									<option value="MI">MI</option>
+									<option value="MN">MN</option>
+									<option value="MO">MO</option>
+									<option value="MS">MS</option>
+									<option value="MT">MT</option>
+									<option value="NC">NC</option>
+									<option value="ND">ND</option>
+									<option value="NE">NE</option>
+									<option value="NH">NH</option>
+									<option value="NJ">NJ</option>
+									<option value="NM">NM</option>
+									<option value="NV">NV</option>
+									<option value="NY">NY</option>
+									<option value="OH">OH</option>
+									<option value="OK">OK</option>
+									<option value="OR">OR</option>
+									<option value="PA">PA</option>
+									<option value="PR">PR</option>
+									<option value="RI">RI</option>
+									<option value="SC">SC</option>
+									<option value="SD">SD</option>
+									<option value="TN">TN</option>
+									<option value="TX">TX</option>
+									<option value="UT">UT</option>
+									<option value="VA">VA</option>
+									<option value="VT">VT</option>
+									<option value="WA">WA</option>
+									<option value="WI">WI</option>
+									<option value="WV">WV</option>
+									<option value="WY">WY</option>
+
+								</select><input id="EmergencyZip" name="EmergencyZip" type="text" alt class="   span4 alphanumeric" />
+							</div>
+							
+						</div>
+						
+					</div>
+
+				</div>
+				
+			</div>
+			
+		</div>
+		<input id="EmergencySection" name="EmergencySection" type="hidden" class="" value="Active" /><div class="row-fluid ApplicantInfoSection" id="CustomSetupDiv">
+			
+		</div>
+		<input id="formName2" name="formName2" type="hidden" class="" value="ApplicantInformation" /><input id="isDocumentSetupAvailbleAtThisStep" name="isDocumentSetupAvailbleAtThisStep" type="hidden" class="" value="0" /><input id="ProspectId" name="ProspectId" type="hidden" class="" value="10850465" /><input id="myOlePropertyId" name="myOlePropertyId" type="hidden" class="" value="159784" /><input id="ContentclassName" name="ContentclassName" type="hidden" class="" value="ApplicantInformation" /><input id="myButtonClicked" name="myButtonClicked" type="hidden" class="" value="Save" /><input id="ProspectEmailHdn" name="ProspectEmailHdn" type="hidden" class="" value="aettrna@gmail.com" /><input id="AdditionalOccupantEvent" name="AdditionalOccupantEvent" type="hidden" class="" value="" /><input id="txtAddEditMode" name="txtAddEditMode" type="hidden" class="" value="True" /><input id="AdditionalOccId" name="AdditionalOccId" type="hidden" class="" value="" /><input id="Voyagertype" name="Voyagertype" type="hidden" class="" value="True" /><input id="bHideAdvancedAppFields" name="bHideAdvancedAppFields" type="hidden" class="" value="False" /><input id="SmartyStreestLookup" name="SmartyStreestLookup" type="hidden" class="" value="0" /><div class="row-fluid" id="Buttons">
+			<button type="button" class="btn  btn" name="btnSave" id="btnSave" onclick="onclickfunctions(&#39;Save&#39;);">Save</button>
+			<button type="button" class="btn btn btn-primary" name="btnNext" id="btnNext" onclick="onclickfunctions(&#39;Next&#39;);">Save & Continue<div class='whitearrow'></div></button>
+			
+		</div>
+		<input id="formName" name="formName" type="hidden" class="" value="WVNJLkNhZmUuUkMuUHJvcGVydHlTaXRlQ29udGVudC5Db250ZW50Q2xhc3Nlcy5BcHBsaWNhbnRJbmZvcm1hdGlvbiNTYXZlQ29udGVudA%3d%3d-Xs9HxcPIa%2bw%3d" />
+	</form><div><span class='text-error'>&#42;</span>&nbsp;Required field</div>
+</div>                                                                               
+
+</div></div></div></div>
+ 
+</div>
+		</div>
+      </section>
+      <footer class="footer">
+			<div class="container-bs3">
+				<div class="footer-links">
+					<ul class="list-inline site-links">
+						<li><a href="/apartmentsforrent/homeaboutus.aspx" target="_blank">About Us</a></li>
+						<li><a href="/apartmentsforrent/homefaq.aspx" target="_blank">FAQ</a></li>
+						<li><a href="/apartments/howitworks.aspx" target="_blank">How it Works</a></li>
+						<li><a href="/apartmentsforrent/homeformanagers.aspx" target="_blank">List with RENTCaf&eacute;</a></li>
+						<li><a href="/apartments/privacypolicy.aspx" target="_blank">Privacy Policy</a></li>
+						<li><a href="/apartments/termsandconditions.aspx" target="_blank">Terms</a></li>
+						<li><a href="http://www.rentcafe.com/blog/" target="_blank">RENTCaf&eacute; Blog</a></li>
+					</ul>
+				</div>
+				<div class="footer-links">
+					<ul class="list-inline yardi-sites">
+						<li><a href="http://www.yardi.com/" target="_blank">Yardi</a></li>
+						<li><a href="http://www.point2.com/" target="_blank">Point2</a></li>
+						<li><a href="http://www.propertyshark.com/" target="_blank">PropertyShark</a></li>
+						<li><a href="http://www.point2homes.com/" target="_blank">Point2 Homes</a></li>
+						<li><a href="http://www.multihousingnews.com/" target="_blank">Multihousing News</a></li>
+						<li><a href="http://www.cpexecutive.com/" target="_blank">Commercial Property Executive</a></li>
+						<li><a href="http://www.hudhomestore.com/" target="_blank">HUD Homestore</a></li>
+						<li><a href="http://www.yesenergymanagement.com/" target="_blank">YES Energy Management</a></li>
+						<li><a href="https://www.screeningworks.com/" target="_blank">ScreeningWorks</a></li>
+						<li><a href="http://www.residentshield.com/" target="_blank">ResidentShield</a></li>
+					</ul>
+				</div>
+				<a class='rc-logo' href='http://www.rentcafe.com'></a>
+				<div class="copyright">
+					<img src="/Themes/rentcafe/images/ech_logo.png" align="bottom" alt="equal housing opportunity" title="equal housing opportunity" width="20" height="12"> © 2017 Yardi Systems, Inc. All Rights Reserved.										
+				</div>
+			</div>
+		</footer>
+    </div>
+  </div>
+</div>
+<script>
+	$(window).bind("load", function() { 
+		var footerH = 0,
+		$footerSelector = $("footer");
+		
+		function footerPos() {
+			footerH = $footerSelector.outerHeight();
+			if ( ($(document.body).height()) < $(window).height()) {
+				$footerSelector.addClass('sticky-footer');
+			} else {
+				$footerSelector.removeClass('sticky-footer');
+			}
+		}
+		setTimeout(function(){ footerPos(); }, 100);
+
+		$(window).scroll(footerPos).resize(footerPos)
+	});
+</script>
+<script src="https://t.rentcafe.com/rctv1.0.js" type="text/javascript" ></script>
+<script src="//cdngeneral.rentcafe.com/js/cafe.noticepeak.min.1499815154.js" type="text/javascript" async></script>
+<script src="//cdngeneral.rentcafe.com/js/cafe.cookies.min.1499815148.js" type="text/javascript" ></script>
+<script src="//cdngeneral.rentcafe.com/js/cafe.dialog.min.1499815150.js" type="text/javascript" ></script>
+<script src="//cdngeneral.rentcafe.com/js/modernizr.min.1501208720.js" type="text/javascript" ></script>
+<script src="//cdngeneral.rentcafe.com/js/classie.min.1501208692.js" type="text/javascript" async></script>
+<script src="//cdngeneral.rentcafe.com/js/nudgeFx.min.1501208722.js" type="text/javascript" ></script>
+<script src="//cdngeneral.rentcafe.com/js/adwords_gadid.min.1501208686.js" type="text/javascript" async></script>
+<script src="//cdngeneral.rentcafe.com/js/cultures/globalize.culture.en-US.min.1499815514.js" type="text/javascript" ></script>
+<script src="//cdngeneral.rentcafe.com/js/Intdate.min.1501208698.js" type="text/javascript" ></script>
+<script src="//popcard.ltsolutions.com/js/DynamicCampaign.js" type="text/javascript" ></script>
+<script type="text/javascript">$(document).ready(function() {Globalize.culture("en-US");})</script>
+	<script type="text/javascript">
+    if (typeof ClickTrack != "undefined") {
+        ClickTrack._PageDisplayName = 'QXBwbGljYW50IEluZm9ybWF0aW9uIzAuOTc2MDEzNw%3d%3d-4no7Dh%2fDLmY%3d';
+        ClickTrack.SiteSection = 'OLE';
+        ClickTrack._CCDisplayName = '';
+        ClickTrack.CCQS = '';
+        ClickTrack._ULI = 'OTExNTYzOCMwLjI0NjA3Ng%3d%3d-WyxttlUMPx8%3d';
+        ClickTrack._Property = 'MTU5Nzg0IzAuMTk4MjE1NA%3d%3d-AnjqSp9Kj%2bg%3d';
+        
+        
+        ClickTrack.init();
+    }
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {Globalize.culture('en-US');})
+</script>
+
+<script type="text/javascript">
+	$(document).ready(function() {Globalize.culture('en-US');})
+</script>
+
+	<script type='text/javascript'>
+var SitebarSlideOpen = false;
+var currSlideCotent = "";
+$(function () {
+     var closebtn = $("<a class='closebtn'><i class='icon-remove'></i></a>");
+     closebtn.click(function(e) { closeSiteBar(); });
+     $('#floatingSitebar').appendTo($('body')); 
+     $('a.toolbarLink').tooltip({ placement: 'left', html: true }).click(function(e){
+         e.preventDefault();
+         $(this).parent().find(".tooltip.fade").fadeOut("fast", function(){ $(this).remove(); });
+         if($($(this).attr('href')).size() == 0) { closeSiteBar(); currSlideCotent = ""; return false; }
+         currSlideCotent = $(this).attr('href');
+         if (SitebarSlideOpen === false) {
+             closebtn.appendTo($(currSlideCotent));
+             $(currSlideCotent).fadeIn();
+             $(this).css('opacity', '1');
+             SitebarSlideOpen = true;
+         } else {
+             $(currSlideCotent).fadeOut();
+             $(this).css('opacity', '0.6');
+             SitebarSlideOpen = false;
+         }
+     });
+});
+function closeSiteBar(){ if (SitebarSlideOpen){ $("a[href='" + currSlideCotent + "']").trigger("click"); } }
+</script>
+
+
+	<script type="text/javascript">$(document).ready(function() { $("#PetWeight0").blur(function() { formatInteger(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#PetAge0").blur(function() { formatInteger(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#Year1").blur(function() { formatInteger(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#ResidencyFrom10850465").blur(function() { formatDate(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#Currentrentpaid10850465").blur(function() { formatCurrency(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#PreviousResidencyFrom10850465").blur(function() { formatDate(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#Previousrentpaid10850465").blur(function() { formatCurrency(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#EmployedSince10850465").blur(function() { formatDate(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#GrossIncome10850465").blur(function() { formatCurrency(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#Additionalincome10850465").blur(function() { formatCurrency(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#PreviousGrossIncome10850465").blur(function() { formatCurrency(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#PreviousAdditionalincome10850465").blur(function() { formatCurrency(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#EmployedSincePrefComp10850465").blur(function() { formatDate(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#EmployedSincePrefComp10850465").datepicker({dateFormat: "m/d/yy", minDate: Globalize.parseDate(""), maxDate: Globalize.parseDate("12/31/9999") });});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#EmployedTillPrefComp10850465").blur(function() { formatDate(this);});});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#EmployedTillPrefComp10850465").datepicker({dateFormat: "m/d/yy", minDate: Globalize.parseDate(""), maxDate: Globalize.parseDate("12/31/9999") });});</script>
+
+	<script type="text/javascript">$(document).ready(function() { $("#ProspectDOB10850465").blur(function() { formatDate(this);});});</script>
+
+	<script type="text/javascript">
+(function($) {
+$(function() { 
+var form;
+form= $('#ApplicantInformation').validate(
+{
+wrapper:  'div',
+errorElement: "div",
+displayAsToolTip: true,
+tooltipDelay: 3000,
+onkeyup: false,
+ignore: '.ignore'
+});
+LoadValidations();
+$('#Buttons').unbind('click'); 
+
+$('#Buttons').bind('click',function(e) 
+{
+if($('#ApplicantInformation').valid())
+ { 
+ EncodeFormElementsToBase64(); 
+$.ajax({
+url: "/rcformsave.ashx",
+type: "POST",
+data:$('#ApplicantInformation').serialize(), 
+success: function(html){
+ var notifymsg = "";
+notifymsg = $.format(html,"#noticeboxdiv_ApplicantInformation");
+$('#noticeboxdiv_ApplicantInformation').append(notifymsg);
+ DecodeFormElementsToBase64(); 
+}
+});
+}
+else
+{
+form.focusInvalid();
+}
+e.preventDefault(); e.stopPropagation();
+});
+});
+})(jQuery);
+</script>
+
+
+	<script type="text/javascript" async src="//assets.pinterest.com/js/pinit.js"></script>
+
+	<script type="text/javascript">
+    $(document).ready(function () {
+        (function (doc, script) {
+            var js,
+        fjs = doc.getElementsByTagName(script)[0],
+        add = function (url, id) {
+            if (doc.getElementById(id)) { return; }
+            js = doc.createElement(script);
+            js.src = url;
+            id && (js.id = id);
+            fjs.parentNode.insertBefore(js, fjs);
+        };
+			// Google+ button
+			add('//apis.google.com/js/platform.js');
+            // Twitter SDK
+            add('//platform.twitter.com/widgets.js', 'twitter-wjs');
+			// facebook share
+			add("//connect.facebook.net/en_GB/all.js#xfbml=1&appId=421990417857971");
+        } (document, 'script'));
+    });
+</script>
+
+	<script text='text/javascript'>$('body').addClass('rentcafe_theme')</script>
+
+	<script type='text/javascript'>$('body').addClass('olemenubody');</script>
+
+	<script>new gnMenu( document.getElementById( 'ole-menu' ) );</script>
+
+	<script type='text/javascript'>$('document').ready(function(){  if(window.innerWidth > 1700){ $('#ole-menu a.ole-icon-menu').click(); }    });</script>
+
+	<script type='text/javascript'>$(document).ready(function() {$('#OLESummaryMenuSummaryLink').click(function() { if ($('#AptSummaryMegaMenu').hasClass("in")) {    $('#AptSummaryMegaMenu').attr('aria-hidden', 'true');   $('#OLESummaryMenuSummaryLink').attr('aria-expanded', 'false'); } else {   $('#AptSummaryMegaMenu').attr('aria-hidden', 'false');   $('#OLESummaryMenuSummaryLink').attr('aria-expanded', 'true'); }});});</script>
+
+	<script type='text/javascript'>
+                                ResizeRightColumn = function(){
+                                    var removePX = function(str){return parseInt(str.replace('px',''));};
+                                    if($('#RightColumn').length > 0){
+                                        var div = $('#RightColumn');
+                                        var height = removePX(div.css('margin-top')) + removePX(div.css('margin-bottom')) + removePX(div.css('padding-top')) + removePX(div.css('padding-bottom'));
+                                        $('#RightColumn').children().each(function(ind, elem){height += $(elem).outerHeight(true);});
+                                        $('#OLEWrap').css('min-height', height+'px');
+                                    }
+                                };
+                                $(document).ready(function(){
+                                    ResizeRightColumn();
+                                });
+                               </script>
+
+	<script type='text/javascript'>
+function GetSelectedRentableItemTypes(){ 
+    var TypesQtyArr = [];
+    var ItemTypes;
+    var TypesQty;
+    $('#RentalItems input:text').each(function() {      
+        ItemTypes = $(this).attr('id').substring(15, $(this).attr('id').length);
+        ItemQty = $(this).val();
+        if (!isNaN(parseInt(ItemQty))) {
+            TypesQty = ItemTypes + '^' + ItemQty;
+            TypesQtyArr.push(TypesQty);
+        };
+    });
+     return TypesQtyArr;   }
+</script>
+
+	<script type="text/javascript">
+        if(typeof ClickTrack != "undefined"){
+	        
+	            ClickTrack._trackEvent("OLE", "Applicant Info", { ce_ProspectID: 10850465 });
+	        
+        }
+</script>
+
+	<script type="text/javascript">
+						$(document).ready(function(){
+							var $ = jQuery;
+							$('.isdate:not(.hasUnderlay)').wrap('<div class="dateUnderlayWrapper"></div>');
+							$('.dateUnderlayWrapper').each(function(){
+								if($(this).find("span").size() == 0){
+									var underlay = $('<span class="help-inline">mm/dd/yyyy</span>');
+									$(this).append(underlay);
+									underlay = $(this).children('.dateFormatUnderlayDiv');
+									$(this).children('.isdate').each(function(){
+										var field = $(this);
+										field.addClass('hasUnderlay');
+										underlay.click(function(){field.focus()});
+										if(this.value != "") underlay.hide();
+										field.focus(function(){underlay.hide()});
+										field.blur(function(){if(this.value == "")underlay.show();});
+										field.change(function(){if(this.value != "")underlay.hide();});
+									});
+								}
+							});
+						});
+					  </script>
+
+	<script type='text/javascript'>
+						$(document).ready(function(){
+							$('#ResidencyFrom10850465').change(function(){
+							  
+								if(datemask(this)) { 
+									var d1 = new Date(Date.parse(this.value)); 
+								} else { 
+									$('#ResidencyFrom10850465').addClass('error');
+									return false; 
+								}
+								var now = new Date();
+								var diff = (now.getYear() - d1.getYear()) * 12 + now.getMonth() - d1.getMonth();
+								var dontshowprev = $('#dontShowPrevAddr10850465').val();
+								if (dontshowprev == '0') {
+								if (diff < 12) { 
+									$('#PreviousAddress10850465').show();
+									$('#PreviousAddress10850465').removeClass('hidden');
+									$('#NotLongEnoughResident10850465').show();
+									$('#NotLongEnoughResident10850465').removeClass('hidden');
+									$('input[id="previousAddress110850465"]').addClass('required');
+									$('input[id="PreviousCity10850465"]').addClass('required');
+									$('#PreviousResidencyFrom10850465').addClass('required');
+									if ($('#drpPrevCountry10850465 :selected').text().trim() == 'United States') {
+										$('select[id="PreviousCity10850465"]').addClass('required');
+										$('select[id="PreviousState10850465"]').addClass('required');
+										$('#PreviousZip10850465').addClass('required');
+
+									}else{
+										$('select[id="PreviousCity10850465"]').removeClass('required');
+										$('select[id="PreviousState10850465"]').removeClass('required');
+										$('#PreviousZip10850465').removeClass('required');      
+									};
+							   }
+								else {
+									$('#PreviousAddress10850465').hide();
+									$('#NotLongEnoughResident10850465').hide();
+									$('input[id="previousAddress110850465"]').removeClass('required');
+									$('input[id="PreviousCity10850465"]').removeClass('required');
+									$('select[id="PreviousState10850465"]').removeClass('required');
+									$('#PreviousZip10850465').removeClass('required');
+									$('select[id="NonUSPreviousState"]').removeClass('required');
+									$('#NonUSPreviousZip').removeClass('required');
+									$('#PreviousResidencyFrom10850465').removeClass('required');                                    
+								};
+							};
+							});
+						});</script>
+
+	<script type='text/javascript'> $(document).ready(function(){  $('#EmployedSince10850465').change(function(){ if(datemask(this)) {  var d1 = new Date(Date.parse(this.value));  } else {  $('#EmployedSince10850465').addClass('error'); return false;  } var now = new Date(); var diff = (now.getYear() - d1.getYear()) * 12 + now.getMonth() - d1.getMonth(); var dontshowprev = $('#dontShowPrevEmpl10850465').val(); if (dontshowprev == '0') { if (diff < 0) {  $('#PreviousEmploymentHeading10850465').show(); $('#PreviousEmploymentHeading10850465').removeClass('hidden'); $('#PreviousEmploymentInformationBody10850465').show(); $('#PreviousEmploymentInformationBody10850465').removeClass('hidden'); $('#NotLongEnoughEmpl10850465').show(); $('#NotLongEnoughEmpl10850465').removeClass('hidden'); $('#EmployedSincePrefComp10850465').addClass('required');
+ $('#EmployedSincePrefCompDiv10850465 .control-label').find('span').html('<b>*</b>');
+ $('#EmployedTillPrefComp10850465').addClass('required');
+ $('#EmployedTillPrefCompDiv10850465 .control-label').find('span').html('<b>*</b>');
+ } else { $('#PreviousEmploymentHeading10850465').hide(); $('#PreviousEmploymentInformationBody10850465').hide(); $('#NotLongEnoughEmpl10850465').hide(); $('#EmployedSincePrefComp10850465').removeClass('required');
+ $('#EmployedSincePrefCompDiv10850465 .control-label').find('span').html('');
+ $('#EmployedTillPrefComp10850465').removeClass('required');
+ $('#EmployedTillPrefCompDiv10850465 .control-label').find('span').html('');
+ }; } }); }); </script>
+
+	<script>
+	function ContentClassName()
+	{
+	document.getElementById('ContentclassName').value = 'AdditionalOccupants';
+	}
+	function CheckCitizen(ProspectId)
+	{
+	var e = document.getElementById('USCitizen'+ ProspectId); 
+	if (e != null) {
+	var strUs = e.options[e.selectedIndex].value;
+	 $('#SSN' + ProspectId).change(function(){ 
+	            var myssn = $('#SSN' + ProspectId).val();        
+	            if (myssn.indexOf('***-**-') >= 0 && myssn.length == 11 ) {
+	                $('#SSN' + ProspectId).removeClass(' ssn '); 
+	            } 
+	            else { 
+	                $('#SSN' + ProspectId).addClass(' ssn '); 
+	            } 
+	 }); 
+	if (strUs == 0)
+	{
+	$('#SSN' + ProspectId).removeClass('required');
+	$('#lblSSN').text('SSN');
+	}
+	else
+	{
+	$('#SSN' + ProspectId).addClass('required');
+	$('#lblSSN').text('SSN');
+	$('#lblSSN').append('<span class="text-error">&#42;</span>');
+	}
+	}
+	}
+	function CheckAge(ProspectId)
+	{
+	if ($('#USCitizen' + ProspectId).val() == -1)
+	{
+	var endDate = new Date(),
+	enteredDate = new Date($('#ProspectDOB' + ProspectId).val());
+	if ((endDate.getFullYear() - enteredDate.getFullYear()) <= 18)  {
+	var e = document.getElementById('USCitizen'+ ProspectId); 
+	e.options[e.selectedIndex].value = -1;
+	CheckCitizen(ProspectId);
+	}
+	else
+	{
+	var e = document.getElementById('USCitizen'+ ProspectId); 
+	e.options[e.selectedIndex].value = 0;
+	CheckCitizen(ProspectId);
+	}
+	}
+	}
+	</script>
+
+	<script type="text/javascript">
+    var windowWarningMessage = "Your data has NOT been saved!";
+    var dialogWarningMessage = "Your data has NOT been saved! Are you sure you want to leave this page?";
+    var eventAttached = false;
+    var prospectId = 10850465;
+    window.onbeforeunload = null;
+
+    $(document).ready(function () {
+        $('input:not(:button,:submit,:file),textarea,select').change(function () {
+
+            if (!eventAttached) {
+
+                window.onbeforeunload = function (evt) {
+
+                    if (typeof evt == 'undefined') {
+                        evt = window.event;
+                    }
+                    if (evt) {
+                        evt.returnValue = windowWarningMessage;
+                    }
+                    return windowWarningMessage;
+                }
+
+                // Show confirmation box, on click of links that do not open new window.
+                $('div[id="wrapper"] a[target!="_new"][target!="_blank"][class!="not_attach_event"]').each(function () { if (!$(this).hasClass('other_occ_link')) { attachWarnUnsavedDataEvent($(this)); } });
+                // Show confirmation box, on click of workflow menus.
+                $('div[id="workflowholder"] div[onclick*="window.location.href"]').each(function () { attachWarnUnsavedDataEvent($(this)) });
+                //Show confirmation box, on click of buttons in Addendums section.
+                $('div[id="CustomSetup"] button').each(function () { attachWarnUnsavedDataEvent($(this)) });
+                //Show confirmation box, on click of buttons in upload section.
+                //$("#iframe_container iframe").contents().find("input[type='file']").each(function () { attachWarnUnsavedDataEvent($(this)) });
+                
+                eventAttached = true;
+            }
+        });
+     
+        hideshow();
+        $('#drpCurrentCountry' + prospectId).bind('change', function () {
+            hideshow();
+        });
+        $('#drpPrevCountry' + prospectId).bind('change', function () {
+            hideshow();
+        });
+        $('#drpEmpCountry' + prospectId).bind('change', function () {
+            hideshow();
+        });
+        $('#drpEmergCountry' ).bind('change', function () {
+            hideshow();
+        });
+        $('#drpDLCountry' ).bind('change', function () {
+            hideshow();
+        });
+       // $('#isFurnished').click(function(){
+    			// if ($(this).is(':checked')) alert('is checked'); 
+    			//alert('check-checky-check was changed');
+				//});
+				$('input[name^="isFurnished"]').change(function () {
+					  	hideshow();
+					});
+      
+
+        $("#chkMiddleName").change(function () {
+            if (this.checked) {
+                $("#ProspectMiddleName").val("");
+                $("#ProspectMiddleName").prop('disabled', true);
+            }
+            else {                
+                $("#ProspectMiddleName").prop('disabled', false);
+            }
+                
+        });
+        
+
+    });
+
+    function hideshow() {
+        if ($('#drpCurrentCountry' + prospectId + ' :selected').text().trim() == 'United States') {
+            $('#CurrentCitydiv' + prospectId).show();
+            $('#CurrentStatediv' + prospectId).show();
+            if (-1 != 0) {
+                $('#CurrentCity' + prospectId).addClass('required');
+            }
+            if (-1 != 0) {
+                $('#CurrentState' + prospectId).addClass('required');
+            }
+            if (-1 != 0) {
+                $('#CurrentZip' + prospectId).addClass('required');
+            }
+        } else {
+            $('#CurrentCitydiv' + prospectId).hide();
+            $('#CurrentStatediv' + prospectId).hide();
+            if (-1 != 0) {
+                $('#CurrentCity' + prospectId).removeClass('required');
+            }
+            if (-1 != 0) {
+                $('#CurrentState' + prospectId).removeClass('required');
+            }
+            if (-1 != 0) {
+                $('#CurrentZip' + prospectId).removeClass('required');
+            }
+        }
+        if ($('#drpPrevCountry' + prospectId + ' :selected').text().trim() == 'United States') {
+            $('#PreviousCityDiv' + prospectId).show();
+            $('#PreviousStatediv' + prospectId).show();
+            if (0 != 0) {
+                $('#PreviousCity' + prospectId).addClass('required');
+            }
+            if (0 != 0) {
+                $('#PreviousState' + prospectId).addClass('required');
+            }
+            if (0 != 0) {
+                $('#PreviousZip' + prospectId).addClass('required');
+            }
+        } else {
+            $('#PreviousCityDiv' + prospectId).hide();
+            $('#PreviousStatediv' + prospectId).hide();
+            
+            $('#PreviousCity' + prospectId).removeClass();
+            $('#PreviousState' + prospectId).removeClass();
+            $('#PreviousZip' + prospectId).removeClass();
+            
+            $('#PreviousState' + prospectId).addClass('span4');
+                       
+            
+           /*following code is commented as previous city state zip are not shown in the code.
+            if (0 != 0) {
+                $('#PreviousCity' + prospectId).removeClass('required');
+            }
+            if (0 != 0) {
+                $('#PreviousState' + prospectId).removeClass('required');
+            }
+            if (0 != 0) {
+                $('#PreviousZip' + prospectId).removeClass('required');
+            }*/
+        }
+        if ($('#drpEmpCountry' + prospectId + ' :selected').text().trim() == 'United States') {
+            $('#EmpCitydiv' + prospectId).show();
+            $('#EmpStatediv' + prospectId).show();
+            if (0 != 0) {
+                $('#EmpCity' + prospectId).addClass('required');
+            }
+            if (0 != 0) {
+                $('#EmpState' + prospectId).addClass('required');
+            }
+            if (0 != 0) {
+                $('#EmpZip' + prospectId).addClass('required');
+            }
+        } else {
+            $('#EmpCitydiv' + prospectId).hide();
+            $('#EmpStatediv' + prospectId).hide();
+
+            $('#EmpCity' + prospectId).removeClass();
+            $('#EmpState' + prospectId).removeClass();
+            $('#EmpZip' + prospectId).removeClass();
+
+            $('#EmpState' + prospectId).addClass('span4');
+
+            /*following code is commented as employment city state zip are not shown in the code. as we are hiding below controls for states other than US.
+            if (0 != 0) {
+                $('#EmpCity' + prospectId).removeClass('required');
+            }
+            if (0 != 0) {
+                $('#EmpState' + prospectId).removeClass('required');
+            }
+            if (0 != 0) {
+                $('#EmpZip' + prospectId).removeClass('required');
+            }*/
+        }
+        if ($('#drpEmergCountry :selected').text().trim() == 'United States') {
+            $('#EmergCityDiv').show();
+            $('#EmergStateZipdiv').show();
+            if (0 != 0) {
+                $('#EmergencyCity').addClass('required');
+            }
+            if (0 != 0) {
+                $('#EmergencyState').addClass('required');
+            }
+            if (0 != 0) {
+                $('#EmergencyZip').addClass('required');
+            }
+        } else {
+            $('#EmergCityDiv').hide();
+            $('#EmergStateZipdiv').hide();
+            $('#EmergencyCity').removeClass('required');
+						$('#EmergencyState').removeClass('required');
+            $('#EmergencyZip').removeClass('required');
+        }
+        if ($('#drpDLCountry :selected').text().trim() == 'United States') {
+                $('#DLStatediv').show();
+                if (0 != 0) {
+                    $('#DLState').addClass('required');
+                }
+            } else {
+                $('#DLStatediv').hide();
+                if (0 != 0) {
+                    $('#DLState').removeClass('required');
+                }
+            }
+            
+         if ($('input[name=isFurnished]:checked').val() == 'Yes') {
+         	    
+         			$('#chkboxdivfurniture').show();
+							$('#chkTandCFurnitureAgree').addClass('required');
+							}
+						else {
+							
+							$('#chkboxdivfurniture').hide();
+							$('#chkTandCFurnitureAgree').removeClass('required');
+							$('#chkTandCFurnitureAgree').removeAttr('checked');
+							}
+							
+        }
+        
+
+  
+
+
+    function showConfirmation() {
+
+        if ('False' == 'True') {
+            if (!confirm(window.lang.translate(dialogWarningMessage))) {
+                return false;
+            }
+        }
+        else {
+            if (!confirm(dialogWarningMessage)) {
+                return false;
+            }
+        }
+
+        
+
+        return removeWarnUnsavedDataConfirmationBox();
+    }
+
+    function attachWarnUnsavedDataEvent(element) {
+        var currentOnclickEvent = element.attr("onclick");
+        if (!currentOnclickEvent) { currentOnclickEvent = ""; }		           		
+			if (element.context.className.includes("sign-btn")) {	
+				element.attr("originalonclickevent", currentOnclickEvent);	
+		  }
+		else{
+			element.attr("onclick", "if (window.parent.showConfirmation()) { " + currentOnclickEvent + "  } else { return false; } ");		
+		}
+		element.attr("originalonclickevent", currentOnclickEvent);
+    }
+
+    function detachWarnUnsavedDataEvent(element) {
+        var originalonclickevent = element.attr("originalonclickevent");
+        if (!originalonclickevent) { originalonclickevent = ""; }
+        if (originalonclickevent != "") {
+            element.attr("onclick", originalonclickevent);
+            element.removeAttr("originalonclickevent");
+        } else {
+            element.removeAttr("onclick");
+            element.removeAttr("originalonclickevent");
+        }
+    }
+
+    function removeWarnUnsavedDataConfirmationBox() {
+
+        if (eventAttached) {
+
+            // Remove confirmation box, on click of links that do not open new window.
+            $('div[id="wrapper"] a[target!="_new"][target!="_blank"][href!="#"]').each(function () { if (!$(this).hasClass('other_occ_link')) { detachWarnUnsavedDataEvent($(this)) } } );
+            // Remove confirmation box, on click of workflow menus.
+            $('div[id="workflowholder"] div[onclick*="window.location.href"]').each(function () { detachWarnUnsavedDataEvent($(this)) } );
+            // Remove confirmation box, on click of buttons in Addendums section.
+            $('div[id="AllOccupant"] button').each(function () { detachWarnUnsavedDataEvent($(this)) } );
+
+            window.onbeforeunload = null;
+            eventAttached = false;
+        }
+
+        return true;
+    }
+   
+    function onclickfunctions(btn) {
+        removeWarnUnsavedDataConfirmationBox();
+        document.getElementById('myButtonClicked').value = btn;
+        mySaveMode = btn;
+        if (btn == 'Save') {
+            document.getElementById('ContentclassName').value = 'ApplicantInformation';
+            $(':input', '#ApplicantInformation').removeClass('required');
+            $('#chkAgreement').removeClass('required');
+            var mysaveform = $('#ApplicantInformation').validate();
+            if (!$('#ApplicantInformation').valid()) {
+                myform.focusInvalid();
+                return false;
+            }
+            else {                
+                if ($('#BlankCanvas').length > 0 && !isCanvasBlank(document.getElementById("SignCanvas")) && document.getElementById('chkAgreement').checked) {
+                    $("#usersignature").val(document.getElementById('SignCanvas').toDataURL());
+                }
+            }
+        } else {
+            ContentClassName();
+            $('#chkAgreement').addClass('required');
+            $('#ApplicantInformation').validate();
+            if ($('#ApplicantInformation').valid()) {
+                if (isCanvasBlank(document.getElementById("SignCanvas"))) {
+                    alert("You cannot save blank signature.");
+                    $('#chkAgreement').prop('checked', false);
+                }
+                else {
+                    $("#usersignature").val(document.getElementById('SignCanvas').toDataURL());
+                }
+
+            }            
+
+        }
+
+    }
+    function isCanvasBlank(canvas) {
+        var blank = document.getElementById('BlankCanvas');
+        blank.width = canvas.width;
+        blank.height = canvas.height;
+        return canvas.toDataURL() == blank.toDataURL();
+    }
+   
+
+</script>
+
+	<script type="text/javascript">
+ var mySaveMode = 'Save';
+$.validator.addMethod('maskdate', function(value, element) {datemask(element); return true; ; },"please enter correct format.");$.validator.addMethod('datevalidation', function(value, element) {if (this.optional(element)) { return true;  }var startDate = Date.parse('01/01/1900');var endDate = Date.parse(new Date());if (value.indexOf('-') == -1 && value.indexOf('/') == -1) {   if (value.length == 8) {      value = value.substr(0,2) + '/' + value.substr(2,2) + '/' + value.substr(4);   }   else { return false; }}var enteredDate = Date.parse(value);if (isNaN(enteredDate)) { return false; }return ((startDate <= enteredDate) && (enteredDate <= endDate)); },"Please enter a non future date in the format mm/dd/yyyy.");$.validator.addMethod('moveindatevalidation', function(value, element) {if (this.optional(element)) { return true;  }var startDate = Date.parse('8/21/2017');var endDate = Date.parse('12/5/2017');if (value.indexOf('-') == -1 && value.indexOf('/') == -1) {   if (value.length == 8) {      value = value.substr(0,2) + '/' + value.substr(2,2) + '/' + value.substr(4);   }   else { return false; }}var enteredDate = Date.parse(value);if (isNaN(enteredDate)) { return false; }return ((startDate <= enteredDate) && (enteredDate <= endDate)); },'Move in date should be between 8/21/2017 and 12/5/2017');$.validator.addMethod('birthdatevalidation', function(value, element) {if (this.optional(element)) { return true;  }var endDate = new Date();if (value.indexOf('-') == -1 && value.indexOf('/') == -1) {   if (value.length == 8) {      value = value.substr(0,2) + '/' + value.substr(2,2) + '/' + value.substr(4);   }   else { return false; }}var enteredDate = new Date(value);if (isNaN(enteredDate)) { return false; }var eday = new Date(); eday.setFullYear(eday.getFullYear() - 18); if(enteredDate < eday) { return true;  } else {  return false;  } ; },"you should be atleast 18 years to qualify as applicant");$.validator.addMethod('NumericValidation', function(value, element) {if (this.optional(element)) { return true;  } var enteredNumber = parseInt(value);if (isNaN(enteredNumber)) { return false; }if (enteredNumber <= 0){ return false;}else { return true;}; },"Lease term should be greater than zero.");jQuery.validator.addMethod('customphonewithnoext', function (value, element) {
+var txt = value;
+if(value.indexOf('x_')>0)
+{
+txt=value.replace(/x______/g, '');
+}
+else{
+txt=value.replace(/_/g, '');
+}
+if (/^(1\s*[-\/\.]?)?(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})\s*(([xX]|[eE][xX][tT])\.?\s*(\d+))*$/.test(txt)) {
+$(element).mask('(999) 999-9999');
+}
+return this.optional(element) || /^(1\s*[-\/\.]?)?(\((\d{3})\)|(\d{3}))\s*[-\/\.]?\s*(\d{3})\s*[-\/\.]?\s*(\d{4})\s*(([xX]|[eE][xX][tT])\.?\s*(\d+))*$/.test(txt);
+}, 'Please enter valid phone number.');
+</script>
+
+	<script language='javascript'>                                                  
+ 	function datestringreplace(fullString,text,by) {	                                
+ 	// Replaces text with by in string	                                                
+ 	    var strLength = fullString.length, txtLength = text.length;	                    
+ 	    if ((strLength == 0) || (txtLength == 0)) return fullString;	                
+ 	    var i = fullString.indexOf(text);	                                            
+ 	    if ((!i) && (text != fullString.substring(0,txtLength))) return fullString;	    
+ 	    if (i == -1) return fullString;	                                                
+ 	    var newstr = fullString.substring(0,i) + by;	                                
+ 	    if (i+txtLength < strLength)	                                                
+ 	        newstr += datestringreplace(fullString.substring(i+txtLength,strLength),text,by);	
+ 	    return newstr;	                                                                
+ 	}	                                                                                
+ 	function datemask(mydate){	                                                        
+ 	    var mm='';                                                                      
+ 	    var dd='';                                                                      
+ 	    var yy='';                                                                      
+ var mmLength = 0;                                                                    
+ var ismasked = mydate.value.indexOf('/');                                            
+ if (ismasked >= 0)  {                                                                
+      var month1digitarr = mydate.value.split('/');                                   
+      if (month1digitarr[1].length == 1) { mmLength = 1; }                               
+     }                                                                                
+ 	    mydate.value = datestringreplace(mydate.value,'/','');	                        
+ 	    var dtlen = mydate.value.length;	                                            
+ 	    if (dtlen==0) {  return true ;}                                                 
+ 	    if (dtlen==4) {  mydate.value = '0' + mydate.value.substring(0,1) + '0' + mydate.value.substring(1) ;}  
+ 	    if (dtlen==6) {                                                                 
+ 	                    yy= mydate.value.substring(2,4);	                            
+ 	                    if (yy=='19' || yy=='20')                                       
+ 	                        {                                                           
+ 	                            mydate.value = '0' + mydate.value.substring(0,1) + '0' + mydate.value.substring(1) ; 
+ 	                        }                                                           
+ 	                    }                                                               
+ 	    if (dtlen==7) {                                                                 
+                                      if (mmLength == 1){                            
+ 	                                        mydate.value = mydate.value.substring(0,2) + '0' + mydate.value.substring(2) ; 
+                                          }else{                                      
+ 	                                            mydate.value = '0' + mydate.value ;     
+                                          }                                           
+ 	                   }                                                                
+ 	    if (dtlen==9) {  mydate.value = '0' + mydate.value ;}                           
+ 	    mm= mydate.value.substring(0,2);	                                        
+ 	    dd= mydate.value.substring(2,4);	                                        
+ 	    yy= mydate.value.substring(4);	                                        
+ 	    if (yy.length == 2){	                                                        
+ 	        if (yy<50){	yy = '20'+yy; }                                                 
+ 	        else{	yy = '19'+yy; }	                                                    
+ 	    }	                                                                            
+ 	    mydate.value =  mm+'/'+dd+'/'+yy;	                                            
+ 	    return true ;	                                                                
+ 	}	                                                                                
+</script>
+
+	<script type="text/javascript">
+$(document).ready(function(){
+$('#PrefMoveinDate10850465').datepicker({ minDate: '8/21/2017', maxDate: '12/5/2017' });$('#ProspectDOB10850465').datepicker({changeMonth: true,changeYear: true,monthRange: '1:12', yearRange: '1920:2050', maxDate:0 });$('#PreviousResidencyFrom10850465').datepicker({changeMonth: true,changeYear: true, monthRange: '1:12', yearRange: '1920:2050',maxDate:new Date() ,minDate: new Date(1920, 12-1, 25) });$('#ResidencyFrom10850465').datepicker({changeMonth: true,changeYear: true,monthRange: '1:12', yearRange: '1920:2050',maxDate:0 ,minDate: new Date(1920, 12-1, 25) });$('#EmployedSincePrefComp10850465').datepicker({changeMonth: true,changeYear: true, monthRange: '1:12', yearRange: '1920:2050',maxDate:0 ,minDate: new Date(1920, 12-1, 25) });$('#EmployedTillPrefComp10850465').datepicker({changeMonth: true,changeYear: true, monthRange: '1:12', yearRange: '1920:2050',maxDate:0 ,minDate: new Date(1920, 12-1, 25) });$('#EmployedSince10850465').datepicker({changeMonth: true,changeYear: true, monthRange: '1:12', yearRange: '1920:2050' ,minDate: new Date(1920, 12-1, 25) 
+ , onSelect: function (dateText, inst) {  var date1=new Date();  var date2=new Date(dateText);   if(date2 > date1) {  if (confirm('You have entered a future date for your employment begin date. Are you sure you want a future date?')) {   $(this).val('');   } else {  $(this).val('');   }  };    $('#EmployedSince10850465').change();}  });CheckCitizen(10850465);
+if($("#drpEverEvicted10850465").val()== 'Yes'){ $("#IsEvictedDetail10850465").addClass("required");$('#ExplainEvictedDiv10850465 label').append(" <span class='text text-error' style='display: inline;'>*</span>");}else{$("#IsEvictedDetail10850465").removeClass("required");$('#ExplainEvictedDiv10850465 label').find('span').html('');}if($("#drpEverConvicted10850465").val()== 'Yes'){ $("#IsConvictedFelonyDetail10850465").addClass("required");$('#ExplainEverConvictedDiv10850465 label').append(" <span class='text text-error' style='display: inline;'>*</span>");}else{$("#IsConvictedFelonyDetail10850465").removeClass("required");$('#ExplainEverConvictedDiv10850465 label').find('span').html('');}if($("#drpCriminalCharges10850465").val()== 'Yes'){ $("#IsCriminalChgPendingDetail10850465").addClass("required");$('#ExplainCriminalCharges10850465 label').append(" <span class='text text-error' style='display: inline;'>*</span>");}else{$("#IsCriminalChgPendingDetail10850465").removeClass("required");$('#ExplainCriminalCharges10850465 label').find('span').html('');}});
+</script>
+
+	<script type="text/javascript">
+$(document).ready(function(){
+ if ($('#EmployerDiv10850465 .control-label').find('span').length == 0) $('#EmployerDiv10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ if ($('#DesignationDiv10850465 .control-label').find('span').length == 0) $('#DesignationDiv10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ if ($('#EmpAddress1Div10850465 .control-label').find('span').length == 0) $('#EmpAddress1Div10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ if ($('#EmpAddress2Div10850465 .control-label').find('span').length == 0) $('#EmpAddress2Div10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ if ($('#EmpCitydiv10850465 .control-label').find('span').length == 0) $('#EmpCitydiv10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ if ($('#EmpStatediv10850465 .control-label').find('span').length == 0) $('#EmpStatediv10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ if ($('#EmpPhoneDiv10850465 .control-label').find('span').length == 0) $('#EmpPhoneDiv10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ if ( $('#EmployedSinceDiv10850465 .control-label').find('span').length == 0) $('#EmployedSinceDiv10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ if ($('#GrossIncomeDiv10850465 .control-label').find('span').length == 0) $('#GrossIncomeDiv10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ if ($('#AdditionalincomeDiv10850465 .control-label').find('span').length == 0) $('#AdditionalincomeDiv10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ if ($('#SupervisorNameDiv10850465 .control-label').find('span').length == 0) $('#SupervisorNameDiv10850465 .control-label').append("<span class='text text-error' style='display: inline;'></span>"); 
+ $('#Status10850465').trigger('onchange');
+});
+ function UpdateEmploymentRequiredFields10850465 (emplType)      { 
+     var EmpStatus = emplType.options[emplType.selectedIndex].value; 
+     var taghtml =''; 
+     var ctrlclass =''; 
+ $('#Designation10850465').removeClass('required');
+ $('#EmployedSince10850465').removeClass('required');
+ $('#Employer10850465').removeClass('required');
+ $('#EmpAddress110850465').removeClass('required');
+ $('#EmpAddress210850465').removeClass('required');
+ $('#EmpCity10850465').removeClass('required');
+ $('#EmpState10850465').removeClass('required');
+ $('#EmpZip10850465').removeClass('required');
+ $('#EmpPhone10850465').removeClass('required');
+ $('#GrossIncome10850465').removeClass('required');
+ $('#Additionalincome10850465').removeClass('required');
+ $('#SupervisorName10850465').removeClass('required');
+ $('#EmployerDiv10850465 .control-label').find('span').html('');
+ $('#DesignationDiv10850465 .control-label').find('span').html('');
+ $('#EmpAddress1Div10850465 .control-label').find('span').html('');
+ $('#EmpAddress2Div10850465 .control-label').find('span').html('');
+ $('#EmpCitydiv10850465 .control-label').find('span').html('');
+ $('#EmpStatediv10850465 .control-label').find('span').html('');
+ $('#EmpPhoneDiv10850465 .control-label').find('span').html('');
+ $('#EmployedSinceDiv10850465 .control-label').find('span').html('');
+ $('#GrossIncomeDiv10850465 .control-label').find('span').html('');
+ $('#AdditionalincomeDiv10850465 .control-label').find('span').html('');
+ $('#SupervisorNameDiv10850465 .control-label').find('span').html('');
+     if (EmpStatus == '') { 
+     } 
+     else { 
+     if (EmpStatus == 'Employed') { 
+         taghtml ='<b>*</b>'; 
+   $('#Designation10850465').addClass('required');
+   $('#EmployedSince10850465').addClass('required');
+   $('#GrossIncome10850465').addClass('required');
+   $('#Employer10850465').addClass('required');
+   $('#EmpAddress110850465').addClass('required');
+   if ($('#drpEmpCountry10850465 :selected').text().trim() == 'United States')              { 
+           $('#EmpCity10850465').addClass('required');
+           $('#EmpState10850465').addClass('required');
+           $('#EmpZip10850465').addClass('required');
+       } 
+   $('#EmpPhone10850465').addClass('required');
+   $('#SupervisorName10850465').addClass('required');
+     }
+ $('#EmployerDiv10850465 .control-label').find('span').html(taghtml);
+ $('#DesignationDiv10850465 .control-label').find('span').html(taghtml);
+ $('#EmpAddress1Div10850465 .control-label').find('span').html(taghtml);
+ $('#EmpCitydiv10850465 .control-label').find('span').html(taghtml);
+ $('#EmpStatediv10850465 .control-label').find('span').html(taghtml);
+ $('#EmpPhoneDiv10850465 .control-label').find('span').html(taghtml);
+ $('#EmployedSinceDiv10850465 .control-label').find('span').html(taghtml);
+ $('#GrossIncomeDiv10850465 .control-label').find('span').html(taghtml);
+ $('#SupervisorNameDiv10850465 .control-label').find('span').html(taghtml);
+     if (EmpStatus == 'Retired' || EmpStatus == 'Other') { 
+     }
+ }
+ }
+</script>
+
+	<script type="text/javascript">
+   $(document).ready(function() {
+      $('[id^=PetType]').on('keyup',function(){
+         var rowId; console.log('in keyup');
+         rowId = $(this).attr('id').replace('PetType','');
+         if( $(this).val() != '' ) {
+            $('#PetBreed' + rowId).addClass('required');
+            $('#PetBreed' + rowId).attr('placeholder','(Required)');console.log('added required classes');
+         }
+         else {
+            $('#PetBreed' + rowId).removeClass('required error');
+            $('#PetBreed' + rowId).attr('placeholder','');
+         }
+      });
+
+      $('[id^=PetType]').each(function ( index ) {
+         if( $(this).val() != '' ) {
+            var rowId;
+            rowId = $(this).attr('id').replace('PetType','');
+            $('#PetBreed' + rowId).addClass('required');
+            $('#PetBreed' + rowId).attr('placeholder','(Required)');
+         }
+      });
+   });
+//@ sourceURL=RequirePetBreed.js
+</script>
+
+	<script>
+      $(document).ready(function (e) {
+          
+           		$('#PetCount').val( $('#PetDetailsTable').find("tr:last").find('.row_count').text())
+              if ($('input[name=hasPets]:checked').val() == 'Yes'){
+                  $('#PetDetails').removeClass('hidden');
+                  									
+					var rows = $('#PetDetails tbody >tr');
+					var thsrows = $('#PetDetails thead >tr');
+					var thscolumns;
+					var columns;
+					for (var i = 0; i < rows.length; i++) {
+						columns = $(rows[i]).find('td');
+						thscolumns = $(thsrows[i]).find('th');
+						for (var j = 0; j < columns.length; j++) {
+							if ( $(thscolumns[j]).find(' span').hasClass('text text-error')) {
+							$(columns[j+1]).find('input').addClass('required error');
+							    $(columns[j+1]).find('select').addClass('required error');
+							}else
+							{
+							}
+						}
+					}
+				}else {
+                  $('#PetDetails').addClass('hidden');
+                  $('[id^=PetType]').removeClass('required error');
+                  $('[id^=PetWeight]').removeClass('required error');
+                  $('[id^=PetAge]').removeClass('required error');
+                  $('[id^=PetColor]').removeClass('required error');
+                  $('[id^=PetBreed]').removeClass('required error');
+                  $('[id^=PetName]').removeClass('required error');
+                  $('[id^=PetGender]').removeClass('required error');
+                  $('[id^=PetSpayed]').removeClass('required error');
+              }
+
+              var limit =   $('#PetDetailsTable').data('limit');
+              var count =   $('#PetDetailsTable').children('tbody').children('tr').length; 
+              if (limit !== 0 && count  >= limit){
+                  $('#PetDetailsTable').closest('.row-fluid').find('a.addNewRowPets').addClass('hidden');
+              }
+         			 
+          $(".isinteger").blur(function (e) {
+              formatInteger(this);
+          });
+          $('body').on('click', '.removeRowPets', function (e) {
+              e.preventDefault();
+              var table = $($(this).data('table'));
+              var limit = table.data('limit');
+              var count = table.children('tbody').children('tr').length;
+              if (limit !== 0 && limit + 1 > count) {
+                  $(this).closest('.row-fluid').find('a.addNewRowPets').removeClass('hidden');
+              }
+              $(this).closest('tr').remove();
+              $('#PetCount').val( $('#PetDetailsTable').find("tr:last").find('.row_count').text())
+          });
+          $('.addNewRowPets').bind('click',function(e){
+              e.preventDefault();
+              var table = $($(this).data('table'));
+              var limit = table.data('limit');
+              var count = table.children('tbody').children('tr').length; 
+              if (limit !== 0 && count + 1 >= limit){
+                  $(this).addClass('hidden');
+              }
+              var last_row = table.find("tr:last");
+              var oldId = parseInt(table.find("tr:last").find('.row_count').text());
+              var clone = last_row.clone().find('input').val('').end().insertAfter(last_row);
+              var idcnt =oldId + 1;
+            
+              clone.find('#PetType' + oldId).attr('name', 'PetType' + idcnt);
+              
+            
+                
+              clone.find('#PetWeight' + oldId).attr('name', 'PetWeight' + idcnt);
+              clone.find('#PetAge' + oldId).attr('name', 'PetAge' + idcnt);
+              clone.find('#PetColor' + oldId).attr('name', 'PetColor' + idcnt);
+              clone.find('#PetBreed' + oldId).attr('name', 'PetBreed' + idcnt);
+              clone.find('#PetName' + oldId).attr('name', 'PetName' + idcnt);
+              clone.find('#PetGender' + oldId).attr('name', 'PetGender' + idcnt);
+              clone.find('#PetSpayed' + oldId).attr('name', 'PetSpayed' + idcnt);
+              
+              clone.find('.row_count').text(idcnt);
+            
+              
+              clone.find('#PetType' + oldId).attr('data-selenium-id', 'PetType' + idcnt);
+              clone.find('#PetWeight' + oldId).attr('data-selenium-id', 'PetWeight' + idcnt);
+              clone.find('#PetAge' + oldId).attr('data-selenium-id', 'PetAge' + idcnt);
+              clone.find('#PetColor' + oldId).attr('data-selenium-id', 'PetColor' + idcnt);
+              clone.find('#PetBreed' + oldId).attr('data-selenium-id', 'PetBreed' + idcnt);
+              clone.find('#PetName' + oldId).attr('data-selenium-id', 'PetName' + idcnt);
+              clone.find('#PetGender' + oldId).attr('data-selenium-id', 'PetGender' + idcnt);
+              clone.find('#PetSpayed' + oldId).attr('data-selenium-id', 'PetSpayed' + idcnt);
+              clone.find('.removeRowPets').attr('data-selenium-id', 'removeRowPets' + idcnt);
+              
+              clone.find('#PetType' + oldId).attr('id', 'PetType' + idcnt);
+              clone.find('#PetWeight' + oldId).attr('id', 'PetWeight' + idcnt);
+              clone.find('#PetAge' + oldId).attr('id', 'PetAge' + idcnt);
+              clone.find('#PetColor' + oldId).attr('id', 'PetColor' + idcnt);
+              clone.find('#PetBreed' + oldId).attr('id', 'PetBreed' + idcnt);
+              clone.find('#PetName' + oldId).attr('id', 'PetName' + idcnt);
+              clone.find('#PetGender' + oldId).attr('id', 'PetGender' + idcnt);
+              clone.find('#PetSpayed' + oldId).attr('id', 'PetSpayed' + idcnt);
+              
+              $('#PetCount').val( $('#PetDetailsTable').find("tr:last").find('.row_count').text())
+             
+          
+            });
+          
+          $('input[name=hasPets]').on('change', function (e) {
+          	$('#PetCount').text( $('#PetDetailsTable').find("tr:last").find('.row_count').text())
+              if ($('input[name=hasPets]:checked').val() == 'Yes'){
+                  $('#PetDetails').removeClass('hidden');
+              		var rows = $('#PetDetails tbody >tr');
+					var thsrows = $('#PetDetails thead >tr');
+					var thscolumns;
+					var columns;
+					for (var i = 0; i < rows.length; i++) {
+						columns = $(rows[i]).find('td');
+						thscolumns = $(thsrows[i]).find('th');
+						for (var j = 0; j < columns.length; j++) {
+							if ( $(thscolumns[j]).find(' span').hasClass('text text-error')) {
+							    $(columns[j+1]).find('input').addClass('required error');
+							    $(columns[j+1]).find('select').addClass('required error');
+							}else
+							{
+							}
+						}
+					}
+              } else {
+                  $('#PetDetails').addClass('hidden');
+                  $('[id^=PetType]').removeClass('required error');
+                  $('[id^=PetWeight]').removeClass('required error');
+                  $('[id^=PetAge]').removeClass('required error');
+                  $('[id^=PetColor]').removeClass('required error');
+                  $('[id^=PetBreed]').removeClass('required error');
+                  $('[id^=PetName]').removeClass('required error');
+                  $('[id^=PetGender]').removeClass('required error');
+                  $('[id^=PetSpayed]').removeClass('required error');
+                 
+              }
+            
+          });
+          
+          
+                
+                
+      });
+  </script>
+
+	<script>
+    
+      $(document).ready(function (e) {
+        
+          if ($('input[name=hasVehicles]:checked').val() == 'Yes'){
+                  $('#VehicleDetails').removeClass('hidden');
+                  if ( $('#VehicleDetailsTable').find('th span').hasClass('text text-error')) {
+                  	
+                  	var rows = $('#VehicleDetails tbody >tr');
+										var thsrows = $('#VehicleDetails thead >tr');
+										var thscolumns;
+										var columns;
+										for (var i = 0; i < rows.length; i++) {
+											columns = $(rows[i]).find('td');
+											thscolumns = $(thsrows[i]).find('th');
+											for (var j = 0; j < columns.length; j++) {
+												if ( $(thscolumns[j]).find(' span').hasClass('text text-error')) {
+												    $(columns[j+1]).find('input').addClass('required');
+												    $(columns[j+1]).find('select').addClass('required');
+												}else
+												{
+												}
+											}
+										}
+				
+							}else{
+							    $('[id^=Make]').addClass('required '); 
+							    $('[id^=Model]').addClass('required '); 
+							    $('[id^=Year]').addClass('required '); 
+							    $('[id^=Color]').addClass('required '); 
+							    $('[id^=License]').addClass('required '); 
+							    $('[id^=State]').addClass('required '); 
+							    $('#VehicleDetailsTable').find('th').append('<span class="text text-error"><b>*</b></span> '); 
+							}
+			           }else {
+			                  $('#VehicleDetails').addClass('hidden');
+			                  $('[id^=Make]').removeClass('required error');
+			                  $('[id^=Model]').removeClass('required error');
+			                  $('[id^=Year]').removeClass('required error');
+			                  $('[id^=Color]').removeClass('required error');
+			                  $('[id^=License]').removeClass('required error');
+			                  $('[id^=State]').removeClass('required error');
+			           }
+			            
+			          var limit =   $('#VehicleDetailsTable').data('limit');
+			          var count =   $('#VehicleDetailsTable').children('tbody').children('tr').length; 
+			          if (limit !== 0 && count  >= limit){
+			                $('#VehicleDetailsTable').closest('.row-fluid').find('a.addNewRowVehicles').addClass('hidden');
+			          }
+              
+          
+         
+        
+          $('body').on('click','.removeRowVehicles',function(e){
+              e.preventDefault();
+              $(this).closest('.row-fluid').find('a.addNewRowVehicles').removeClass('hidden');
+              $(this).closest('tr').remove();
+             
+          }); 
+          $('.addNewRowVehicles').bind('click',function(e){
+              e.preventDefault();
+              var table = $($(this).data('table'));
+              var limit = table.data('limit');
+              var count = table.children('tbody').children('tr').length; 
+              if (limit !== 0 && count+1  >= limit){
+                  $(this).addClass('hidden');
+              }
+	          var last_row = table.find("tr:last");
+	          var idcnt;
+	          var i =1;
+	          $('#VehicleDetailsTable .row_count').each(function() {
+	              idcnt=$(this).text();
+	              if (idcnt == i){
+	                   idcnt=i+1
+	              }else{
+	                   idcnt=i
+	                    return ;
+	              }
+			      i=i+1
+		      });
+						
+						
+	             var clone = last_row.clone().find('input').val('').end().insertAfter(last_row);
+	             var oldId = parseInt(table.find("tr:last").find('.row_count').text());
+	             //var idcnt =oldId + 1;
+              
+              clone.find('#Make' + oldId).attr('name', 'Make' + idcnt);
+              clone.find('#Model' + oldId).attr('name', 'Model' + idcnt);
+              clone.find('#Year' + oldId).attr('name', 'Year' + idcnt);
+              clone.find('#Color' + oldId).attr('name', 'Color' + idcnt);
+              clone.find('#License' + oldId).attr('name', 'License' + idcnt);
+              clone.find('#State' + oldId).attr('name', 'State' + idcnt);
+              
+              
+              clone.find('.row_count').text(idcnt);
+              clone.attr('id', 'vehiclerow' + idcnt);
+              clone.attr('vehiclerow',  idcnt);
+              
+              clone.find('#Make' + oldId).attr('data-selenium-id', 'Make' + idcnt);
+              clone.find('#Model' + oldId).attr('data-selenium-id', 'Model' + idcnt);
+              clone.find('#Year' + oldId).attr('data-selenium-id', 'Year' + idcnt);
+              clone.find('#Color' + oldId).attr('data-selenium-id', 'Color' + idcnt);
+              clone.find('#License' + oldId).attr('data-selenium-id', 'License' + idcnt);
+              clone.find('#State' + oldId).attr('data-selenium-id', 'State' + idcnt);
+              clone.find('.removeRowVehicles').attr('data-selenium-id', 'removeRowVehicles' + idcnt);
+              
+              clone.find('#Make' + oldId).attr('id', 'Make' + idcnt);
+              clone.find('#Model' + oldId).attr('id', 'Model' + idcnt);
+              clone.find('#Year' + oldId).attr('id', 'Year' + idcnt);
+              clone.find('#Color' + oldId).attr('id', 'Color' + idcnt);
+              clone.find('#License' + oldId).attr('id', 'License' + idcnt);
+              clone.find('#State' + oldId).val('');
+              clone.find('#State' + oldId).attr('id', 'State' + idcnt);
+            	
+            	
+              
+             
+          
+            });
+          
+        
+          $('input[name=hasVehicles]').on('change', function (e) {
+              if ($('input[name=hasVehicles]:checked').val() == 'Yes'){
+                  $('#VehicleDetails').removeClass('hidden');
+                  if ( $('#VehicleDetailsTable').find('th span').hasClass('text text-error')) {
+						
+											var rows = $('#VehicleDetails tbody >tr');
+											var thsrows = $('#VehicleDetails thead >tr');
+											var thscolumns;
+											var columns;
+											for (var i = 0; i < rows.length; i++) {
+												columns = $(rows[i]).find('td');
+												thscolumns = $(thsrows[i]).find('th');
+												for (var j = 0; j < columns.length; j++) {
+													if ( $(thscolumns[j]).find(' span').hasClass('text text-error')) {
+													$(columns[j+1]).find('input').addClass('required error');
+														$(columns[j+1]).find('select').addClass('required error');
+													}else
+													{
+													}
+												}
+											}
+				           } else {
+										    $('[id^=Make]').addClass('required'); 
+										    $('[id^=Model]').addClass('required'); 
+										    $('[id^=Year]').addClass('required'); 
+										    $('[id^=Color]').addClass('required'); 
+										    $('[id^=License]').addClass('required '); 
+										    $('[id^=State]').addClass('required');
+										    $('#VehicleDetailsTable').find('th').append('<span class="text text-error"><b>*</b></span> '); 
+				            }
+				          
+              } else {
+		                  $('#VehicleDetails').addClass('hidden');
+		                  $('[id^=Make]').removeClass('required error');
+		                  $('[id^=Model]').removeClass('required error');
+		                  $('[id^=Year]').removeClass('required error');
+		                  $('[id^=Color]').removeClass('required error');
+		                  $('[id^=License]').removeClass('required error');
+		                  $('[id^=State]').removeClass('required error');
+		                
+              }
+          });
+      });
+  </script>
+
+	<script type="text/javascript">                                                       
+var needToConfirm = false;                                                              
+//window.onbeforeunload = confirmExit;                                                  
+function confirmExit(){ return 'Are you sure you would like to navigate away from this page?'; }     
+$(document).ready(function () {                                                         
+    $('.ApplicantInfoHeader').click(function(e){  
+        e.preventDefault();  
+        if($(this).find('span').hasClass('icon-caret-up')){
+            $(this).find('span').removeClass('icon-caret-up').addClass('icon-caret-down'); 
+        } else { 
+            $(this).find('span').removeClass('icon-caret-down').addClass('icon-caret-up'); 
+        } 
+    });  
+    $('a,div,button').click(function() {                                                
+        if (needToConfirm == false) {                                                   
+            window.onbeforeunload = function() { null; };                               
+            $(window).unbind('beforeunload', confirmExit);                              
+        }                                                                               
+    });                                                                                 
+    $('select,input,textarea').change(function() { needToConfirm = true; });            
+});                                                                                     
+</script>
+
+	<script type="text/javascript"> 
+ function loadCustomSetup(prospectID) {
+$('#CustomSetupDiv').load('/rcLoadContent.ashx?contentclass=ApplicantInformation&method=CustomSetupWrapper&myProspectID=' + prospectID );
+}
+</script>
+
+	<script>
+$(document).ready(function () {
+  $(document).ajaxSuccess(function( event, xhr, settings ) {
+    if ( settings.url === '/rcformsave.ashx') {
+        if(!location.href.toLowerCase().includes('stepname=registration') && !location.href.toLowerCase().includes('register.aspx')) return;
+        if($('#NoticePeakErrorDiv').length !== 0) return;
+        if(typeof gaWrapper === undefined)  return;
+        if(gaWrapper === undefined)  return;
+        gaWrapper.sendEvent.toTrackers(['ILSonlyTracker.send', 'rc.send'], 'event', 'New User Registration', 'Create Account', window.location.href);
+        if(typeof criteoWrapper != 'undefined' && typeof event.target.location.href != 'undefined' && event.target.location.href.indexOf('RentalOptions') == -1) {
+             criteoWrapper.SetTransactionPage('159784');
+        }
+    }
+  });
+});
+</script>
+
+<script type="text/javascript">
+   $(window).load(function () {
+       function addLazyScript(src, tmout) {
+           var script = document.createElement("script");
+           document.getElementsByTagName("body")[0].appendChild(script);
+           script.src = src;
+           script.async = true;
+           clearTimeout(tmout);
+       }
+         var timeout0 = setTimeout(function() { addLazyScript('//cdngeneral.rentcafe.com/js/bootstrap-accessibility.min.1499815146.js', timeout0) }, 1000);
+   });
+</script>
+	
+	
+<noscript>
+    <div style='position: fixed; z-index: 999999;margin: 0 auto;text-align: center;width: 80%; top: 0px;'>
+        <div class='span8 offset2'>
+            <div class='alert alert-error text-center'>
+                <strong>Warning!</strong> For full functionality of this site it is necessary to <a href='http://www.google.com/search?q=how+to+enable+javascript' target='_blank' class='text-info'> enable JavaScript in your web browser.</a>
+            </div>
+        </div>
+    </div>
+</noscript>
+</body>
+<input type="hidden" id="cafeportalkey" name="cafeportalkey" value="MSM4NTM%3d-rUR3ynHYUO4%3d">
+</html>
