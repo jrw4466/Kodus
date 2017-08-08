@@ -1,4 +1,5 @@
-- Create database 
+
+-- Create database 
 CREATE DATABASE kodus_db;
 USE kodus_db;
 
@@ -84,3 +85,5 @@ CREATE TABLE IF NOT EXISTS  kdsMaintenance
 	requestDt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id)
 );
+
+
