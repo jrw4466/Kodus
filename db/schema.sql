@@ -20,7 +20,7 @@ CREATE TABLE IF NOT EXISTS  kdsApplication
 	kdsState VARCHAR(3) NOT NULL,
 	leaseLength INT(2) NOT NULL,
 	numOccupants INT(2) NOT NULL,
-	moveInDt VARCHAR(10) NOT NULL,
+	moveInDt DATE(10) NOT NULL,
 	curAddr1 VARCHAR(50) NOT NULL,
 	curAddr2 VARCHAR(50),
 	curAddrCity VARCHAR(50) NOT NULL,
