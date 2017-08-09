@@ -229,7 +229,7 @@ module.exports = function(sequelize, Sequelize) {
 
 	kdsApplication.associate = function(models) {
     // Application should belong to just one Rental
-    kdsApplication.belongsTo(models.Rentals);
+    kdsApplication.belongsTo(models.Rental);
   };
 
 	return kdsApplication;

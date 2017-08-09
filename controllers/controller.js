@@ -38,6 +38,7 @@ app.get("/register", function(req, res) {
 });
 
 
+/*
 	app.post("/apply", function(req, res){
 		db.kdsApplication.create({
 			rentalsID: req.body.rentalsID,
@@ -113,6 +114,7 @@ app.get("/register", function(req, res) {
 		});
 	});
 
+*/
 
 };
 
