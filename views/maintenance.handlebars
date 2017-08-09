@@ -1,0 +1,25 @@
+<div class="header">
+<h1>Kodus</h1>
+<h2> Maintence</h2>
+
+<div id="comment">
+	This is where our Maintence request page form will live. - Chris
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<ul id="notDevoured">
+			{{#each rental}}
+					<div class="notDevouredList">
+						{{this.id}}. {{this.property_name}}
+			
+						<form action="/{{this.id}}?_method=PUT" method="POST" id="devourIt">
+							<input type="hidden" name="devoured" value="true">
+							<button type="submit" id="devourBtn">Devour it!</button>
+						</form>
+					</div>
+			{{/each}}
+		</ul>
+	</div>
+</div>
