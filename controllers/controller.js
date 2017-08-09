@@ -1,18 +1,46 @@
 var db = require("../models");
 
+
 module.exports = function(app) {
-	app.get("/", function(req, res) {
-		db.Rental.findAll({
-			include: [db.Tenant]
-		}).then(function(results) {
-			res.json(results);
-		});
+// 	app.get("/", function(req, res) {
+// 		db.Rental.findAll({
+// 			include: [db.Tenant]
+// 		}).then(function(results) {
+// 			res.json(results);
+// 		});
+// 	});
+// }
+
+app.get("/", function(req, res) {
+	db.Rental.findAll({}).then(function(results) {
+		var hbsObject = {
+			rentals: results
+		};
+		res.render("index", hbsObject);
 	});
+});
+app.get("/apply", function(req, res) {
+	db.Rental.findAll({}).then(function(results) {
+		var hbsObject = {
+			rentals: results
+		};
+		res.render("apply", hbsObject);
+	});
+});
+
+app.get("/register", function(req, res) {
+	db.Rental.findAll({}).then(function(results) {
+		var hbsObject = {
+			rentals: results
+		};
+		res.render("register", hbsObject);
+	});
+});
 
 
 	app.post("/apply", function(req, res){
 		db.kdsApplication.create({
-			rentalID: req.body.rentalID,
+			rentalsID: req.body.rentalsID,
 			salutation: req.body.salutation,
 			firstName: req.body.firstName,
 			middleName: req.body.middleName,
@@ -69,7 +97,7 @@ module.exports = function(app) {
 
 	app.post("/maintenance", function(req, res){
 		db.kdsMaintenance.create({
-			rentalID: req.body.rentalID,
+			rentalsID: req.body.rentalsID,
 			firstName: req.body.firstName,
 			lastName: req.body.lastName,
 			phone: req.body.phone,
@@ -86,5 +114,5 @@ module.exports = function(app) {
 	});
 
 
-}
+};
 

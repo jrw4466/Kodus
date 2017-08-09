@@ -74,7 +74,7 @@ module.exports = function(sequelize, Sequelize) {
 
 	kdsMaintenance.associate = function(models) {
     // Maintenance should belong to just one property
-    kdsMaintenance.belongsTo(models.Rental);
+    kdsMaintenance.belongsTo(models.Rentals);
   };
 
 	return kdsMaintenance;
