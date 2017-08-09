@@ -9,7 +9,13 @@ body {
     /* background-image: url("https://i0.wp.com/webdesignledger.com/wp-content/uploads/2013/01/patterns03.jpg?w=970"); */
     background-color: #cccccc;
   font-family: Roboto;
-
+}
+.nav>li>a {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    color: #904bea;
+    background-color: #ffffff;
 }
 .container {
   background: #f9f9f9;
