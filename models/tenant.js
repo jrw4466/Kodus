@@ -31,12 +31,7 @@ module.exports = function(sequelize, DataTypes) {
       validate: {
       	len: [1]
       }
-    },
-
-    freezeTableName: true,
-
-    tableName: "Tenant"
-
+    }
   });
     Tenant.associate = function(models) {
     // We're saying that a Tenant should belong to a Property

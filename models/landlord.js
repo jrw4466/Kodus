@@ -38,6 +38,8 @@ module.exports = function(sequelize, DataTypes) {
     // tableName: "Landlord"
 
   });
+
+  
     Landlord.associate = function(models) {
     // We're saying that a landlord should belong to a Property
     // A landlord can't be created without a Property due to the foreign key constraint

@@ -8,14 +8,4 @@ module.exports = function(app) {
 			res.json(results);
 		});
 	});
-
-module.exports = function(app) {
-	app.get("/landlords", function(req, res) {
-		db.Landlord.findAll({
-			include: [db.Rental]
-		}).then(function(results) {
-			res.json(results);
-		});
-	});
-
-};
+}

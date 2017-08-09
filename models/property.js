@@ -73,20 +73,14 @@ module.exports = function(sequelize, DataTypes) {
 
   });
 
-Rental.associate = function(models) {
-    // We're saying that a Property should belong to a Landlord
-    // A Property can't be created without a Landlord due to the foreign key constraint
+ Rental.associate = function(models) {
+    // Property Author with Tenant
     Rental.belongsTo(models.Landlord, {
       foreignKey: {
         allowNull: false
       }
     });
-  };
-
- Rental.associate = function(models) {
-    // Property Author with Tenant
-   
-    Rental.hasMany(models.Tenants, {
+    Rental.hasMany(models.Tenant, {
         foreignKey: {
         allowNull: false
       }
