@@ -8,6 +8,11 @@ module.exports = function(sequelize, Sequelize) {
 			type: Sequelize.INTEGER
 		},
 
+		salutation: {
+			type: Sequelize.STRING
+		},
+
+
 		firstName: {
 			type: Sequelize.STRING,
 			notEmpty: true
@@ -161,23 +166,23 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		petDog: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		petCat: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		petBird: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		petFish: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		petOther: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		petOtherDesc: {
@@ -193,23 +198,23 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		vehSedan: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		vehSUV: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		vehTruck: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		vehMotorcycle: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		vehOther: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		vehOtherDesc: {
