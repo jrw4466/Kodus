@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang = "en-US">
+<!--html xmlns="http://www.w3.org/1999/xhtml"-->
+	<head>
+    	<meta charset="UTF-8">
+      	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+      	<meta name="description" content="Project 2 - Estonian Property Manager">
+      	<meta name="keywords" content="Property, rental, bootcamp, part-time">
+      	<meta name="author" content="Jake Wyatt, Spencer Brown, Christopher Allen, Samuel Jeon, Marya Crigler">
+<!-- Link to reset Style Sheets -->
+      	<link rel="stylesheet" type="text/css" href="../assets/css/reset.css">
+<!-- Link to the Bootstrap CDN -->
+      	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- Link to my customized style sheet -->
+      	<link rel="stylesheet" type="text/css" href="../assets/css/application.css">
+<!-- Linkk to jQuery -->
+     	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- Google Font -->
+     	 <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet">
+
+		<title>Kodus Application</title>
+	</head>
+
+	<body id="kodusApp" >
+
+		<div class="well infolist">
+			<h1> Kodus Rental Application </h1>
+			<br>
+			<ul>
+				<li>Prices and special offers valid for new residents only. Pricing and availability subject to change at any time. Prices and specials are not guaranteed until you have paid the application fees.</li>
+				<li><em>Renter&#39;s Insurance is required to reside at this community. All residents and applicants must provide evidence of renters insurance to the management office.&nbsp; </em></li>
+				<li><strong><u>DISCLAIMER</u>:</strong>&nbsp;Please note that all applications are subject to a $15 application fee and a $25 administrative fee. Additional security deposit is required for all floor plans. The rates are as follows: one bedroom $200, two bedroom $300, three bedroom $400 deposit.<br><br></li>
+				<li><strong> * - required fields </strong></li>
+			</ul>
+		</div>
+	
+		<div class ="maincontainer">
+
+		
+
+			<form id="applicationInformation form-horizontal"   method="post">
+
+			<!-- ==== Personal Information ===  -->
+				<h2> Personal Information </h2>
+				
+				<div class = "personalInfo well">
+					<div class = "form-group">
+						<label class="control-label">Title </label>
+						<select id="salutation" name="salutation">
+							<option value=""></option>
+							<option value="Mr.">Mr.</option>
+							<option value="Ms.">Ms.</option>
+							<option value="Mrs.">Mrs.</option>
+						</select>
+					</div>
+					<div class = "form-group">
+						<label class="control-label">First Name  <span class='text text-error'><b>*</b></span> </label>
+						<input id="firstName" name="firstName" type="text" class="required span5  alphanumeric" />
+					</div>	
+					<div class = "form-group">				
+						<label class="control-label">Middle Name </label>
+						<input id="middleName" name="middleName" type="text"  class=" span5  alphanumeric"  />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">Last Name <span class='text text-error'><b>*</b></span> </label>
+						<input id="lastName" name="lastName" type="text" class="required span5  alphanumeric" />		
+					</div>
+					<div class = "form-group">				
+						<label class="control-label">Marital Status</label>
+						<select class="span8" id="maritalStatus" name="maritalStatus">
+							<option value=""></option>
+							<option value="Single">Single</option>
+							<option value="Married">Married</option>
+						</select>
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">Phone<b>*</b></span> </label>
+						<input id="phone" name="phone" type="text" maxlength="12" size = "12" class="required phone span8  nothing" placeholder="512-555-5555" />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">Email <span class='text text-error'><b>*</b></span> </label>
+						<input id="email" name="email" type="text" maxlength="60" size ="40" disabled="True" class=" required   span8  nothing" placeholder="jane.doe@example.com" />
+					</div>
+				</div>
+
+			<!-- ==== Lease Information ===  -->
+				<h2> Lease Information </h2>
+				
+				<div class = "leaseInfo well">
+					<div class = "form-group">
+						<label class="control-label">KDS#<span class='text text-error'></label>	
+						<input id="kdsNum" name="kdsNum" type="text" maxlength="5" size="5" class="span4 alphanumeric" />
+					</div>		
+					<div class = "form-group">	
+						<label class="control-label">Lease Property Address <span class='text text-error'><b>*</b></span> </label>
+						<input id="kdsAddr1" name="kdsAddr1" type="text" maxlength="50" size="40" class=" required  span8  nothing" />
+					</div>					
+					<div class = "form-group">	
+						<label class="control-label">City <span class='text text-error'><b>*</b></span> </label>
+						<input id="kdsCity" name="kdsCity" type="text" maxlength="30" class=" required   span8 nothing" />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">State<span class='text text-error'><b>*</b></span> </label>
+						<select class=" required  span4" id="kdsState" name="kdsState">		
+							<option value=""></option>
+							<option value="AK">AK</option>
+							<option value="AL">AL</option>
+							<option value="AR">AR</option>
+							<option value="AZ">AZ</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="DC">DC</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="IA">IA</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="MA">MA</option>
+							<option value="MD">MD</option>
+							<option value="ME">ME</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MO">MO</option>
+							<option value="MS">MS</option>
+							<option value="MT">MT</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="NE">NE</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NV">NV</option>
+							<option value="NY">NY</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="PR">PR</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VA">VA</option>
+							<option value="VT">VT</option>
+							<option value="WA">WA</option>
+							<option value="WI">WI</option>
+							<option value="WV">WV</option>
+							<option value="WY">WY</option>
+						</select>
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Lease Length <span class='text text-error'><b>*</b></span> </label>
+						<select class=" required  span4" id="leaseLength" name="leaseLength">		
+							<option value=""></option>
+							<option value="6">6 months</option>
+							<option value="12">12 months</option>
+							<option value="18">18 months</option>
+							<option value="24">24 months</option>
+						</select>	
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Number of Occupants <span class='text text-error'><b>*</b></span> </label>	
+						<input id="numOccupants" name="numOccupants" type="text" maxlength="2" size="2"class=" required  span4 alphanumeric" />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">Move In Date <span class='text text-error'><b>*</b></span> </label>
+						<input id="moveInDt" name="moveInDt" type="text" maxlength="12" size="12" placeholder="mm/dd/ccyy" class=" required  span4 alphanumeric" />
+					</div>								
+				</div>
+			
+
+			<!-- === Address Information  === -->
+				<h2> Current Address Information </h2>
+				<div class = "addressInfo well">					
+					<div class = "form-group">	
+						<label class="control-label">Current Address <span class='text text-error'><b>*</b></span> </label>
+						<input id="curAddr1" name="curAddr1" type="text" maxlength="50" size="40" class=" required  span8  nothing" />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">Address (line two) </label>
+						<input id="curAddr2" name="curAddr2" type="text" maxlength="50" size="40" class="span8  nothing" />
+					</div>
+				
+					<div class = "form-group">	
+						<label class="control-label">City <span class='text text-error'><b>*</b></span> </label>
+						<input id="curAddrCity" name="curAddrCity" type="text" maxlength="30" class=" required   span8 nothing" />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">State<span class='text text-error'><b>*</b></span> </label>
+						<select class=" required  span4" id="curAddrState" name="curAddrState">		
+							<option value=""></option>
+							<option value="AK">AK</option>
+							<option value="AL">AL</option>
+							<option value="AR">AR</option>
+							<option value="AZ">AZ</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="DC">DC</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="IA">IA</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="MA">MA</option>
+							<option value="MD">MD</option>
+							<option value="ME">ME</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MO">MO</option>
+							<option value="MS">MS</option>
+							<option value="MT">MT</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="NE">NE</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NV">NV</option>
+							<option value="NY">NY</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="PR">PR</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VA">VA</option>
+							<option value="VT">VT</option>
+							<option value="WA">WA</option>
+							<option value="WI">WI</option>
+							<option value="WV">WV</option>
+							<option value="WY">WY</option>
+						</select>
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Zip Code<span class='text text-error'><b>*</b></span> </label>	
+						<input id="curAddrZip" name="curAddrZip" type="text" maxlength="5" size="5" class=" required  span4 alphanumeric" />
+					</div>				
+					<div class = "form-group">
+						<label class="control-label">Number of Years at Current Address <span class='text text-error'><b>*</b></span> </label>
+						<input id="curAdrrYrs" name="curAddrYrs" type="text" maxlength="2" size="2" class=" required  span4 alphanumeric" />
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Monthly Rent/Mortgage Payments<b>*</b></span> </label>
+						<input id="curAddrRent" name="curAddrRent" type="text" maxlength="10" size="10" class="required span8 iscurrency" value="" />
+					</div>					
+					<div class = "form-group">
+						<label class="control-label">Was 30 days notice given</label>
+						<select class="span8" id="curAddrNoticeDays" name="curAddrNoticeDays">
+							<option value="Yes">Yes</option>
+							<option value="No">No</option>
+						</select>
+					</div>
+					<div class = "form-group">
+						<p class="control-label"><strong>Reason for moving</strong></p>
+						<textarea id="Reasonformoving" name="Reasonformoving" type="text" maxlength="250" class="span8 nothing" rows="5" cols="50"></textarea>
+					</div>
+				</div>
+
+
+			<!-- === Employment Information  === -->
+
+				<h2> Employment Information </h2>
+				<div class = "employmentInfo well">
+					<div class = "form-group">
+						<label class="control-label">Employment Status<span class='text text-error'><b>*</b></span> </label>
+						<select class="   span8 " id="empStatus" name="empStatus" >
+							<option value=""></option>
+							<option value="Employed">Employed</option>
+							<option value="Retired">Retired</option>
+							<option value="Student">Student</option>
+							<option value="Never employed">Never employed</option>
+							<option value="Other">Other</option>
+						</select>
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Monthly Income<span class='text text-error'><b>*</b></span> </label>
+						<input id="empIncome" name="empIncome" type="text" maxlength="10" size="10"  class="span8  iscurrency" value="" />
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Additional Income</label>
+						<input id="empAddlIncome" name="empAddlIncome" type="text" maxlength="10" size="10" class="span8  iscurrency" value="" />
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Additional Income Source</label>
+						<input id="empAddlIncomeSource" name="empAddlIncomeSource" type="text" maxlength="50" size="30" class=" required span5  alphanumeric" value="" />
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Employer</label>
+						<input id="empEmployer" name="empEmployer" type="text" maxlength="50" size="40" class="   span8  nothing" />
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Job Title</label>
+						<input id="empJobTitle" name="empJobTitle" type="text" maxlength="50" size="30" class="   span8  nothing" />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">Employer Address <span class='text text-error'></label>
+						<input id="EmpAddr1" name="EmpAddr1" type="text" maxlength="50" size="40" class="span8  nothing" />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">Address (line two) </label>
+						<input id="EmpAddr2" name="EmpAddr2" type="text" maxlength="50" size="40" class="span8  nothing" />
+					</div>
+				
+					<div class = "form-group">	
+						<label class="control-label">City <span class='text text-error'> </label>
+						<input id="EmpAddrCity" name="EmpAddrCity" type="text" maxlength="50" size="30" class=" span8 nothing" />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">State<span class='text text-error'></label>
+						<select class=" required  span4" id="EmpAddrState" name="EmpAddrState">		
+							<option value=""></option>
+							<option value="AK">AK</option>
+							<option value="AL">AL</option>
+							<option value="AR">AR</option>
+							<option value="AZ">AZ</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="DC">DC</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="IA">IA</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="MA">MA</option>
+							<option value="MD">MD</option>
+							<option value="ME">ME</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MO">MO</option>
+							<option value="MS">MS</option>
+							<option value="MT">MT</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="NE">NE</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NV">NV</option>
+							<option value="NY">NY</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="PR">PR</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VA">VA</option>
+							<option value="VT">VT</option>
+							<option value="WA">WA</option>
+							<option value="WI">WI</option>
+							<option value="WV">WV</option>
+							<option value="WY">WY</option>
+						</select>
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Zip Code<span class='text text-error'></label>	
+						<input id="EmpAddrZip" name="EmpAddrZip" type="text" maxlength="5" size="5"" class=" span4 alphanumeric" />
+					</div>				
+					<div class = "form-group">
+						<label class="control-label">Number of Years at Current Employer <span class='text text-error'> </label>
+						<input id="empEmployedYrs" name="empEmployedYrs" type="text" maxlength="2" size="2" class=" span4 alphanumeric" />
+					</div>
+					<div class = "form-group">
+						<label class="control-label">Supervisor's Name</label>
+						<input id="empSupervisor" name="empSupervisor" type="text" maxlength="50" size="30" class="span8  nothing" />
+					</div>	
+					<div class = "form-group">
+						<label class="control-label">Employer's Phone</label>
+						<input id="empPhone" name="empPhone" type="text" maxlength="12" size="12" class="  phone span8  nothing" placeholder="512-555-5555" />
+					</div>
+				</div>
+
+			<!-- === Pet Information  === -->
+
+				<h2> Pet Information </h2>
+				<div class = "petInfo well">
+					<div class="form-group">
+						<label class="control-label">Number of pets <b>*</b></span></label>
+						<input id="petNumn" name="petNumn" type="text" maxlength="2" size="2" class=" required  span4 alphanumeric" />
+					</div>
+					<div class="form-group">
+						<label class="control-label">What type of pet do you have? &nbsp; &nbsp; &nbsp;</label>
+						<input id="petDog" name="petDog" type="checkbox" value="Yes"> Dog &nbsp;
+						<input id="petCat" name="petCat" type="checkbox" value="Yes"> Cat &nbsp;
+						<input id="petBird" name="petBird" type="checkbox" value="Yes"> Bird &nbsp;
+						<input id="petFish" name="petFish" type="checkbox" value="Yes"> Fish &nbsp;
+						<input id="petOther" name="petOther" type="checkbox" value="Yes"> Other
+						<input id="petOtherDesc" type="text" maxlength=20>
+					</div>
+					<div class="form-group">
+						<label class="control-label">Are the pets spayed or nuetered?</label>
+						<select class="span8" id="petSpayed" name="petSpayed">
+							<option value=""></option>
+							<option value="Yes">Yes</option>
+							<option value="No">No</option>
+						</select>
+					</div>
+				</div>
+
+			<!-- === Vehicle Information  === -->
+
+				<h2> Vehicle Information </h2>
+				<div class = "petInfo well">
+					<div class="form-group">
+						<label class="control-label">Number of vehicles<b>*</b></span> </label>
+						<input id="vehNum" name="vehNum" type="text" maxlength="2" size="2" class=" required  span4 alphanumeric" />
+					</div>
+					<div class="form-group">
+						<label class="control-label">What type of vehicle do you have? &nbsp; &nbsp; &nbsp;</label>
+						<input id="vehSedan" name="vehSedan" type="checkbox" value="Yes"> Sedan &nbsp;
+						<input id="vehSUV" name="vehSUV" type="checkbox" value="Yes"> SUV &nbsp;
+						<input id="vehTruck" name="vehTruck" type="checkbox" value="Yes"> Truck &nbsp;
+						<input id="vehMotorcycle" name="vehMotorcycle" type="checkbox" value="Yes"> Motorcycle &nbsp;
+						<input id="vehOther" name="veh"type="checkbox" value="Yes"> Other
+						<input id="vehOtherDesc" type="text" maxlength=20>
+					</div>					
+				</div>
+
+				<button type="submit" class="btn btn-primary">Submit</button>
+
+
+			</form> 
+		
+		</div>  <!--  End Main Container -->
+	</body>
+</html>

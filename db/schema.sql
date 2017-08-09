@@ -3,6 +3,7 @@
 CREATE DATABASE kodus_db;
 USE kodus_db;
 
+
 -- Create table
 CREATE TABLE IF NOT EXISTS  kdsApplication
 (
@@ -62,3 +63,28 @@ CREATE TABLE IF NOT EXISTS  kdsApplication
 	applicationDt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 	PRIMARY KEY (id)
 );
+
+
+-- Create table
+CREATE TABLE IF NOT EXISTS  kdsMaintenance
+(
+	id int(10) NOT NULL AUTO_INCREMENT,
+	firstName VARCHAR(50) NOT NULL,
+	middleName VARCHAR(50),
+	lastName VARCHAR(50) NOT NULL,
+	phone VARCHAR(12) NOT NULL,
+	email VARCHAR(60) NOT NULL,
+	kdsNum VARCHAR(10),
+	kdsAddr VARCHAR(50) NOT NULL,
+	kdsCity VARCHAR(50) NOT NULL,
+	kdsState VARCHAR(3) NOT NULL,
+	maintenanceCategory VARCHAR(50) NOT NULL,
+	maintenanceIssue VARCHAR(255),
+	applItem VARCHAR(50),
+	applMake VARCHAR(50),
+	applModel VARCHAR(50),
+	requestDt  TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+	PRIMARY KEY (id)
+);
+
+
