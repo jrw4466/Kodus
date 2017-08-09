@@ -2,7 +2,7 @@ module.exports = function(sequelize, DataTypes) {
   var Landlord = sequelize.define("Landlord", {
 
     lastName: {
-  	  type: DataTypes.STRING
+  	  type: DataTypes.STRING,
   	  allowNull: false,
       validate: {
         len: [1]
@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
     },
 
     firstName: {
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
   	  allowNull: false,
       validate: {
         len: [1]
@@ -18,7 +18,7 @@ module.exports = function(sequelize, DataTypes) {
     },
 
     email:{
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
   	  allowNull: false,
       validate: {
         len: [1]
@@ -26,7 +26,7 @@ module.exports = function(sequelize, DataTypes) {
     },
 
     phone:{
-      type: DataTypes.STRING
+      type: DataTypes.STRING,
       allowNull: false,
       validate: {
       	len: [1]
@@ -41,14 +41,14 @@ module.exports = function(sequelize, DataTypes) {
     Landlord.associate = function(models) {
     // We're saying that a landlord should belong to a Property
     // A landlord can't be created without a Property due to the foreign key constraint
-    Landlord.hasmany(models.Properties, {
+    Landlord.hasMany(models.Rental, {
       foreignKey: {
         allowNull: false
       }
     });
   };
 
-  return Post;
+  return Landlord;
 };
 
 

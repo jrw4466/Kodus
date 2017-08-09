@@ -1,0 +1,70 @@
+
+<div class="header">
+<h1>Eat-Da-Burger!</h1>
+
+<div id="comment">
+	Enter a burger you want to eat and click the Submit button!
+</div>
+</div>
+
+<img src="http://clipart-library.com/image_gallery/149336.png" alt="burgerPic" id="burgerImage">
+
+<form action='/login' method='post'>
+	<div>
+		<label>Username:</label>
+
+		<input type='text' name='username'/>
+	</div>
+
+	<div>
+		<label>Password:</label>
+
+		<input type='password' name='password'/>
+	</div>
+
+	<div>
+		<input type='submit' value='Log In'/>
+	</div>
+</form>
+
+<div class="row">
+	<div class="col-md-6">
+		<ul id="notDevoured">
+			{{#each burgers}}
+				{{#unless this.devoured}}
+					<div class="notDevouredList">
+						{{this.id}}. {{this.burger_name}}
+			
+						<form action="/{{this.id}}?_method=PUT" method="POST" id="devourIt">
+							<input type="hidden" name="devoured" value="true">
+							<button type="submit" id="devourBtn">Devour it!</button>
+						</form>
+					</div>
+				{{/unless}}
+			{{/each}}
+		</ul>
+	</div>
+
+<div class="col-md-6">
+<ul id="devoured">
+	{{#each burgers}}
+		{{#if this.devoured}}
+			<div class="devouredList">
+				<p>{{this.id}}. {{this.burger_name}}</p> <br>
+			</div>
+		{{/if}}
+	{{/each}}
+</ul>
+</div>
+</div>
+
+<form class="create-update-form" action="/" method="POST">
+	
+	<div class="form-group">
+		<input type="text" id="newBurger" name="burger_name">
+	</div>
+
+	<button type="submit" id="submitBtn">Submit</button>
+	<br>
+	
+</form>
