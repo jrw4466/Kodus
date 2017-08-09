@@ -66,10 +66,10 @@ module.exports = function(sequelize, DataTypes) {
         len:[1]
       }
     }
-  },{
-    freezeTableName: true,
 
-    tableName: "Property"
+    // freezeTableName: true,
+
+    // tableName: "Property"
 
   });
 

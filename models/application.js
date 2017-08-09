@@ -222,10 +222,5 @@ module.exports = function(sequelize, Sequelize) {
 		  timestamps: false
 	});
 
-	kdsApplication.associate = function(models) {
-    // Application should belong to just one Rental
-    kdsApplication.belongsTo(models.Rental);
-  };
-
 	return kdsApplication;
 };

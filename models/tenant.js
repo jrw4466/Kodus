@@ -32,7 +32,6 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     }
-
   });
     Tenant.associate = function(models) {
     // We're saying that a Tenant should belong to a Property
@@ -46,4 +45,3 @@ module.exports = function(sequelize, DataTypes) {
 
   return Tenant;
 };
-
