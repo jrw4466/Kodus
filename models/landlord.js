@@ -32,10 +32,10 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+  },{
+    freezeTableName: true,
 
-    // freezeTableName: true,
-
-    // tableName: "Landlord"
+    tableName: "Landlord"
 
   });
 
