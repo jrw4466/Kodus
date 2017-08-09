@@ -72,5 +72,12 @@ module.exports = function(sequelize, Sequelize) {
 		  timestamps: false
 	});
 
-	return kdsApplication;
+
+	kdsMaintenance.associate = function(models) {
+    // Maintenance should belong to just one property
+    kdsMaintenance.belongsTo(models.Rentals);
+  };
+
+	return kdsMaintenance;
+
 };
