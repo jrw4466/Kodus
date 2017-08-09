@@ -1,11 +1,14 @@
-/*Jumbotron*/
+/*Index Body For Handlebars*/
 
 /* Space out content a bit */
 body {
+  background: #d8d8d8;
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
+.container {
+  background: #f9f9f9;
+}
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
