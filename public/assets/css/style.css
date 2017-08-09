@@ -8,6 +8,10 @@ body {
 }
 .container {
   background: #f9f9f9;
+  padding: 20px;
+}
+#company-decribe {
+  padding-left: 35px;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
