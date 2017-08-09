@@ -218,10 +218,8 @@ module.exports = function(sequelize, Sequelize) {
 		applicationDt: {
 			type: Sequelize.DATE
 		},
-
-		{
+	}, {
 		  timestamps: false
-		}
 	});
 
 	return kdsApplication;

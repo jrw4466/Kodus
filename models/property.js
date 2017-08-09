@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Property = sequelize.define("Property", {
+  var Rental = sequelize.define("Rental", {
 
     propertyName: {
       type: DataTypes.STRING,
@@ -42,7 +42,7 @@ module.exports = function(sequelize, DataTypes) {
     },
 
     monthlyRent:{
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
         len:[1]
@@ -50,18 +50,18 @@ module.exports = function(sequelize, DataTypes) {
     },
 
     isVacant:{
-      type: DataTypes.BOOLEAN
-      allowNull: false
-      defaultValue: false
+      type: DataTypes.BOOLEAN,
+      allowNull: false,
+      defaultValue: false,
       validate: {
         len:[1]
       }
     },
 
     isManaged:{
-      type: DataTypes.BOOLEAN
+      type: DataTypes.BOOLEAN,
       allowNull: false,
-      defaultValue: false
+      defaultValue: false,
       validate: {
         len:[1]
       }
@@ -73,22 +73,20 @@ module.exports = function(sequelize, DataTypes) {
 
   });
 
-Property.associate = function(models) {
-    // We're saying that a Property should belong to a Landlord
-    // A Property can't be created without a Landlord due to the foreign key constraint
-    Property.belongsTo(models.Landlord, {
+ Rental.associate = function(models) {
+    // Property Author with Tenant
+    Rental.belongsTo(models.Landlord, {
       foreignKey: {
+        allowNull: false
+      }
+    });
+    Rental.hasMany(models.Tenant, {
+        foreignKey: {
         allowNull: false
       }
     });
   };
 
- Property.associate = function(models) {
-    // Property Author with Tenant
-   
-    Property.hasMany(models.Tenants);
-  };
 
-
-  return Property;
-}
+  return Rental;
+};

@@ -1,9 +1,7 @@
 {
   "development": {
     "username": "root",
-
-    "password": "INPUT YOUR PASSWORD",
-
+    "password": "test",
     "database": "kodus_db",
     "host": "127.0.0.1",
     "dialect": "mysql"
@@ -20,4 +18,3 @@
     "dialect": "mysql"
   }
 }
-
