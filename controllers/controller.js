@@ -34,12 +34,60 @@ app.get("/register", function(req, res) {
 			rentals: results
 		};
 		res.render("register", hbsObject);
-
 	});
 });
 
+app.get("/rental", function(req, res) {
+	db.Rental.findAll({}).then(function(results) {
+		var hbsObject = {
+			rentals: results
+		};
+		res.render("property", hbsObject);
+	});
+});
 
+app.get("/maintenance", function(req, res) {
+	db.Rental.findAll({}).then(function(results) {
+		var hbsObject = {
+			rentals: results
+		};
+		res.render("maintenance", hbsObject);
+	});
+});
 
+app.get("/users/login", function(req, res) {
+	db.Rental.findAll({}).then(function(results) {
+		var hbsObject = {
+			rentals: results
+		};
+		res.render("login", hbsObject);
+	});
+});
+
+app.get("/users/register", function(req, res) {
+	db.Rental.findAll({}).then(function(results) {
+		var hbsObject = {
+			rentals: results
+		};
+		res.render("register", hbsObject);
+	});
+});
+
+app.get("/users/details", function(req, res) {
+	db.Rental.findAll({}).then(function(results) {
+		var hbsObject = {
+			rentals: results
+		};
+		res.render("details", hbsObject);
+	});
+});
+
+app.get("/thankyou", function(req, res) {
+	db.Rental.findAll({}).then(function(results) {
+		var hbsObject = {
+			rentals: results
+		};
+		res.render("thankyou", hbsObject);
+	});
+});
 };
-
-

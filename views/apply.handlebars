@@ -1,13 +1,16 @@
 <div class="header">
-<h1>Kodus</h1>
-<h2> Apply Form </h2>
+<h1>Application Form</h1>
+
 
 <div id="comment">
-	This is where our apply form will live. - Chris
+	Tenants must fill out form for application submission process.
 </div>
 </div>
 
-	<div class="well infolist">
+<div class="row">
+	<body id="kodusApp" >
+
+		<div class="well infolist">
 			<h1> Kodus Rental Application </h1>
 			<br>
 			<ul>
@@ -22,7 +25,7 @@
 
 		
 
-			<form id="applicationInformation form-horizontal" action="/apply"  method="post">
+			<form id="applicationInformation form-horizontal"   method="post">
 
 			<!-- ==== Personal Information ===  -->
 				<h2> Personal Information </h2>
@@ -73,7 +76,7 @@
 				<div class = "leaseInfo well">
 					<div class = "form-group">
 						<label class="control-label">KDS#<span class='text text-error'></label>	
-						<input id="rentalID" name="rentalID" type="text" maxlength="5" size="5" class="span4 alphanumeric" />
+						<input id="kdsNum" name="kdsNum" type="text" maxlength="5" size="5" class="span4 alphanumeric" />
 					</div>		
 					<div class = "form-group">	
 						<label class="control-label">Lease Property Address <span class='text text-error'><b>*</b></span> </label>
@@ -299,20 +302,20 @@
 					</div>
 					<div class = "form-group">	
 						<label class="control-label">Employer Address <span class='text text-error'></label>
-						<input id="EmpAddr1" name="empAddr1" type="text" maxlength="50" size="40" class="span8  nothing" />
+						<input id="EmpAddr1" name="EmpAddr1" type="text" maxlength="50" size="40" class="span8  nothing" />
 					</div>
 					<div class = "form-group">	
 						<label class="control-label">Address (line two) </label>
-						<input id="EmpAddr2" name="empAddr2" type="text" maxlength="50" size="40" class="span8  nothing" />
+						<input id="EmpAddr2" name="EmpAddr2" type="text" maxlength="50" size="40" class="span8  nothing" />
 					</div>
 				
 					<div class = "form-group">	
 						<label class="control-label">City <span class='text text-error'> </label>
-						<input id="EmpAddrCity" name="empAddrCity" type="text" maxlength="50" size="30" class=" span8 nothing" />
+						<input id="EmpAddrCity" name="EmpAddrCity" type="text" maxlength="50" size="30" class=" span8 nothing" />
 					</div>
 					<div class = "form-group">	
 						<label class="control-label">State<span class='text text-error'></label>
-						<select class=" required  span4" id="EmpAddrState" name="empAddrState">		
+						<select class=" required  span4" id="EmpAddrState" name="EmpAddrState">		
 							<option value=""></option>
 							<option value="AK">AK</option>
 							<option value="AL">AL</option>
@@ -370,7 +373,7 @@
 					</div>
 					<div class = "form-group">
 						<label class="control-label">Zip Code<span class='text text-error'></label>	
-						<input id="EmpAddrZip" name="empAddrZip" type="text" maxlength="5" size="5"" class=" span4 alphanumeric" />
+						<input id="EmpAddrZip" name="EmpAddrZip" type="text" maxlength="5" size="5" class=" span4 alphanumeric" />
 					</div>				
 					<div class = "form-group">
 						<label class="control-label">Number of Years at Current Employer <span class='text text-error'> </label>
@@ -386,7 +389,7 @@
 					</div>
 				</div>
 
-			<!-- === Pet Information  === -->
+			  <!-- === Pet Information  ===   -->
 
 				<h2> Pet Information </h2>
 				<div class = "petInfo well">
@@ -396,11 +399,11 @@
 					</div>
 					<div class="form-group">
 						<label class="control-label">What type of pet do you have? &nbsp; &nbsp; &nbsp;</label>
-						<input id="petDog" name="petDog" type="checkbox" > Dog &nbsp;
-						<input id="petCat" name="petCat" type="checkbox" > Cat &nbsp;
-						<input id="petBird" name="petBird" type="checkbox" > Bird &nbsp;
-						<input id="petFish" name="petFish" type="checkbox" > Fish &nbsp;
-						<input id="petOther" name="petOther" type="checkbox" > Other
+						<input id="petDog" name="petDog" type="checkbox" value="Yes"> Dog &nbsp;
+						<input id="petCat" name="petCat" type="checkbox" value="Yes"> Cat &nbsp;
+						<input id="petBird" name="petBird" type="checkbox" value="Yes"> Bird &nbsp;
+						<input id="petFish" name="petFish" type="checkbox" value="Yes"> Fish &nbsp;
+						<input id="petOther" name="petOther" type="checkbox" value="Yes"> Other
 						<input id="petOtherDesc" type="text" maxlength=20>
 					</div>
 					<div class="form-group">
@@ -423,11 +426,11 @@
 					</div>
 					<div class="form-group">
 						<label class="control-label">What type of vehicle do you have? &nbsp; &nbsp; &nbsp;</label>
-						<input id="vehSedan" name="vehSedan" type="checkbox" > Sedan &nbsp;
-						<input id="vehSUV" name="vehSUV" type="checkbox" > SUV &nbsp;
-						<input id="vehTruck" name="vehTruck" type="checkbox" > Truck &nbsp;
-						<input id="vehMotorcycle" name="vehMotorcycle" type="checkbox" > Motorcycle &nbsp;
-						<input id="vehOther" name="veh"type="checkbox" > Other
+						<input id="vehSedan" name="vehSedan" type="checkbox" value="Yes"> Sedan &nbsp;
+						<input id="vehSUV" name="vehSUV" type="checkbox" value="Yes"> SUV &nbsp;
+						<input id="vehTruck" name="vehTruck" type="checkbox" value="Yes"> Truck &nbsp;
+						<input id="vehMotorcycle" name="vehMotorcycle" type="checkbox" value="Yes"> Motorcycle &nbsp;
+						<input id="vehOther" name="veh"type="checkbox" value="Yes"> Other
 						<input id="vehOtherDesc" type="text" maxlength=20>
 					</div>					
 				</div>
@@ -438,5 +441,5 @@
 			</form> 
 		
 		</div>  <!--  End Main Container -->
+	</body>
 </div>
-
