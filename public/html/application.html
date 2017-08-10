@@ -161,10 +161,10 @@
 						<label class="control-label">Lease Length <span class='text text-error'><b>*</b></span> </label>
 						<select class=" required  span4" id="leaseLength" name="leaseLength">		
 							<option value=""></option>
-							<option value="6">6 months</option>
-							<option value="12">12 months</option>
-							<option value="18">18 months</option>
-							<option value="24">24 months</option>
+							<option value=6 >6 months</option>
+							<option value=12 >12 months</option>
+							<option value=18 >18 months</option>
+							<option value=24 >24 months</option>
 						</select>	
 					</div>
 					<div class = "form-group">
@@ -295,11 +295,11 @@
 					</div>
 					<div class = "form-group">
 						<label class="control-label">Monthly Income<span class='text text-error'><b>*</b></span> </label>
-						<input id="empIncome" name="empIncome" type="text" maxlength="10" size="10"  class="span8  iscurrency" value="" />
+						<input id="empIncome" name="empIncome" type="text" maxlength="10" size="10"  class="span8  iscurrency" value=0 />
 					</div>
 					<div class = "form-group">
 						<label class="control-label">Additional Income</label>
-						<input id="empAddlIncome" name="empAddlIncome" type="text" maxlength="10" size="10" class="span8  iscurrency" value="" />
+						<input id="empAddlIncome" name="empAddlIncome" type="text" maxlength="10" size="10" class="span8  iscurrency" value=0 />
 					</div>
 					<div class = "form-group">
 						<label class="control-label">Additional Income Source</label>
@@ -390,7 +390,7 @@
 					</div>				
 					<div class = "form-group">
 						<label class="control-label">Number of Years at Current Employer <span class='text text-error'> </label>
-						<input id="empEmployedYrs" name="empEmployedYrs" type="text" maxlength="2" size="2" class=" span4 alphanumeric" />
+						<input id="empEmployedYrs" name="empEmployedYrs" value=0 type="text" maxlength="2" size="2" class=" span4 alphanumeric" />
 					</div>
 					<div class = "form-group">
 						<label class="control-label">Supervisor's Name</label>
@@ -412,11 +412,11 @@
 					</div>
 					<div class="form-group">
 						<label class="control-label">What type of pet do you have? &nbsp; &nbsp; &nbsp;</label>
-						<input id="petDog" name="petDog" type="checkbox" > Dog &nbsp;
-						<input id="petCat" name="petCat" type="checkbox" > Cat &nbsp;
-						<input id="petBird" name="petBird" type="checkbox" > Bird &nbsp;
-						<input id="petFish" name="petFish" type="checkbox" > Fish &nbsp;
-						<input id="petOther" name="petOther" type="checkbox" > Other
+						<input id="petDog" name="petDog" value="true" type="checkbox" /> Dog &nbsp;
+						<input id="petCat" name="petCat" value="true" type="checkbox" /> Cat &nbsp;
+						<input id="petBird" name="petBird" value="true" type="checkbox" /> Bird &nbsp;
+						<input id="petFish" name="petFish" value="true" type="checkbox" /> Fish &nbsp;
+						<input id="petOther" name="petOther" value="true" type="checkbox" /> Other
 						<input id="petOtherDesc" type="text" maxlength=20>
 					</div>
 					<div class="form-group">
@@ -439,11 +439,11 @@
 					</div>
 					<div class="form-group">
 						<label class="control-label">What type of vehicle do you have? &nbsp; &nbsp; &nbsp;</label>
-						<input id="vehSedan" name="vehSedan" type="checkbox" > Sedan &nbsp;
-						<input id="vehSUV" name="vehSUV" type="checkbox" > SUV &nbsp;
-						<input id="vehTruck" name="vehTruck" type="checkbox" > Truck &nbsp;
-						<input id="vehMotorcycle" name="vehMotorcycle" type="checkbox" > Motorcycle &nbsp;
-						<input id="vehOther" name="veh"type="checkbox" > Other
+						<input id="vehSedan" name="vehSedan" value="true" type="checkbox" /> Sedan &nbsp;
+						<input id="vehSUV" name="vehSUV" value="true" type="checkbox" /> SUV &nbsp;
+						<input id="vehTruck" name="vehTruck" value="true" type="checkbox" /> Truck &nbsp;
+						<input id="vehMotorcycle" name="vehMotorcycle" value="true" type="checkbox" /> Motorcycle &nbsp;
+						<input id="vehOther" name="vehOther" value="true"  type="checkbox" /> Other
 						<input id="vehOtherDesc" type="text" maxlength=20>
 					</div>					
 				</div>
