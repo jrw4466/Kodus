@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
-	var kdsApplication = sequelize.define('kdsApplication', {
+	var Maintenance = sequelize.define('Maintenance', {
 
 		id: {
 			autoIncrement: true,
@@ -73,11 +73,11 @@ module.exports = function(sequelize, Sequelize) {
 	});
 
 
-	kdsMaintenance.associate = function(models) {
+	Maintenance.associate = function(models) {
     // Maintenance should belong to just one property
-    kdsMaintenance.belongsTo(models.Rental);
+    Maintenance.belongsTo(models.Rental);
   };
 
-	return kdsMaintenance;
+	return Maintenance;
 
 };
