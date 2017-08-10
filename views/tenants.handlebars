@@ -1,0 +1,26 @@
+<div class="header">
+<h1>Kodus</h1>
+<h2> Tenants</h2>
+
+<div id="comment">
+	This is where registered tenats will be able to make maintence requests and later on will be able to do 
+    payments and all other features. - Chris
+</div>
+</div>
+
+<div class="row">
+	<div class="col-md-6">
+		<ul id="notDevoured">
+			{{#each rental}}
+					<div class="notDevouredList">
+						{{this.id}}. {{this.property_name}}
+			
+						<form action="/{{this.id}}?_method=PUT" method="POST" id="devourIt">
+							<input type="hidden" name="devoured" value="true">
+							<button type="submit" id="devourBtn">Devour it!</button>
+						</form>
+					</div>
+			{{/each}}
+		</ul>
+	</div>
+</div>

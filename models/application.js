@@ -59,15 +59,18 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		leaseLength: {
-			type: Sequelize.INTEGER
+			type: Sequelize.INTEGER,
+			allowNull: false
 		},
 
 		numOccupants: {
-			type: Sequelize.INTEGER
+			type: Sequelize.INTEGER,
+			allowNull: false
 		},
 
 		moveInDt: {
-			type: Sequelize.DATE
+			type: Sequelize.DATE,
+			allowNull: false
 		},
 
 		curAddr1: {
@@ -87,15 +90,18 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		curAddrZip: {
-			type: Sequelize.INTEGER
+			type: Sequelize.INTEGER,
+			allowNull: true
 		},
 
 		curAddrYrs: {
-			type: Sequelize.INTEGER
+			type: Sequelize.INTEGER,
+			allowNull: true
 		},
 
 		curAddrRent: {
-			type: Sequelize.INTEGER
+			type: Sequelize.INTEGER,
+			allowNull: true
 		},
 
 		curAddrNoticeDays: {
@@ -111,11 +117,14 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		empIncome: {
-			type: Sequelize.INTEGER
+			type: Sequelize.INTEGER,
+			allowNull: false
+
 		},
 
 		empAddlIncome: {
-			type: Sequelize.INTEGER
+			type: Sequelize.INTEGER,
+			allowNull: true
 		},
 
 		empAddlIncomeSource: {
@@ -146,11 +155,11 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		empAddrZip: {
-			type: Sequelize.INTEGER
+			type: Sequelize.STRING
 		},
 
 		empEmployedYrs: {
-			type: Sequelize.INTEGER
+			type: Sequelize.STRING
 		},
 
 		empSupervisor: {
@@ -161,7 +170,7 @@ module.exports = function(sequelize, Sequelize) {
 			type: Sequelize.STRING
 		},
 
-		petNumn: {
+		petNum: {
 			type: Sequelize.INTEGER
 		},
 
@@ -194,7 +203,8 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		vehNum: {
-			type: Sequelize.INTEGER
+			type: Sequelize.INTEGER,
+			allowNull: false
 		},
 
 		vehSedan: {

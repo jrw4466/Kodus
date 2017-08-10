@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/assets/css/style.css" type="text/css" />
+		<title>Kodus</title>
+	</head>
+	<body>
+		<div class="container">
+      <div class="header clearfix">
+        <nav>
+          <ul class="nav nav-pills pull-right">
+            <li role="presentation"><a href="/users/login">Login</a></li>
+            <li role="presentation"><a href="/users/register">Register</a></li>
+          </ul>
+        </nav>
+					<img src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/20638020_10159221120140397_9213631796004429252_n.jpg?oh=dcf3aa8482b25b83811f9fd54c361d29&oe=5A31FE1E" alt="Stickman" width="135" height="110" style="margin-top: 10px;">
+				
+      </div>
+
+      <div class="row">
+        <div class="col-lg-12">
+			{{#if success_msg}}
+				<div class='alert alert-success'>{{success_msg}}</div>
+			{{/if}}
+
+			{{#if error_msg}}
+				<div class='alert alert-danger'>{{error_msg}}</div>
+			{{/if}}
+
+			{{#if error}}
+				<div class='alert alert-danger'>{{error}}</div>
+			{{/if}}
+			
+        	{{{body}}}
+        </div>
+
+      </div>
+
+      
+
+    </div> <!-- /container -->
+	</body>
+</html>
