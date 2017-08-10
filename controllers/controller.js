@@ -28,7 +28,7 @@ app.get("/apply", function(req, res) {
 	});
 });
 
-app.get("/register", function(req, res) {
+app.get("/users/register", function(req, res) {
 	db.Rental.findAll({}).then(function(results) {
 		var hbsObject = {
 			rentals: results

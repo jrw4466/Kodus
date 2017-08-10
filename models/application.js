@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
-	var kdsApplication = sequelize.define('kdsApplication', {
+	var Application = sequelize.define('Application', {
 
 		id: {
 			autoIncrement: true,
@@ -222,5 +222,5 @@ module.exports = function(sequelize, Sequelize) {
 		  timestamps: false
 	});
 
-	return kdsApplication;
+	return Application;
 };
