@@ -1,5 +1,5 @@
 <div class="header">
-<h2> Properties Search!</h2>
+<h2> Property Search!</h2>
 
 <div id="comment">
 	Search through our list of properties. View the details to learn more about one that interests you!
@@ -7,116 +7,65 @@
 </div>
 
 {{!-- Start of 1st Proptery Post --}}
-<div style="background-color: white;" id="listing-bin" class="row">
+<div style="background-color: white; padding: 10px;" id="listing-bin" class="row">
 
-	<div id="listing" class="col-md-4">
-		<img style=" display: block; margin: auto; width: 80%;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/20767726_10159221434560397_3520340775677831607_n.jpg?oh=35493445648f706d26b33123f6a4ff03&oe=59F01C62"> 
+	<div style="padding-top: 15px;" id="listing" class="col-md-4">
+		{{!-- <img style=" display: block; margin: auto; width: 80%;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" 
+		src="http://www.adeptstudios.com/images/real-estate-photography-fort-lauderdale/real-estate-photography-fort-lauderdale-0023.jpg">  --}}
+		<div style="width: 220px;  display: block; margin: auto; width: 100%;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" class="w3-content w3-display-container">
+			<img class="mySlides" src="http://www.adeptstudios.com/images/real-estate-photography-fort-lauderdale/real-estate-photography-fort-lauderdale-0023.jpg" style="width:100%">
+			<img class="mySlides" src="http://fitsmallbusiness.com/wp-content/uploads/2016/10/best-listing-photos-property-snaps-nighttime-614x409-1.jpg" style="width:100%">
+			<img class="mySlides" src="img_mountains.jpg" style="width:100%">
+			<img class="mySlides" src="img_forest.jpg" style="width:100%">
+
+			<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+			<button style="float: right;" class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+		</div>
+			<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			var i;
+			var x = document.getElementsByClassName("mySlides");
+			if (n > x.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = x.length}
+			for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none";  
+			}
+			x[slideIndex-1].style.display = "block";  
+			}
+			</script>
 	</div>
+	<br>
 
 	<div class="col-md-4">
-		<h1>Address</h1>
+		<h4 style=" font-weight: bold;">Address</h4>
 		<p> 2215 Town Lake Circle Apt 142</p>
 		<p> Austin, TX 78741</p>
+		<span class="glyphicon glyphicon-signal" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-home" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-glass" aria-hidden="true"></span>
+		<span class="glyphicon glyphicon-tree-conifer" aria-hidden="true"></span>
+		<hr>
+		<span class="glyphicon glyphicon-earphone" aria-hidden="true">254-324-9775</span>
 	</div>
 
 		<div class="col-md-4">
-		<h2>Price: $1,5000</h2>
+		<h4 style=" font-weight: bold;">Price: $1,200 - $1,500</h4>
 		<p> USD / Month </p>
-		<h2>Beds: 4 |  Bath: 4</h2>
-		<a href="/users/details">View Details > </a></li>
+		<h4>Beds: 4 |  Bath: 4</h4>
+		
+		<a href="/users/details"><button type="button" class="button button1">
+  			<span class="glyphicon glyphicon-search" aria-hidden="true"></span> View Details
+		</button></a>
 	</div>
 </div>
 <br>
 {{!-- End of 1st Property Post --}}
 
 {{!-- Start of 2nd Proptery Post --}}
-<div style="background-color: white;" id="listing-bin" class="row">
-
-	<div id="listing" class="col-md-4">
-		<img style=" display: block; margin: auto; width: 80%;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/20767726_10159221434560397_3520340775677831607_n.jpg?oh=35493445648f706d26b33123f6a4ff03&oe=59F01C62"> 
-	</div>
-
-	<div class="col-md-4">
-		<h1>Address</h1>
-		<p> 2215 Town Lake Circle Apt 142</p>
-		<p> Austin, TX 78741</p>
-	</div>
-
-		<div class="col-md-4">
-		<h2>Price: $1,5000</h2>
-		<p> USD / Month </p>
-		<h2>Beds: 4 |  Bath: 4</h2>
-		<a href="/users/details">View Details > </a></li>
-	</div>
-</div>
-<br>
-{{!-- End of 2nd Property Post --}}
-
-{{!-- Start of 3rd Proptery Post --}}
-<div style="background-color: white;" id="listing-bin" class="row">
-
-	<div id="listing" class="col-md-4">
-		<img style=" display: block; margin: auto; width: 80%;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/20767726_10159221434560397_3520340775677831607_n.jpg?oh=35493445648f706d26b33123f6a4ff03&oe=59F01C62"> 
-	</div>
-
-	<div class="col-md-4">
-		<h1>Address</h1>
-		<p> 2215 Town Lake Circle Apt 142</p>
-		<p> Austin, TX 78741</p>
-	</div>
-
-		<div class="col-md-4">
-		<h2>Price: $1,5000</h2>
-		<p> USD / Month </p>
-		<h2>Beds: 4 |  Bath: 4</h2>
-		<a href="/users/details">View Details > </a></li>
-	</div>
-</div>
-<br>
-{{!-- End of 3rd Property Post --}}
-
-{{!-- Start of 4th Proptery Post --}}
-<div style="background-color: white;" id="listing-bin" class="row">
-
-	<div id="listing" class="col-md-4">
-		<img style=" display: block; margin: auto; width: 80%;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/20767726_10159221434560397_3520340775677831607_n.jpg?oh=35493445648f706d26b33123f6a4ff03&oe=59F01C62"> 
-	</div>
-
-	<div class="col-md-4">
-		<h1>Address</h1>
-		<p> 2215 Town Lake Circle Apt 142</p>
-		<p> Austin, TX 78741</p>
-	</div>
-
-		<div class="col-md-4">
-		<h2>Price: $1,5000</h2>
-		<p> USD / Month </p>
-		<h2>Beds: 4 |  Bath: 4</h2>
-		<a href="/users/details">View Details > </a></li>
-	</div>
-</div>
-<br>
-{{!-- End of 4th Property Post --}}
-
-{{!-- Start of 5th Proptery Post --}}
-<div style="background-color: white;" id="listing-bin" class="row">
-
-	<div id="listing" class="col-md-4">
-		<img style=" display: block; margin: auto; width: 80%;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://scontent.fmkc1-1.fna.fbcdn.net/v/t1.0-9/20767726_10159221434560397_3520340775677831607_n.jpg?oh=35493445648f706d26b33123f6a4ff03&oe=59F01C62"> 
-	</div>
-
-	<div class="col-md-4">
-		<h1>Address</h1>
-		<p> 2215 Town Lake Circle Apt 142</p>
-		<p> Austin, TX 78741</p>
-	</div>
-
-		<div class="col-md-4">
-		<h2>Price: $1,5000</h2>
-		<p> USD / Month </p>
-		<h2>Beds: 4 |  Bath: 4</h2>
-		<a href="/users/details">View Details > </a>
-	</div>
-</div>
-<br>
-{{!-- End of 5th Property Post --}}

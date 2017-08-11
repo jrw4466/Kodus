@@ -13,7 +13,7 @@
 		<h1>Kodus</h1>
 		<h4> Property Managment App </h4>
 		<hr>
-		<h2 style="color: #904bea; font-style: italic;" > Easy. Peezy. Lemon-Squeezy.</h2>
+		<h2 style="color: #904bea; font-style: italic;" > Easy. Simple. Quick.</h2>
 		<h3>Software that works for property mangers & tenants</h3>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec ultrices 
 			ex. Donec pharetra viverra orci, in tempus ante mollis sed. Aliquam ac quam nunc. 
@@ -28,6 +28,37 @@
 	</div>
 </div>
 {{!-- Start 2nd Element --}}
+
+<br>
+<div style="background-color: white; padding-top: 20px;"class="row">
+	<div id="overview" class="col-sm-12">
+		
+		<div class="w3-content w3-section" style="max-width:500px">
+  <img class="mySlides" src="https://i2.wp.com/www.virtuance.com/wp-content/uploads/2017/01/virtuance-residential-real-estate-photography-homepage-1.jpg?quality=80&strip=all" style="width:100%">
+  <img class="mySlides" src="https://vht.com/media/1118/resource-photo-1.jpg" style="width:100%">
+  <img class="mySlides" src="https://placester.com/wp-content/uploads/2015/01/best-listing-photos-travis-mark-urban.jpg" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000); // Change image every 2 seconds
+}
+</script>
+
+	</div>
+</div>
+
 <br>
 <div style="background-color: white; padding-top: 20px;"class="row">
 	<div id="overview" class="col-sm-6">
@@ -54,13 +85,28 @@
 <br>
 <div style="background-color: white; padding-top: 20px;"class="row">
 	<div id="overview" class="col-sm-6">
-		<img style=" display: block; margin: auto; width: 80%;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="http://cafeseo.ir/wp-content/uploads/mobile-phones.jpg"> 
+		<img style=" display: block; margin: auto; width: 80%;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="https://blankslatepages.s3.amazonaws.com/56ec2c02d59fc-property-management-duties.jpg"> 
 		<br>
 	</div>
 	<div class="col-sm-6">
-		<h3 style="text-align: center;"> Kodus Makes Life Simple </h3>
+		<h3 style="text-align: center;"> Property Managers And <br> Tenants Unite</h3>
 		<blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec ultrices 
 			ex. Donec pharetra viverra orci, in tempus ante mollis sed. Aliquam ac quam nunc. 
 			Etiam dignissim tempor turpis nec rutrum.</blockquote>
 	</div>
 </div>
+
+<br>
+<div style="background-color: white; padding-top: 20px;"class="row">
+	<div id="overview" class="col-sm-6">
+		<h3 style="text-align: center;"> Rental Search Made Easy </h3>
+		<blockquote>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nec ultrices 
+			ex. Donec pharetra viverra orci, in tempus ante mollis sed. Aliquam ac quam nunc. 
+			Etiam dignissim tempor turpis nec rutrum.</blockquote>
+		<br>
+	</div>
+	<div class="col-sm-6">
+		<img style=" display: block; margin: auto; width: 80%;   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" src="http://cafeseo.ir/wp-content/uploads/mobile-phones.jpg"> 
+	</div>
+</div>
+
