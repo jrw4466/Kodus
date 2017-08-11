@@ -76,7 +76,7 @@
 				<div class = "leaseInfo well">
 					<div class = "form-group">
 						<label class="control-label">KDS#<span class='text text-error'></label>	
-						<input id="kdsNum" name="kdsNum" type="text" maxlength="5" size="5" class="span4 alphanumeric" />
+						<input id="kdsNum" name="rentalID" type="text" maxlength="5" size="5" class="span4 alphanumeric" />
 					</div>		
 					<div class = "form-group">	
 						<label class="control-label">Lease Property Address <span class='text text-error'><b>*</b></span> </label>
@@ -148,10 +148,10 @@
 						<label class="control-label">Lease Length <span class='text text-error'><b>*</b></span> </label>
 						<select class=" required  span4" id="leaseLength" name="leaseLength">		
 							<option value=""></option>
-							<option value="6">6 months</option>
-							<option value="12">12 months</option>
-							<option value="18">18 months</option>
-							<option value="24">24 months</option>
+							<option value=6>6 months</option>
+							<option value=12>12 months</option>
+							<option value=18>18 months</option>
+							<option value=24>24 months</option>
 						</select>	
 					</div>
 					<div class = "form-group">
@@ -260,7 +260,7 @@
 					</div>
 					<div class = "form-group">
 						<p class="control-label"><strong>Reason for moving</strong></p>
-						<textarea id="Reasonformoving" name="Reasonformoving" type="text" maxlength="250" class="span8 nothing" rows="5" cols="50"></textarea>
+						<input id="Reasonformoving" name="Reasonformoving" type="text" size="50" maxlength="250" class="span8" />
 					</div>
 				</div>
 
@@ -282,11 +282,11 @@
 					</div>
 					<div class = "form-group">
 						<label class="control-label">Monthly Income<span class='text text-error'><b>*</b></span> </label>
-						<input id="empIncome" name="empIncome" type="text" maxlength="10" size="10"  class="span8  iscurrency" value="" />
+						<input id="empIncome" name="empIncome" type="text" maxlength="10" size="10"  class="span8  iscurrency" value=0 />
 					</div>
 					<div class = "form-group">
 						<label class="control-label">Additional Income</label>
-						<input id="empAddlIncome" name="empAddlIncome" type="text" maxlength="10" size="10" class="span8  iscurrency" value="" />
+						<input id="empAddlIncome" name="empAddlIncome" type="text" maxlength="10" size="10" class="span8  iscurrency" value=0 />
 					</div>
 					<div class = "form-group">
 						<label class="control-label">Additional Income Source</label>
@@ -395,15 +395,15 @@
 				<div class = "petInfo well">
 					<div class="form-group">
 						<label class="control-label">Number of pets <b>*</b></span></label>
-						<input id="petNumn" name="petNumn" type="text" maxlength="2" size="2" class=" required  span4 alphanumeric" />
+						<input id="petNumn" name="petNum" type="text" maxlength="2" size="2" class=" required  span4 alphanumeric" />
 					</div>
 					<div class="form-group">
 						<label class="control-label">What type of pet do you have? &nbsp; &nbsp; &nbsp;</label>
-						<input id="petDog" name="petDog" type="checkbox" value="Yes"> Dog &nbsp;
-						<input id="petCat" name="petCat" type="checkbox" value="Yes"> Cat &nbsp;
-						<input id="petBird" name="petBird" type="checkbox" value="Yes"> Bird &nbsp;
-						<input id="petFish" name="petFish" type="checkbox" value="Yes"> Fish &nbsp;
-						<input id="petOther" name="petOther" type="checkbox" value="Yes"> Other
+						<input id="petDog" name="petDog" type="checkbox" value="true"> Dog &nbsp;
+						<input id="petCat" name="petCat" type="checkbox" value="true"> Cat &nbsp;
+						<input id="petBird" name="petBird" type="checkbox" value="true"> Bird &nbsp;
+						<input id="petFish" name="petFish" type="checkbox" value="true"> Fish &nbsp;
+						<input id="petOther" name="petOther" type="checkbox" value="true"> Other
 						<input id="petOtherDesc" type="text" maxlength=20>
 					</div>
 					<div class="form-group">
@@ -426,11 +426,11 @@
 					</div>
 					<div class="form-group">
 						<label class="control-label">What type of vehicle do you have? &nbsp; &nbsp; &nbsp;</label>
-						<input id="vehSedan" name="vehSedan" type="checkbox" value="Yes"> Sedan &nbsp;
-						<input id="vehSUV" name="vehSUV" type="checkbox" value="Yes"> SUV &nbsp;
-						<input id="vehTruck" name="vehTruck" type="checkbox" value="Yes"> Truck &nbsp;
-						<input id="vehMotorcycle" name="vehMotorcycle" type="checkbox" value="Yes"> Motorcycle &nbsp;
-						<input id="vehOther" name="veh"type="checkbox" value="Yes"> Other
+						<input id="vehSedan" name="vehSedan" type="checkbox" value="true"> Sedan &nbsp;
+						<input id="vehSUV" name="vehSUV" type="checkbox" value="true"> SUV &nbsp;
+						<input id="vehTruck" name="vehTruck" type="checkbox" value="true"> Truck &nbsp;
+						<input id="vehMotorcycle" name="vehMotorcycle" type="checkbox" value="true"> Motorcycle &nbsp;
+						<input id="vehOther" name="vehOther" type="checkbox" value="true"> Other
 						<input id="vehOtherDesc" type="text" maxlength=20>
 					</div>					
 				</div>

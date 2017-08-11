@@ -87,7 +87,7 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		curAddrZip: {
-			type: Sequelize.INTEGER
+			type: Sequelize.STRING
 		},
 
 		curAddrYrs: {
@@ -146,11 +146,11 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		empAddrZip: {
-			type: Sequelize.INTEGER
+			type: Sequelize.STRING
 		},
 
 		empEmployedYrs: {
-			type: Sequelize.INTEGER
+			type: Sequelize.STRING
 		},
 
 		empSupervisor: {
@@ -161,7 +161,7 @@ module.exports = function(sequelize, Sequelize) {
 			type: Sequelize.STRING
 		},
 
-		petNumn: {
+		petNum: {
 			type: Sequelize.INTEGER
 		},
 
@@ -227,10 +227,14 @@ module.exports = function(sequelize, Sequelize) {
 		  timestamps: false
 	});
 
-	Application.associate = function(models) {
-    // Application should belong to just one Rental
-    Application.belongsTo(models.Rental);
-  };
+	//Application.associate = function(models) {
+    //// Application should belong to just one Rental
+   // Application.belongsTo(models.Rental, {
+   //   foreignKey: {
+   //     allowNull: false
+   //   }
+   // });
+  //};
 
 	return Application;
 };
