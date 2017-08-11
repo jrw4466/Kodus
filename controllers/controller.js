@@ -143,7 +143,7 @@ app.post("/apply", function(req, res){
 			vehOther: req.body.vehOther,
 			vehOtherDesc: req.body.vehOtherDesc
 			}).then(function(){
-			res.redirect('/');
+			res.redirect('/thankyou');
 		});
 	});
 
@@ -161,7 +161,7 @@ app.post("/maintenance", function(req, res){
 			applModel: req.body.applModel,
 			requestDt: req.body.requestDt
 		}).then(function(){
-			res.redirect('/');
+			res.redirect('/thankyou');
 		});
 	});
 };
