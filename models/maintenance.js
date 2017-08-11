@@ -62,7 +62,7 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		applModel: {
-			type: Sequelize.INTEGER
+			type: Sequelize.STRING
 		},
 
 		requestDt: {
