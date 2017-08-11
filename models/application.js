@@ -229,8 +229,11 @@ module.exports = function(sequelize, Sequelize) {
 
 	Application.associate = function(models) {
     // Application should belong to just one Rental
-    Application.belongsTo(models.Rental);
+    Application.belongsTo(models.Rental, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
   };
-
 	return Application;
 };
