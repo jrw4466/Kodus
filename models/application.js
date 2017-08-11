@@ -8,6 +8,11 @@ module.exports = function(sequelize, Sequelize) {
 			type: Sequelize.INTEGER
 		},
 
+		salutation: {
+			type: Sequelize.STRING
+		},
+
+
 		firstName: {
 			type: Sequelize.STRING,
 			notEmpty: true
@@ -82,7 +87,7 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		curAddrZip: {
-			type: Sequelize.INTEGER
+			type: Sequelize.STRING
 		},
 
 		curAddrYrs: {
@@ -141,11 +146,11 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		empAddrZip: {
-			type: Sequelize.INTEGER
+			type: Sequelize.STRING
 		},
 
 		empEmployedYrs: {
-			type: Sequelize.INTEGER
+			type: Sequelize.STRING
 		},
 
 		empSupervisor: {
@@ -156,28 +161,28 @@ module.exports = function(sequelize, Sequelize) {
 			type: Sequelize.STRING
 		},
 
-		petNumn: {
+		petNum: {
 			type: Sequelize.INTEGER
 		},
 
 		petDog: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		petCat: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		petBird: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		petFish: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		petOther: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		petOtherDesc: {
@@ -193,23 +198,23 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		vehSedan: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		vehSUV: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		vehTruck: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		vehMotorcycle: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		vehOther: {
-			type: Sequelize.STRING
+			type: Sequelize.BOOLEAN
 		},
 
 		vehOtherDesc: {
@@ -221,6 +226,19 @@ module.exports = function(sequelize, Sequelize) {
 	}, {
 		  timestamps: false
 	});
+
+
+
+	//Application.associate = function(models) {
+    //// Application should belong to just one Rental
+   	//Application.belongsTo(models.Rental, {
+   //   foreignKey: {
+   //     allowNull: false
+   //   }
+   // });
+  //};
+
+
 
 	return Application;
 };

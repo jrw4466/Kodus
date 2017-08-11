@@ -2,8 +2,8 @@ module.exports = function(sequelize, DataTypes) {
   var Tenant = sequelize.define("Tenant", {
 
     lastName: {
-      type: DataTypes.STRING,
-      allowNull: false,
+  	  type: DataTypes.STRING,
+  	  allowNull: false,
       validate: {
         len: [1]
       }
@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
 
     firstName: {
       type: DataTypes.STRING,
-      allowNull: false,
+  	  allowNull: false,
       validate: {
         len: [1]
       }
@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
 
     email:{
       type: DataTypes.STRING,
-      allowNull: false,
+  	  allowNull: false,
       validate: {
         len: [1]
       }

@@ -3,7 +3,157 @@
 <h2> Maintence</h2>
 
 <div id="comment">
-	This is where our Maintence request page form will live. - Chris
+	<div class="well infolist">
+			<br>
+			<ul>
+				<li>Online maintenance requests are for non-emergency work orders and you will be contacted within two business days to schedule the request maintenance repairs.</li>
+				<li><strong>For maintenance emergencies, please call our office at (512) 555-5555. Our voice mail system will give you instructions for reporting the emergency.</strong></li>
+			</ul>
+		</div>
+	
+		<div class ="maincontainer">
+
+		
+
+			<form id="applicationInformation form-horizontal" action="/maintenance"  method="post">
+
+			<!-- ==== Contact Information ===  -->
+				<h2> Contact Information </h2>
+				
+				<div class = "personalInfo well">
+					<div class = "form-group">
+						<label class="control-label">First Name  <span class='text text-error'><b>*</b></span> </label>
+						<input id="FirstName" name="firstName" type="text" class=" required span5  alphanumeric" />
+					</div>	
+					<div class = "form-group">	
+						<label class="control-label">Last Name <span class='text text-error'><b>*</b></span> </label>
+						<input id="LastName" name="lastName" type="text" class=" required span5  alphanumeric" />		
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">Phone</label>
+						<input id="Phone" name="phone" type="text" maxlength="12" size = "12" class="  phone span8  nothing" placeholder="512-555-5555" />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">Email <span class='text text-error'><b>*</b></span> </label>
+						<input id="Email" name="email" type="text" maxlength="60" size ="40" disabled="True" class=" required   span8  nothing" placeholder="jane.doe@example.com" />
+					</div>				
+								
+				</div>
+
+			<!-- ==== Service Address ===  -->
+				<h2> Address for Requested Service </h2>
+				
+				<div class = "serviceAddr well">
+					<div class = "form-group">
+						<label class="control-label">KDS#<span class='text text-error'></label>	
+						<input id="kdsNum" name="kdsNum" type="text" maxlength="5" size="5" class="span4 alphanumeric" />
+					</div>		
+					<div class = "form-group">	
+						<label class="control-label">Lease Property Address <span class='text text-error'><b>*</b></span> </label>
+						<input id="kdsAddr1" name="kdsAddr1" type="text" maxlength="50" size="40" class=" required  span8  nothing" />
+					</div>					
+					<div class = "form-group">	
+						<label class="control-label">City <span class='text text-error'><b>*</b></span> </label>
+						<input id="kdsCity" name="kdsCity" type="text" maxlength="30" class=" required   span8 nothing" />
+					</div>
+					<div class = "form-group">	
+						<label class="control-label">State<span class='text text-error'><b>*</b></span> </label>
+						<select class=" required  span4" id="kdsState" name="kdsState">		
+							<option value=""></option>
+							<option value="AK">AK</option>
+							<option value="AL">AL</option>
+							<option value="AR">AR</option>
+							<option value="AZ">AZ</option>
+							<option value="CA">CA</option>
+							<option value="CO">CO</option>
+							<option value="CT">CT</option>
+							<option value="DC">DC</option>
+							<option value="DE">DE</option>
+							<option value="FL">FL</option>
+							<option value="GA">GA</option>
+							<option value="HI">HI</option>
+							<option value="IA">IA</option>
+							<option value="ID">ID</option>
+							<option value="IL">IL</option>
+							<option value="IN">IN</option>
+							<option value="KS">KS</option>
+							<option value="KY">KY</option>
+							<option value="LA">LA</option>
+							<option value="MA">MA</option>
+							<option value="MD">MD</option>
+							<option value="ME">ME</option>
+							<option value="MI">MI</option>
+							<option value="MN">MN</option>
+							<option value="MO">MO</option>
+							<option value="MS">MS</option>
+							<option value="MT">MT</option>
+							<option value="NC">NC</option>
+							<option value="ND">ND</option>
+							<option value="NE">NE</option>
+							<option value="NH">NH</option>
+							<option value="NJ">NJ</option>
+							<option value="NM">NM</option>
+							<option value="NV">NV</option>
+							<option value="NY">NY</option>
+							<option value="OH">OH</option>
+							<option value="OK">OK</option>
+							<option value="OR">OR</option>
+							<option value="PA">PA</option>
+							<option value="PR">PR</option>
+							<option value="RI">RI</option>
+							<option value="SC">SC</option>
+							<option value="SD">SD</option>
+							<option value="TN">TN</option>
+							<option value="TX">TX</option>
+							<option value="UT">UT</option>
+							<option value="VA">VA</option>
+							<option value="VT">VT</option>
+							<option value="WA">WA</option>
+							<option value="WI">WI</option>
+							<option value="WV">WV</option>
+							<option value="WY">WY</option>
+						</select>
+					</div>								
+				</div>
+
+			<!-- === Type of Maintenance  === -->
+
+				<h2> Type of Maintenance</h2>
+				<div class = "typeOfMaintenance well">
+					<div class = "form-group">
+						<label class="control-label">Maintenance Category<span class='text text-error'><b>*</b></span> </label>
+						<select class="span8 " id="maintenanceCategory" name="maintenanceCategory" >
+							<option value=""></option>
+							<option value="HVAC">Air Conditioning/Heating</option>							
+							<option value="Appliances">Appliances</option>
+							<option value="Electric">Electical (non appliance)</option>
+							<option value="Kitchen">Kitchen Plumbing</option>
+							<option value="Bathroom">Bathroom Plumbing</option>
+							<option value="WinDoor">Windows or Doors</option>
+							<option value="WallFloor">Walls or Flooring</option>
+							<option value="PestControl">Bugs, Pests or Rodents </option>
+							<option value="Other">Other</option>
+						</select>
+					</div>					
+					<div class = "form-group">
+						<p>Please describe the maintenance issue:</p>						
+						<textarea id="maintenanceIssue" name="maintenanceIssue" type="text" maxlength="250" class="span8 nothing" rows="5" cols="50">
+						</textarea>
+					</div>
+					<div class = "form-group">
+						<p>For appliances please give:</p>
+						<label class="control-label">Item</label>
+						<input id="applItem" name="applItem" type="text" maxlength="10" size="10"  class="span8  iscurrency" value="" />
+						<label class="control-label">Make</label>
+						<input id="applMake" name="applMake" type="text" maxlength="10" size="10"  class="span8  iscurrency" value="" />
+						<label class="control-label">Model</label>
+						<input id="applModel" name="applModel" type="text" maxlength="10" size="10"  class="span8  iscurrency" value="" />
+					</div>								
+				</div>
+				<button type="submit" class="btn btn-primary">Submit</button>
+			</form> 
+		
+		</div>  <!--  End Main Container -->
 </div>
 </div>
 

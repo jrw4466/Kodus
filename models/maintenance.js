@@ -62,7 +62,7 @@ module.exports = function(sequelize, Sequelize) {
 		},
 
 		applModel: {
-			type: Sequelize.INTEGER
+			type: Sequelize.STRING
 		},
 
 		requestDt: {
@@ -72,5 +72,17 @@ module.exports = function(sequelize, Sequelize) {
 		  timestamps: false
 	});
 
+
+
+	Maintenance.associate = function(models) {
+    // Maintenance should belong to just one property
+    Maintenance.belongsTo(models.Rental, {
+        foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+
 	return Maintenance;
+
 };
