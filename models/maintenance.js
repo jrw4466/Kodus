@@ -76,11 +76,15 @@ module.exports = function(sequelize, Sequelize) {
 
 	Maintenance.associate = function(models) {
     // Maintenance should belong to just one property
-    Maintenance.belongsTo(models.Rental, {
-        foreignKey: {
-        allowNull: false
-      }
-    });
+    Maintenance.belongsTo(models.Rental);
+
+    // Maintenance.belongsTo(models.Rental, {
+    //     foreignKey: {
+    //     allowNull: false
+    //   }
+    // });
+
+
   };
 
 	return Maintenance;
