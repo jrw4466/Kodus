@@ -33,16 +33,14 @@
 				<li><strong> * - required fields </strong></li>
 			</ul>
 		</div>
-	
+
 		<div class ="maincontainer">
 
-		
-
-			<form id="applicationInformation form-horizontal" action="/apply"  method="post">
+			<form id="applicationInformation form-horizontal" action="/application"  method="post">
 
 			<!-- ==== Personal Information ===  -->
 				<h2> Personal Information </h2>
-				
+
 				<div class = "personalInfo well">
 					<div class = "form-group">
 						<label class="control-label">Title </label>
@@ -56,16 +54,16 @@
 					<div class = "form-group">
 						<label class="control-label">First Name  <span class='text text-error'><b>*</b></span> </label>
 						<input id="firstName" name="firstName" type="text" class="required span5  alphanumeric" />
-					</div>	
-					<div class = "form-group">				
+					</div>
+					<div class = "form-group">
 						<label class="control-label">Middle Name </label>
 						<input id="middleName" name="middleName" type="text"  class=" span5  alphanumeric"  />
 					</div>
-					<div class = "form-group">	
+					<div class = "form-group">
 						<label class="control-label">Last Name <span class='text text-error'><b>*</b></span> </label>
-						<input id="lastName" name="lastName" type="text" class="required span5  alphanumeric" />		
+						<input id="lastName" name="lastName" type="text" class="required span5  alphanumeric" />
 					</div>
-					<div class = "form-group">				
+					<div class = "form-group">
 						<label class="control-label">Marital Status</label>
 						<select class="span8" id="maritalStatus" name="maritalStatus">
 							<option value=""></option>
@@ -73,11 +71,11 @@
 							<option value="Married">Married</option>
 						</select>
 					</div>
-					<div class = "form-group">	
+					<div class = "form-group">
 						<label class="control-label">Phone<b>*</b></span> </label>
 						<input id="phone" name="phone" type="text" maxlength="12" size = "12" class="required phone span8  nothing" placeholder="512-555-5555" />
 					</div>
-					<div class = "form-group">	
+					<div class = "form-group">
 						<label class="control-label">Email <span class='text text-error'><b>*</b></span> </label>
 						<input id="email" name="email" type="text" maxlength="60" size ="40" disabled="True" class=" required   span8  nothing" placeholder="jane.doe@example.com" />
 					</div>
@@ -85,23 +83,23 @@
 
 			<!-- ==== Lease Information ===  -->
 				<h2> Lease Information </h2>
-				
+
 				<div class = "leaseInfo well">
 					<div class = "form-group">
-						<label class="control-label">KDS#<span class='text text-error'></label>	
+						<label class="control-label">KDS#<span class='text text-error'></label>
 						<input id="rentalID" name="rentalID" type="text" maxlength="5" size="5" class="span4 alphanumeric" />
-					</div>		
-					<div class = "form-group">	
+					</div>
+					<div class = "form-group">
 						<label class="control-label">Lease Property Address <span class='text text-error'><b>*</b></span> </label>
 						<input id="kdsAddr1" name="kdsAddr1" type="text" maxlength="50" size="40" class=" required  span8  nothing" />
-					</div>					
-					<div class = "form-group">	
+					</div>
+					<div class = "form-group">
 						<label class="control-label">City <span class='text text-error'><b>*</b></span> </label>
 						<input id="kdsCity" name="kdsCity" type="text" maxlength="30" class=" required   span8 nothing" />
 					</div>
-					<div class = "form-group">	
+					<div class = "form-group">
 						<label class="control-label">State<span class='text text-error'><b>*</b></span> </label>
-						<select class=" required  span4" id="kdsState" name="kdsState">		
+						<select class=" required  span4" id="kdsState" name="kdsState">
 							<option value=""></option>
 							<option value="AK">AK</option>
 							<option value="AL">AL</option>
@@ -159,44 +157,44 @@
 					</div>
 					<div class = "form-group">
 						<label class="control-label">Lease Length <span class='text text-error'><b>*</b></span> </label>
-						<select class=" required  span4" id="leaseLength" name="leaseLength">		
+						<select class=" required  span4" id="leaseLength" name="leaseLength">
 							<option value=""></option>
 							<option value="6">6 months</option>
 							<option value="12">12 months</option>
 							<option value="18">18 months</option>
 							<option value="24">24 months</option>
-						</select>	
+						</select>
 					</div>
 					<div class = "form-group">
-						<label class="control-label">Number of Occupants <span class='text text-error'><b>*</b></span> </label>	
+						<label class="control-label">Number of Occupants <span class='text text-error'><b>*</b></span> </label>
 						<input id="numOccupants" name="numOccupants" type="text" maxlength="2" size="2"class=" required  span4 alphanumeric" />
 					</div>
-					<div class = "form-group">	
+					<div class = "form-group">
 						<label class="control-label">Move In Date <span class='text text-error'><b>*</b></span> </label>
 						<input id="moveInDt" name="moveInDt" type="text" maxlength="12" size="12" placeholder="mm/dd/ccyy" class=" required  span4 alphanumeric" />
-					</div>								
+					</div>
 				</div>
-			
+
 
 			<!-- === Address Information  === -->
 				<h2> Current Address Information </h2>
-				<div class = "addressInfo well">					
-					<div class = "form-group">	
+				<div class = "addressInfo well">
+					<div class = "form-group">
 						<label class="control-label">Current Address <span class='text text-error'><b>*</b></span> </label>
 						<input id="curAddr1" name="curAddr1" type="text" maxlength="50" size="40" class=" required  span8  nothing" />
 					</div>
-					<div class = "form-group">	
+					<div class = "form-group">
 						<label class="control-label">Address (line two) </label>
 						<input id="curAddr2" name="curAddr2" type="text" maxlength="50" size="40" class="span8  nothing" />
 					</div>
-				
-					<div class = "form-group">	
+
+					<div class = "form-group">
 						<label class="control-label">City <span class='text text-error'><b>*</b></span> </label>
 						<input id="curAddrCity" name="curAddrCity" type="text" maxlength="30" class=" required   span8 nothing" />
 					</div>
-					<div class = "form-group">	
+					<div class = "form-group">
 						<label class="control-label">State<span class='text text-error'><b>*</b></span> </label>
-						<select class=" required  span4" id="curAddrState" name="curAddrState">		
+						<select class=" required  span4" id="curAddrState" name="curAddrState">
 							<option value=""></option>
 							<option value="AK">AK</option>
 							<option value="AL">AL</option>
@@ -253,9 +251,9 @@
 						</select>
 					</div>
 					<div class = "form-group">
-						<label class="control-label">Zip Code<span class='text text-error'><b>*</b></span> </label>	
+						<label class="control-label">Zip Code<span class='text text-error'><b>*</b></span> </label>
 						<input id="curAddrZip" name="curAddrZip" type="text" maxlength="5" size="5" class=" required  span4 alphanumeric" />
-					</div>				
+					</div>
 					<div class = "form-group">
 						<label class="control-label">Number of Years at Current Address <span class='text text-error'><b>*</b></span> </label>
 						<input id="curAdrrYrs" name="curAddrYrs" type="text" maxlength="2" size="2" class=" required  span4 alphanumeric" />
@@ -263,7 +261,7 @@
 					<div class = "form-group">
 						<label class="control-label">Monthly Rent/Mortgage Payments<b>*</b></span> </label>
 						<input id="curAddrRent" name="curAddrRent" type="text" maxlength="10" size="10" class="required span8 iscurrency" value="" />
-					</div>					
+					</div>
 					<div class = "form-group">
 						<label class="control-label">Was 30 days notice given</label>
 						<select class="span8" id="curAddrNoticeDays" name="curAddrNoticeDays">
@@ -313,22 +311,22 @@
 						<label class="control-label">Job Title</label>
 						<input id="empJobTitle" name="empJobTitle" type="text" maxlength="50" size="30" class="   span8  nothing" />
 					</div>
-					<div class = "form-group">	
+					<div class = "form-group">
 						<label class="control-label">Employer Address <span class='text text-error'></label>
 						<input id="EmpAddr1" name="empAddr1" type="text" maxlength="50" size="40" class="span8  nothing" />
 					</div>
-					<div class = "form-group">	
+					<div class = "form-group">
 						<label class="control-label">Address (line two) </label>
 						<input id="EmpAddr2" name="empAddr2" type="text" maxlength="50" size="40" class="span8  nothing" />
 					</div>
-				
-					<div class = "form-group">	
+
+					<div class = "form-group">
 						<label class="control-label">City <span class='text text-error'> </label>
 						<input id="EmpAddrCity" name="empAddrCity" type="text" maxlength="50" size="30" class=" span8 nothing" />
 					</div>
-					<div class = "form-group">	
+					<div class = "form-group">
 						<label class="control-label">State<span class='text text-error'></label>
-						<select class=" required  span4" id="EmpAddrState" name="empAddrState">		
+						<select class=" required  span4" id="EmpAddrState" name="empAddrState">
 							<option value=""></option>
 							<option value="AK">AK</option>
 							<option value="AL">AL</option>
@@ -385,9 +383,9 @@
 						</select>
 					</div>
 					<div class = "form-group">
-						<label class="control-label">Zip Code<span class='text text-error'></label>	
+						<label class="control-label">Zip Code<span class='text text-error'></label>
 						<input id="EmpAddrZip" name="EmpAddrZip" type="text" maxlength="5" size="5" class=" span4 alphanumeric" />
-					</div>				
+					</div>
 					<div class = "form-group">
 						<label class="control-label">Number of Years at Current Employer <span class='text text-error'> </label>
 						<input id="empEmployedYrs" name="empEmployedYrs" type="text" maxlength="2" size="2" class=" span4 alphanumeric" />
@@ -395,7 +393,7 @@
 					<div class = "form-group">
 						<label class="control-label">Supervisor's Name</label>
 						<input id="empSupervisor" name="empSupervisor" type="text" maxlength="50" size="30" class="span8  nothing" />
-					</div>	
+					</div>
 					<div class = "form-group">
 						<label class="control-label">Employer's Phone</label>
 						<input id="empPhone" name="empPhone" type="text" maxlength="12" size="12" class="  phone span8  nothing" placeholder="512-555-5555" />
@@ -445,14 +443,14 @@
 						<input id="vehMotorcycle" name="vehMotorcycle" type="checkbox" > Motorcycle &nbsp;
 						<input id="vehOther" name="veh"type="checkbox" > Other
 						<input id="vehOtherDesc" type="text" maxlength=20>
-					</div>					
+					</div>
 				</div>
 
 				<button type="submit" class="btn btn-primary">Submit</button>
 
 
-			</form> 
-		
+			</form>
+
 		</div>  <!--  End Main Container -->
 	</body>
 </html>
