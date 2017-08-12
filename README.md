@@ -46,6 +46,11 @@ Existing tenants can submit maintenance request.
 ![Demo ](/public/assets/images/KodusDemo.mp4)
 
 ---------
+
+## Run tests
+
+`mocha`
+
 ## Front-End Technologies
 
 #### JQuery
