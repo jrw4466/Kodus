@@ -43,7 +43,7 @@ Existing tenants can submit maintenance request.
 
 ## Kodus Walk-through 
 
-![Maint ](/public/assets/images/koduslogo.png)
+![Demo ](/public/assets/images/KodusDemo.mp4)
 
 ---------
 ## Front-End Technologies
@@ -61,6 +61,8 @@ Existing tenants can submit maintenance request.
 #### Express
 #### Passport
 #### Sequelize
+
+
 
 
 
