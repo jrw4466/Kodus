@@ -1,41 +1,40 @@
+![Logo ](/public/assets/images/rm_koduslogo.png)
 # Kodus Property Managment
 
 
 ## Software that works for property managers and tenants. 
 
 ---------
-![Maint ](/public/assets/images/form.png)
+![Sign-In ](/public/assets/images/rm_sign_in.png)
 <p>
-<img src="https://github.com/jrw4466/Kodus/blob/yaya/public/assets/images/sign-in.png" width="120" />
 <b> Sign In </b>
 </p>
  Existing users can sign-in with their username and password to get access to custom features. New tenants can register. 
 
 ---------
+![Search ](/public/assets/images/rm_search.png)
 <p>
-<img src="https://github.com/jrw4466/Kodus/blob/yaya/public/assets/search.png" width="120" />
 <b> Search for properties </b>
 </p>
  All guests of the website can search the database for available lease properties. 
 
 ---------
+![Details ](/public/assets/images/rm_details.png)
 <p>
-<img src="https://github.com/jrw4466/Kodus/blob/yaya/public/assets/details.png" width="120" />
 <b> View property details </b>
 </p>
  View additional details for the property.
 
 --------- 
+![Applu ](/public/assets/images/rm_form.png)
 <p>
-<img src="https://github.com/jrw4466/Kodus/blob/yaya/public/assets/form.png" width="120" />
 <b> Application </b>
 </p>
 Submit your rental application! 
 
 ---------
-
+![Maint ](/public/assets/images/rm_form.png)
 <p>
-<img src="https://github.com/jrw4466/Kodus/blob/yaya/public/assets/form.png" width="120" />
 <b> Maintenance </b>
 </p>
 Existing tenants can submit maintenance request. 
@@ -44,7 +43,7 @@ Existing tenants can submit maintenance request.
 
 ## Kodus Walk-through 
 
-![Maint ](/public/assets/images/form.png)
+![Maint ](/public/assets/images/koduslogo.png)
 
 ---------
 ## Front-End Technologies
