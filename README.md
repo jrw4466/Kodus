@@ -1,35 +1,32 @@
-# Kodus 
-
-###Team Members
-Jake Wyatt, Spencer Brown, Christopher Allen, Samuel Jeon, Marya Crigler
+# Kodus Property Managment
 
 
-## Property management software that works for property managers and tenants. 
+## Software that works for property managers and tenants. 
 
 ---------
 <p>
-![Sign In ](/public/assets/images/sign_in.png)
+<img src="https://github.com/jrw4466/Kodus/blob/yaya/public/assets/sign-in.png" width="120" />
 <b> Sign In </b>
 </p>
  Existing users can sign-in with their username and password to get access to custom features. New tenants can register. 
 
 ---------
 <p>
-![Search ](/public/assets/images/search.png)
+<img src="https://github.com/jrw4466/Kodus/blob/yaya/public/assets/search.png" width="120" />
 <b> Search for properties </b>
 </p>
  All guests of the website can search the database for available lease properties. 
 
 ---------
 <p>
-![View Details ](/public/assets/images/details.png)
+<img src="https://github.com/jrw4466/Kodus/blob/yaya/public/assets/details.png" width="120" />
 <b> View property details </b>
 </p>
  View additional details for the property.
 
 --------- 
 <p>
-![Applu ](/public/assets/images/form.png)
+<img src="https://github.com/jrw4466/Kodus/blob/yaya/public/assets/form.png" width="120" />
 <b> Application </b>
 </p>
 Submit your rental application! 
@@ -37,7 +34,7 @@ Submit your rental application!
 ---------
 
 <p>
-![Maint ](/public/assets/images/form.png)
+<img src="https://github.com/jrw4466/Kodus/blob/yaya/public/assets/form.png" width="120" />
 <b> Maintenance </b>
 </p>
 Existing tenants can submit maintenance request. 
@@ -51,7 +48,6 @@ Existing tenants can submit maintenance request.
 ---------
 ## Front-End Technologies
 
-
 #### JQuery
 #### CSS
 #### Bootstrap
@@ -60,9 +56,14 @@ Existing tenants can submit maintenance request.
 
 ## Back-End Technologies
 
-
 #### MySQL
 #### Node.js
 #### Express
 #### Passport
 #### Sequelize
+
+
+
+## Team Members
+Jake Wyatt, Spencer Brown, Christopher Allen, Samuel Jeon, Marya Crigler
+
