@@ -91,6 +91,15 @@ app.get("/thankyou", function(req, res) {
 	});
 });
 
+app.get("/thankyoumaintenance", function(req, res) {
+	db.Rental.findAll({}).then(function(results) {
+		var hbsObject = {
+			rentals: results
+		};
+		res.render("thankyoumaintenance", hbsObject);
+	});
+});
+
 app.post("/apply", function(req, res){
 		db.Application.create({
 			rentalsID: req.body.rentalsID,
@@ -161,7 +170,7 @@ app.post("/maintenance", function(req, res){
 			applModel: req.body.applModel,
 			requestDt: req.body.requestDt
 		}).then(function(){
-			res.redirect('/thankyou');
+			res.redirect('/thankyoumaintenance');
 		});
 	});
 };
