@@ -22,9 +22,11 @@
   "homepage": "https://github.com/jrw4466/Kodus#readme",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "chai": "^4.1.1",
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
     "method-override": "^2.3.9",
+    "mocha": "^3.5.0",
     "mysql": "^2.14.1",
     "mysql2": "^1.4.0",
     "require": "^2.4.20",
