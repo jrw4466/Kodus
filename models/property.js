@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Rental = sequelize.define("Rental", {
+  let Rental = sequelize.define("Rental", {
 
     propertyName: {
       type: DataTypes.STRING,
@@ -68,12 +68,10 @@ module.exports = function(sequelize, DataTypes) {
     }
 
     // freezeTableName: true,
-
     // tableName: "Property"
-
   });
 
- Rental.associate = function(models) {
+  Rental.associate = function(models) {
     // Property Author with Tenant
     Rental.belongsTo(models.Landlord, {
       foreignKey: {

@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Landlord = sequelize.define("Landlord", {
+  let Landlord = sequelize.define("Landlord", {
 
     lastName: {
   	  type: DataTypes.STRING,
@@ -39,7 +39,7 @@ module.exports = function(sequelize, DataTypes) {
 
   });
 
-  
+
     Landlord.associate = function(models) {
     // We're saying that a landlord should belong to a Property
     // A landlord can't be created without a Property due to the foreign key constraint
@@ -52,4 +52,3 @@ module.exports = function(sequelize, DataTypes) {
 
   return Landlord;
 };
-

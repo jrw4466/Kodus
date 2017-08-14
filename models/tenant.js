@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Tenant = sequelize.define("Tenant", {
+  let Tenant = sequelize.define("Tenant", {
 
     lastName: {
   	  type: DataTypes.STRING,
@@ -33,7 +33,8 @@ module.exports = function(sequelize, DataTypes) {
       }
     }
   });
-    Tenant.associate = function(models) {
+
+  Tenant.associate = function(models) {
     // We're saying that a Tenant should belong to a Property
     // A Tenant can't be created without a Property due to the foreign key constraint
     Tenant.belongsTo(models.Rental, {

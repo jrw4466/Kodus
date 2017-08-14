@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
-	var Application = sequelize.define('Application', {
+	let Application = sequelize.define('Application', {
 
 		id: {
 			autoIncrement: true,
