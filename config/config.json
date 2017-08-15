@@ -16,5 +16,12 @@
   "production": {
     "use_env_variable": "JAWSDB_URL",
     "dialect": "mysql"
+    },
+  "cody": {
+    "username": "root",
+    "password": null,
+    "database": "kodus_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
   }
 }

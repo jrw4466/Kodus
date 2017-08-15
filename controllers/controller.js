@@ -1,20 +1,57 @@
-var db = require("../models");
-var capitalize = require('../utils/string_utils').capitalize;
+const db = require("../models");
+const capitalize = require('../utils/string_utils').capitalize;
+const path = require("path");
+const braintree = require("braintree");
+
+const gateway = braintree.connect({
+  environment: braintree.Environment.Sandbox,
+  merchantId: "m6mfjf8ryfd29j7z",
+  publicKey: "tnpgjzjvfs637n4m",
+  privateKey: "41779fcbcf665ad91462d9737a95f28e"
+});
 
 module.exports = function(app) {
 
 	app.get("/", function(req, res) {
 		db.Rental.findAll({}).then(function(results) {
-			var hbsObject = {
+			let hbsObject = {
 				rentals: results
 			};
 			res.render("index", hbsObject);
 		});
 	});
 
+	// payments
+	app.get('/testPayments', function(req, res) {
+	    res.sendFile(path.join(__dirname + '/../public/paymentPage.html'))
+	});
+
+	app.get('/client_token', function(req, res) {
+	    gateway.clientToken.generate({}, function(err, response) {
+	        res.send(response.clientToken);
+	    })
+	});
+
+	app.post('/checkout', function(req, res) {
+	    let nonce = req.body.payment_method_nonce;
+	    gateway.transaction.sale({
+	        amount: "10.00",
+	        paymentMethodNonce: nonce,
+	        options: {
+	            submitForSettlement: true
+	        }
+	    }, function(err, result) {
+	        if (err) {
+	            console.log(err);
+	        }
+	        console.log(result);
+	    });
+	})
+	// END payments
+
 	app.get("/apply", function(req, res) {
 		db.Rental.findAll({}).then(function(results) {
-			var hbsObject = {
+			let hbsObject = {
 				rentals: results
 			};
 			res.render("apply", hbsObject);
@@ -23,7 +60,7 @@ module.exports = function(app) {
 
 	app.get("/users/register", function(req, res) {
 		db.Rental.findAll({}).then(function(results) {
-			var hbsObject = {
+			let hbsObject = {
 				rentals: results
 			};
 			res.render("register", hbsObject);
@@ -32,7 +69,7 @@ module.exports = function(app) {
 
 	app.get("/rental", function(req, res) {
 		db.Rental.findAll({}).then(function(results) {
-			var hbsObject = {
+			let hbsObject = {
 				rentals: results
 			};
 			res.render("property", hbsObject);
@@ -41,7 +78,7 @@ module.exports = function(app) {
 
 	app.get("/maintenance", function(req, res) {
 		db.Rental.findAll({}).then(function(results) {
-			var hbsObject = {
+			let hbsObject = {
 				rentals: results
 			};
 			res.render("maintenance", hbsObject);
@@ -50,7 +87,7 @@ module.exports = function(app) {
 
 	app.get("/users/login", function(req, res) {
 		db.Rental.findAll({}).then(function(results) {
-			var hbsObject = {
+			let hbsObject = {
 				rentals: results
 			};
 			res.render("login", hbsObject);
@@ -59,7 +96,7 @@ module.exports = function(app) {
 
 	app.get("/users/register", function(req, res) {
 		db.Rental.findAll({}).then(function(results) {
-			var hbsObject = {
+			let hbsObject = {
 				rentals: results
 			};
 			res.render("register", hbsObject);
@@ -68,7 +105,7 @@ module.exports = function(app) {
 
 	app.get("/users/details", function(req, res) {
 		db.Rental.findAll({}).then(function(results) {
-			var hbsObject = {
+			let hbsObject = {
 				rentals: results
 			};
 			res.render("details", hbsObject);
@@ -77,7 +114,7 @@ module.exports = function(app) {
 
 	app.get("/thankyou", function(req, res) {
 		db.Rental.findAll({}).then(function(results) {
-			var hbsObject = {
+			let hbsObject = {
 				rentals: results
 			};
 			res.render("thankyou", hbsObject);
@@ -86,7 +123,7 @@ module.exports = function(app) {
 
 	app.get("/thankyoumaintenance", function(req, res) {
 		db.Rental.findAll({}).then(function(results) {
-			var hbsObject = {
+			let hbsObject = {
 				rentals: results
 			};
 			res.render("thankyoumaintenance", hbsObject);
@@ -179,6 +216,5 @@ module.exports = function(app) {
 		.then(function(result) {
 	      res.json(result);
 	    });
-	  });
 	});
 };
