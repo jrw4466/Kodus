@@ -1,6 +1,6 @@
 module.exports = function(sequelize, Sequelize) {
 
-	var Maintenance = sequelize.define('Maintenance', {
+	let Maintenance = sequelize.define('Maintenance', {
 
 		id: {
 			autoIncrement: true,
